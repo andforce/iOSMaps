@@ -11,6 +11,8 @@
 
 #import "SearchView.h"
 
+#import "LocationView.h"
+
 //#import "Mamap"
 
 @interface ViewController ()<MAMapViewDelegate>{
@@ -20,6 +22,7 @@
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +44,10 @@
     
     
     [self.view addSubview:searchView];
+    
+    LocationView *locationView = [LocationView locationView:self.view];
+    
+    [self.view addSubview:locationView];
     
 }
 

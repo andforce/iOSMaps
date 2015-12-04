@@ -16,6 +16,14 @@
 		3A4C405A1C11F8EC009B520C /* ic_qu_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40571C11F8EC009B520C /* ic_qu_search.png */; };
 		3A4C405B1C11F8EC009B520C /* ic_qu_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40581C11F8EC009B520C /* ic_qu_search@2x.png */; };
 		3A4C405C1C11F8EC009B520C /* ic_qu_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40591C11F8EC009B520C /* ic_qu_search@3x.png */; };
+		3A4C40601C11FDEE009B520C /* LocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* LocationView.m */; };
+		3A4C40621C11FE01009B520C /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40611C11FE01009B520C /* LocationView.xib */; };
+		3A4C40671C120405009B520C /* ic_qu_direction_mylocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40641C120405009B520C /* ic_qu_direction_mylocation.png */; };
+		3A4C40681C120405009B520C /* ic_qu_direction_mylocation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40651C120405009B520C /* ic_qu_direction_mylocation@2x.png */; };
+		3A4C40691C120405009B520C /* ic_qu_direction_mylocation@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40661C120405009B520C /* ic_qu_direction_mylocation@3x.png */; };
+		3A4C406D1C12044A009B520C /* button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C406A1C12044A009B520C /* button_background.png */; };
+		3A4C406E1C12044A009B520C /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C406B1C12044A009B520C /* button_background@2x.png */; };
+		3A4C406F1C12044A009B520C /* button_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C406C1C12044A009B520C /* button_background@3x.png */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
 		4DCD33311C11915000F68262 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33301C11915000F68262 /* AppDelegate.m */; };
 		4DCD33341C11915000F68262 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33331C11915000F68262 /* ViewController.m */; };
@@ -35,6 +43,15 @@
 		3A4C40571C11F8EC009B520C /* ic_qu_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_qu_search.png; sourceTree = "<group>"; };
 		3A4C40581C11F8EC009B520C /* ic_qu_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_search@2x.png"; sourceTree = "<group>"; };
 		3A4C40591C11F8EC009B520C /* ic_qu_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_search@3x.png"; sourceTree = "<group>"; };
+		3A4C405E1C11FDEE009B520C /* LocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationView.h; sourceTree = "<group>"; };
+		3A4C405F1C11FDEE009B520C /* LocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationView.m; sourceTree = "<group>"; };
+		3A4C40611C11FE01009B520C /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
+		3A4C40641C120405009B520C /* ic_qu_direction_mylocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_qu_direction_mylocation.png; sourceTree = "<group>"; };
+		3A4C40651C120405009B520C /* ic_qu_direction_mylocation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_direction_mylocation@2x.png"; sourceTree = "<group>"; };
+		3A4C40661C120405009B520C /* ic_qu_direction_mylocation@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_direction_mylocation@3x.png"; sourceTree = "<group>"; };
+		3A4C406A1C12044A009B520C /* button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_background.png; sourceTree = "<group>"; };
+		3A4C406B1C12044A009B520C /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
+		3A4C406C1C12044A009B520C /* button_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@3x.png"; sourceTree = "<group>"; };
 		4DCD33291C11915000F68262 /* iOSMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD332D1C11915000F68262 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DCD332F1C11915000F68262 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +119,28 @@
 			name = SearchViewImages;
 			sourceTree = "<group>";
 		};
+		3A4C405D1C11FDDA009B520C /* LocationView */ = {
+			isa = PBXGroup;
+			children = (
+				3A4C405E1C11FDEE009B520C /* LocationView.h */,
+				3A4C405F1C11FDEE009B520C /* LocationView.m */,
+			);
+			name = LocationView;
+			sourceTree = "<group>";
+		};
+		3A4C40631C1203EE009B520C /* LocationViewImages */ = {
+			isa = PBXGroup;
+			children = (
+				3A4C406A1C12044A009B520C /* button_background.png */,
+				3A4C406B1C12044A009B520C /* button_background@2x.png */,
+				3A4C406C1C12044A009B520C /* button_background@3x.png */,
+				3A4C40641C120405009B520C /* ic_qu_direction_mylocation.png */,
+				3A4C40651C120405009B520C /* ic_qu_direction_mylocation@2x.png */,
+				3A4C40661C120405009B520C /* ic_qu_direction_mylocation@3x.png */,
+			);
+			name = LocationViewImages;
+			sourceTree = "<group>";
+		};
 		4DCD33201C11915000F68262 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +162,7 @@
 		4DCD332B1C11915000F68262 /* iOSMaps */ = {
 			isa = PBXGroup;
 			children = (
+				3A4C405D1C11FDDA009B520C /* LocationView */,
 				3A4C404C1C11F566009B520C /* SearchView */,
 				4DCD332F1C11915000F68262 /* AppDelegate.h */,
 				4DCD33301C11915000F68262 /* AppDelegate.m */,
@@ -135,6 +175,7 @@
 				4DCD33381C11915000F68262 /* iOSMaps.xcdatamodeld */,
 				4DCD332C1C11915000F68262 /* Supporting Files */,
 				3A4C404A1C11F55F009B520C /* SearchView.xib */,
+				3A4C40611C11FE01009B520C /* LocationView.xib */,
 			);
 			path = iOSMaps;
 			sourceTree = "<group>";
@@ -142,6 +183,7 @@
 		4DCD332C1C11915000F68262 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A4C40631C1203EE009B520C /* LocationViewImages */,
 				3A4C40501C11F8CB009B520C /* SearchViewImages */,
 				4DCD332D1C11915000F68262 /* main.m */,
 			);
@@ -209,16 +251,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4C406E1C12044A009B520C /* button_background@2x.png in Resources */,
 				3A4C405B1C11F8EC009B520C /* ic_qu_search@2x.png in Resources */,
 				3A4C404B1C11F55F009B520C /* SearchView.xib in Resources */,
 				3A4C405A1C11F8EC009B520C /* ic_qu_search.png in Resources */,
 				3A4C40561C11F8DE009B520C /* ic_qu_menu_grabber@3x.png in Resources */,
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,
+				3A4C406F1C12044A009B520C /* button_background@3x.png in Resources */,
 				3A4C40541C11F8DE009B520C /* ic_qu_menu_grabber.png in Resources */,
 				4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */,
 				3A4C405C1C11F8EC009B520C /* ic_qu_search@3x.png in Resources */,
+				3A4C40671C120405009B520C /* ic_qu_direction_mylocation.png in Resources */,
 				4DCD33371C11915000F68262 /* Main.storyboard in Resources */,
+				3A4C40691C120405009B520C /* ic_qu_direction_mylocation@3x.png in Resources */,
+				3A4C40681C120405009B520C /* ic_qu_direction_mylocation@2x.png in Resources */,
 				3A4C40551C11F8DE009B520C /* ic_qu_menu_grabber@2x.png in Resources */,
+				3A4C406D1C12044A009B520C /* button_background.png in Resources */,
+				3A4C40621C11FE01009B520C /* LocationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +329,7 @@
 				4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */,
 				4DCD33341C11915000F68262 /* ViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
+				3A4C40601C11FDEE009B520C /* LocationView.m in Sources */,
 				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,
 				4DCD332E1C11915000F68262 /* main.m in Sources */,
 			);
