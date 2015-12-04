@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <MAMapKit/MAMapKit.h>
 
+#import "SearchView.h"
+
 //#import "Mamap"
 
 @interface ViewController ()<MAMapViewDelegate>{
@@ -30,7 +32,16 @@
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
     _mapView.delegate = self;
     
+
     [self.view addSubview:_mapView];
+    
+    
+    
+    SearchView *searchView = [SearchView searvchView];
+    
+    
+    [self.view addSubview:searchView];
+    
 }
 
 - (void)didReceiveMemoryWarning {

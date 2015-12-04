@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
+		3A4C404B1C11F55F009B520C /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C404A1C11F55F009B520C /* SearchView.xib */; };
+		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
 		4DCD33311C11915000F68262 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33301C11915000F68262 /* AppDelegate.m */; };
 		4DCD33341C11915000F68262 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33331C11915000F68262 /* ViewController.m */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A4C404A1C11F55F009B520C /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		3A4C404D1C11F59B009B520C /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		4DCD33291C11915000F68262 /* iOSMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD332D1C11915000F68262 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DCD332F1C11915000F68262 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +68,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3A4C404C1C11F566009B520C /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				3A4C404D1C11F59B009B520C /* SearchView.h */,
+				3A4C404E1C11F59B009B520C /* SearchView.m */,
+			);
+			name = SearchView;
+			sourceTree = "<group>";
+		};
 		4DCD33201C11915000F68262 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +98,7 @@
 		4DCD332B1C11915000F68262 /* iOSMaps */ = {
 			isa = PBXGroup;
 			children = (
+				3A4C404C1C11F566009B520C /* SearchView */,
 				4DCD332F1C11915000F68262 /* AppDelegate.h */,
 				4DCD33301C11915000F68262 /* AppDelegate.m */,
 				4DCD33321C11915000F68262 /* ViewController.h */,
@@ -94,6 +109,7 @@
 				4DCD33401C11915000F68262 /* Info.plist */,
 				4DCD33381C11915000F68262 /* iOSMaps.xcdatamodeld */,
 				4DCD332C1C11915000F68262 /* Supporting Files */,
+				3A4C404A1C11F55F009B520C /* SearchView.xib */,
 			);
 			path = iOSMaps;
 			sourceTree = "<group>";
@@ -167,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4C404B1C11F55F009B520C /* SearchView.xib in Resources */,
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,
 				4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */,
 				4DCD33371C11915000F68262 /* Main.storyboard in Resources */,
@@ -231,6 +248,7 @@
 				4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */,
 				4DCD33341C11915000F68262 /* ViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
+				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,
 				4DCD332E1C11915000F68262 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
