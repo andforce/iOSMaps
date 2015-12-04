@@ -12,11 +12,15 @@
 #import "SearchView.h"
 
 #import "LocationView.h"
+#import "LocationControllerViewController.h"
+
 
 //#import "Mamap"
 
 @interface ViewController ()<MAMapViewDelegate>{
     MAMapView *_mapView;
+    LocationControllerViewController *locationController;
+    
 }
 
 @end
@@ -26,9 +30,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
+    locationController = [[LocationControllerViewController alloc]init];
+    [locationController startLocation];
+    [self addChildViewController:locationController];
     
-    // Do any additional setup after loading the view, typically from a nib.
+    
     //配置用户Key
     [MAMapServices sharedServices].apiKey = @"f6a86f7a8d176d2ee0ae836d9e580158";
     

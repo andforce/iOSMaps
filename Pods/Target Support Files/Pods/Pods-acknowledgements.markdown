@@ -6,6 +6,11 @@ This application makes use of the following third party libraries:
 Copyright © 2014 AutoNavi. All Rights Reserved.
 
 
+## AMapLocation
+
+Copyright © 2014 AutoNavi. All Rights Reserved.
+
+
 ## AMapSearch
 
 Copyright © 2014 AutoNavi. All Rights Reserved.

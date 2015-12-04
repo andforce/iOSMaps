@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
+		3A34A4E31C1213D500BB55ED /* LocationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A34A4E21C1213D500BB55ED /* LocationControllerViewController.m */; };
 		3A4C404B1C11F55F009B520C /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C404A1C11F55F009B520C /* SearchView.xib */; };
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40541C11F8DE009B520C /* ic_qu_menu_grabber.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40511C11F8DE009B520C /* ic_qu_menu_grabber.png */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A34A4E11C1213D500BB55ED /* LocationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationControllerViewController.h; sourceTree = "<group>"; };
+		3A34A4E21C1213D500BB55ED /* LocationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationControllerViewController.m; sourceTree = "<group>"; };
 		3A4C404A1C11F55F009B520C /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		3A4C404D1C11F59B009B520C /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
@@ -119,13 +122,15 @@
 			name = SearchViewImages;
 			sourceTree = "<group>";
 		};
-		3A4C405D1C11FDDA009B520C /* LocationView */ = {
+		3A4C405D1C11FDDA009B520C /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				3A4C405E1C11FDEE009B520C /* LocationView.h */,
 				3A4C405F1C11FDEE009B520C /* LocationView.m */,
+				3A34A4E11C1213D500BB55ED /* LocationControllerViewController.h */,
+				3A34A4E21C1213D500BB55ED /* LocationControllerViewController.m */,
 			);
-			name = LocationView;
+			name = Location;
 			sourceTree = "<group>";
 		};
 		3A4C40631C1203EE009B520C /* LocationViewImages */ = {
@@ -162,7 +167,7 @@
 		4DCD332B1C11915000F68262 /* iOSMaps */ = {
 			isa = PBXGroup;
 			children = (
-				3A4C405D1C11FDDA009B520C /* LocationView */,
+				3A4C405D1C11FDDA009B520C /* Location */,
 				3A4C404C1C11F566009B520C /* SearchView */,
 				4DCD332F1C11915000F68262 /* AppDelegate.h */,
 				4DCD33301C11915000F68262 /* AppDelegate.m */,
@@ -329,6 +334,7 @@
 				4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */,
 				4DCD33341C11915000F68262 /* ViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
+				3A34A4E31C1213D500BB55ED /* LocationControllerViewController.m in Sources */,
 				3A4C40601C11FDEE009B520C /* LocationView.m in Sources */,
 				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,
 				4DCD332E1C11915000F68262 /* main.m in Sources */,
