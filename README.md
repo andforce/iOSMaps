@@ -1,5 +1,4 @@
-# iOSMaps
-《指路者地图》iOS版本
+#《指路者地图》iOS版本
 
 ## 如何编译
 - 先安装`CocoaPods`
