@@ -20,5 +20,8 @@
 }
 
 
+//务, 需要在Info.plist中添加NSLocationAlwaysUsageDescription或者NSLocationWhenInUseUsageDescription字段。
+
+
 
 @end

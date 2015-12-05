@@ -12,14 +12,17 @@
 #import "SearchView.h"
 
 #import "LocationView.h"
-#import "LocationControllerViewController.h"
+
+
+#import <AMapLocationKit/AMapLocationKit.h>
 
 
 //#import "Mamap"
 
-@interface ViewController ()<MAMapViewDelegate>{
+@interface ViewController ()<MAMapViewDelegate ,AMapLocationManagerDelegate>{
     MAMapView *_mapView;
-    LocationControllerViewController *locationController;
+    AMapLocationManager *_locationManager;
+    
     
 }
 
@@ -31,14 +34,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
-    locationController = [[LocationControllerViewController alloc]init];
-    [locationController startLocation];
-    [self addChildViewController:locationController];
-    
+    [AMapLocationServices sharedServices].apiKey =@"f6a86f7a8d176d2ee0ae836d9e580158";
     
     //配置用户Key
     [MAMapServices sharedServices].apiKey = @"f6a86f7a8d176d2ee0ae836d9e580158";
+    
+
+    _locationManager = [[AMapLocationManager alloc]init];
+    _locationManager.delegate = self;
+    
+    
+
     
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
     _mapView.delegate = self;
@@ -57,7 +63,18 @@
     
     [self.view addSubview:locationView];
     
+    [self startLocation];
+    
 }
+
+-(void)startLocation{
+    [_locationManager startUpdatingLocation];
+}
+
+- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location{
+    NSLog(@"================%f", location.altitude);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
