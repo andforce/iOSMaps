@@ -19,8 +19,10 @@
     return locationView;
 }
 
+- (IBAction)showMyLocation:(UIButton *)sender {
+    
+}
 
-//务, 需要在Info.plist中添加NSLocationAlwaysUsageDescription或者NSLocationWhenInUseUsageDescription字段。
 
 
 

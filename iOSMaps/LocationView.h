@@ -11,5 +11,6 @@
 @interface LocationView : UIView
 
 +(id) locationView: (UIView *) rootView;
+- (IBAction)showMyLocation:(UIButton *)sender;
 
 @end

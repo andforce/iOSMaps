@@ -64,6 +64,10 @@
     // 定位
     [self startLocation];
     
+    
+    _mapView.customizeUserLocationAccuracyCircleRepresentation = YES;
+    _mapView.userTrackingMode = MAUserTrackingModeFollow;
+    
 }
 
 
@@ -136,6 +140,7 @@
 
 - (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location{
     NSLog(@"================%f", location.altitude);
+
 }
 
 
