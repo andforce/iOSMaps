@@ -17,7 +17,7 @@
 			<string>Copyright &#169; 2014 AutoNavi. All Rights Reserved.
 </string>
 			<key>Title</key>
-			<string>AMap3DMap</string>
+			<string>AMapLocation</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -26,7 +26,7 @@
 			<string>Copyright &#169; 2014 AutoNavi. All Rights Reserved.
 </string>
 			<key>Title</key>
-			<string>AMapLocation</string>
+			<string>AMapNavi</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

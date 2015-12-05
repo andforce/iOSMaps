@@ -1,16 +1,16 @@
 PODS:
-  - AMap3DMap (3.2.1)
   - AMapLocation (1.0.1)
+  - AMapNavi (1.3.2)
   - AMapSearch (3.1.0)
 
 DEPENDENCIES:
-  - AMap3DMap
   - AMapLocation
+  - AMapNavi
   - AMapSearch
 
 SPEC CHECKSUMS:
-  AMap3DMap: 1f179c4fc41a60e42243466eb188e3be946aa163
   AMapLocation: d33782bd102563aae1824cb4fae8b4495376f016
+  AMapNavi: 01b4ec04204f36814bc3d320d7b548b98a3db5c5
   AMapSearch: aa7621ae8aec9cb8df116710b26e3fe3d09dc0ff
 
 COCOAPODS: 0.39.0
