@@ -12,24 +12,11 @@
 #import "SearchView.h"
 #import "LocationView.h"
 
-#import <AMapLocationKit/AMapLocationKit.h>
-#import <AMapNaviKit/AMapNaviKit.h>
-#import <AMapSearchKit/AMapSearchKit.h>
 
-#define kApiKey @"f6a86f7a8d176d2ee0ae836d9e580158"
-
-
-@interface ViewController ()<MAMapViewDelegate ,AMapLocationManagerDelegate, AMapSearchDelegate>{
-    MAMapView *_mapView;
-    AMapLocationManager *_locationManager;
-    AMapSearchAPI *_search;
+@interface ViewController (){
 
 }
-
 @end
-
-
-
 
 @implementation ViewController
 
@@ -37,17 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
-    
-    [self initMapView];
-    
-    [self initLocationServices];
-    
-    [self initPoiSearchServices];
-
-    [self.view addSubview:_mapView];
-    
-    
     
     // 顶部的搜索空间
     SearchView *searchView = [SearchView searvchView];
@@ -59,15 +35,9 @@
     
     [self.view addSubview:locationView];
     
-    
-    
+
     // 定位
     [self startLocation];
-    
-    
-    _mapView.customizeUserLocationAccuracyCircleRepresentation = YES;
-    _mapView.userTrackingMode = MAUserTrackingModeFollow;
-    
 }
 
 
@@ -88,31 +58,7 @@
     request.requireExtension = YES;
     
     //发起周边搜索
-    [_search AMapPOIAroundSearch: request];
-}
-
-
-
--(void) initPoiSearchServices{
-    // 搜索
-    [AMapSearchServices sharedServices].apiKey = kApiKey;
-    _search = [[AMapSearchAPI alloc]init];
-    _search.delegate = self;
-    
-}
-
--(void) initMapView{
-    // 3D地图
-    [MAMapServices sharedServices].apiKey = kApiKey;
-    _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
-    _mapView.delegate = self;
-}
-
--(void) initLocationServices{
-    // 定位
-    [AMapLocationServices sharedServices].apiKey = kApiKey;
-    _locationManager = [[AMapLocationManager alloc]init];
-    _locationManager.delegate = self;
+    [self.search AMapPOIAroundSearch: request];
 }
 
 
@@ -135,7 +81,7 @@
 }
 
 -(void)startLocation{
-    [_locationManager startUpdatingLocation];
+    [[self locationManager] startUpdatingLocation];
 }
 
 - (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location{
@@ -143,10 +89,5 @@
 
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

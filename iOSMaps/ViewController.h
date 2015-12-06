@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseMapViewController.h"
 
 
-@interface ViewController : UIViewController
+@interface ViewController : BaseMapViewController
 
 
 @end
