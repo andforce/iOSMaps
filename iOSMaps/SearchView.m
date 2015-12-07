@@ -56,6 +56,12 @@
     _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
     _leftDrawerView.backgroundColor = [UIColor whiteColor];
     
+    _leftDrawerView.layer.shadowColor = [[UIColor blackColor]CGColor];
+    // 阴影的透明度
+    _leftDrawerView.layer.shadowOpacity = 0.3f;
+    //设置View Shadow的偏移量
+    _leftDrawerView.layer.shadowOffset = CGSizeMake(0.5f, 0);
+    
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
                                                     initWithTarget:self
                                                     action:@selector(handlePan:)];
@@ -76,6 +82,15 @@
     [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
     
     if (recognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
+        
+        NSLog(@"Touch ===   %f", velocity.x);
+        
+        if (velocity.x > 0) {
+            [self showLeftDrawer];
+        } else{
+            [self hideLeftDrawer];
+        }
         
 //        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
 //        CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
@@ -91,7 +106,7 @@
 //        [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
 //            recognizer.view.center = finalPoint;
 //        } completion:nil];
-        [self hideLeftDrawer];
+        
     }
     
 }
