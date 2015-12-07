@@ -126,16 +126,21 @@
 - (void) showLeftDrawer{
     [UIView beginAnimations:nil context:nil];
     CGRect currentRect = _leftDrawerView.frame;
-    
-    if (currentRect.origin.x == -_leftDrawerView.frame.size.width) {
-        currentRect.origin.x = 0;
-    } else{
-        currentRect.origin.x = -_leftDrawerView.frame.size.width;
-    }
+    currentRect.origin.x = 0;
     _leftDrawerView.frame = currentRect;
     
     [UIView commitAnimations];
 }
+
+- (void) hideLeftDrawer{
+    [UIView beginAnimations:nil context:nil];
+    CGRect currentRect = _leftDrawerView.frame;
+    currentRect.origin.x = _leftDrawerView.frame.size.width;
+    _leftDrawerView.frame = currentRect;
+    
+    [UIView commitAnimations];
+}
+
 
 -(void)showOrHideWhiteBgView{
     [UIView beginAnimations:nil context:nil];
