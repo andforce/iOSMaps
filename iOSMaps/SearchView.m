@@ -58,9 +58,27 @@
     _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
     _leftDrawerView.backgroundColor = [UIColor whiteColor];
     
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
+                                                    initWithTarget:self
+                                                    action:@selector(handlePan:)];
+    [_leftDrawerView addGestureRecognizer:panGestureRecognizer];
+    
     
     [self addSubview:_leftDrawerView];
 }
+
+- (void) handlePan:(UIPanGestureRecognizer*) recognizer
+{
+    CGPoint translation = [recognizer translationInView:_leftDrawerView];
+    CGFloat x = recognizer.view.center.x + translation.x;
+    if (x > self.frame.size.width / 3.0f) {
+        return;
+    }
+    recognizer.view.center = CGPointMake(x, recognizer.view.center.y );
+    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
+    
+}
+
 
 -(void) initSearchView:(UIView *) rootView{
     _topBarRootView = [UIButton buttonWithType:UIButtonTypeCustom];
