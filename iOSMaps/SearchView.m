@@ -17,6 +17,8 @@
     
     UIButton *_searchButton;
     UIButton *_drawerSwitchButton;
+    
+    UITextField *_searchTextField;
 }
 @end
 
@@ -78,6 +80,12 @@
     
     //[_drawerSwitchButton addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
     [_topBarRootView addSubview:_drawerSwitchButton];
+    
+    
+    _searchTextField = [[UITextField alloc]init];
+    _searchTextField.frame = CGRectMake(_drawerSwitchButton.frame.origin.x + _drawerSwitchButton.frame.size.width + kMargin / 2.0f, kMargin / 2.0f, _searchButton.frame.origin.x - kMargin - _drawerSwitchButton.frame.size.width - kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin);
+    _searchTextField.placeholder = @"请输入关键字";
+    [_topBarRootView addSubview:_searchTextField];
     
     
     [self addSubview:_topBarRootView];
