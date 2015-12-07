@@ -17,7 +17,6 @@
 		3A4C405B1C11F8EC009B520C /* ic_qu_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40581C11F8EC009B520C /* ic_qu_search@2x.png */; };
 		3A4C405C1C11F8EC009B520C /* ic_qu_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40591C11F8EC009B520C /* ic_qu_search@3x.png */; };
 		3A4C40601C11FDEE009B520C /* LocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* LocationView.m */; };
-		3A4C40621C11FE01009B520C /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40611C11FE01009B520C /* LocationView.xib */; };
 		3A4C40671C120405009B520C /* ic_qu_direction_mylocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40641C120405009B520C /* ic_qu_direction_mylocation.png */; };
 		3A4C40681C120405009B520C /* ic_qu_direction_mylocation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40651C120405009B520C /* ic_qu_direction_mylocation@2x.png */; };
 		3A4C40691C120405009B520C /* ic_qu_direction_mylocation@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40661C120405009B520C /* ic_qu_direction_mylocation@3x.png */; };
@@ -47,7 +46,6 @@
 		3A4C40591C11F8EC009B520C /* ic_qu_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_search@3x.png"; sourceTree = "<group>"; };
 		3A4C405E1C11FDEE009B520C /* LocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationView.h; sourceTree = "<group>"; };
 		3A4C405F1C11FDEE009B520C /* LocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationView.m; sourceTree = "<group>"; };
-		3A4C40611C11FE01009B520C /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
 		3A4C40641C120405009B520C /* ic_qu_direction_mylocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_qu_direction_mylocation.png; sourceTree = "<group>"; };
 		3A4C40651C120405009B520C /* ic_qu_direction_mylocation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_direction_mylocation@2x.png"; sourceTree = "<group>"; };
 		3A4C40661C120405009B520C /* ic_qu_direction_mylocation@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_direction_mylocation@3x.png"; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 				4DCD33381C11915000F68262 /* iOSMaps.xcdatamodeld */,
 				4DCD332C1C11915000F68262 /* Supporting Files */,
 				3A4C404A1C11F55F009B520C /* SearchView.xib */,
-				3A4C40611C11FE01009B520C /* LocationView.xib */,
 			);
 			path = iOSMaps;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 				3A4C40551C11F8DE009B520C /* ic_qu_menu_grabber@2x.png in Resources */,
 				3A69DBAF1C13C07600EABC79 /* launcher.png in Resources */,
 				3A4C406D1C12044A009B520C /* button_background.png in Resources */,
-				3A4C40621C11FE01009B520C /* LocationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -456,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -468,11 +464,14 @@
 			baseConfigurationReference = FD2D0A083A325F260A4E512E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSMaps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andforce.iOSMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -481,11 +480,14 @@
 			baseConfigurationReference = 58F9DC11FC3E7E9A622A2C41 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSMaps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andforce.iOSMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocationView : UIView
+@interface LocationView : UIButton
 
 +(id) locationView: (UIView *) rootView;
+
 - (IBAction)showMyLocation:(UIButton *)sender;
 
 @end

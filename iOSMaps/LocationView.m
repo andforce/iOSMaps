@@ -8,15 +8,26 @@
 
 #import "LocationView.h"
 
+#define kViewR 50
+#define kViewMargin 25
+
 @implementation LocationView
 
 +(LocationView *)locationView: (UIView *) rootView{
 
-    LocationView *locationView = [[NSBundle mainBundle]loadNibNamed:@"LocationView" owner:nil options:nil][0];
+    LocationView *shadowView=[[LocationView alloc] initWithFrame:CGRectMake(rootView.frame.size.width - kViewR - kViewMargin, rootView.frame.size.height - kViewR - kViewMargin, kViewR,  kViewR)];
+    shadowView.backgroundColor = [UIColor whiteColor];
     
-    locationView.frame = CGRectMake(rootView.frame.size.width - 50, rootView.frame.size.height - 50, locationView.frame.size.width, locationView.frame.size.height);
-    
-    return locationView;
+    //设置View圆角
+    shadowView.layer.cornerRadius = kViewR / 2.0;
+    // 阴影的颜色
+    shadowView.layer.shadowColor = [[UIColor blackColor]CGColor];
+    // 阴影的透明度
+    shadowView.layer.shadowOpacity = 0.5f;
+    //设置View Shadow的偏移量
+    shadowView.layer.shadowOffset = CGSizeMake(0, 0.5f);
+
+    return shadowView;
 }
 
 - (IBAction)showMyLocation:(UIButton *)sender {
