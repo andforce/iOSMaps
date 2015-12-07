@@ -28,11 +28,8 @@
 - (id)init:(UIView *)rootView{
     if (self == [super init]) {
         
-        self.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
-        
         [self initWhiteBgView:rootView];
         [self initSearchView:rootView];
-        
         [self initLeftDrawerView:rootView];
         
     }
@@ -46,7 +43,7 @@
     _whiteBgView.backgroundColor = [UIColor whiteColor];
     
     
-    [self addSubview:_whiteBgView];
+    [rootView addSubview:_whiteBgView];
 }
 
 -(void) initLeftDrawerView:(UIView*) rootView{
@@ -68,14 +65,14 @@
     [_leftDrawerView addGestureRecognizer:panGestureRecognizer];
     
     
-    [self addSubview:_leftDrawerView];
+    [rootView addSubview:_leftDrawerView];
 }
 
 - (void) handlePan:(UIPanGestureRecognizer*) recognizer
 {
     CGPoint translation = [recognizer translationInView:_leftDrawerView];
     CGFloat x = recognizer.view.center.x + translation.x;
-    if (x > self.frame.size.width / 3.0f) {
+    if (x > self.superview.frame.size.width / 3.0f) {
         return;
     }
     //recognizer.view.center = CGPointMake(x, recognizer.view.center.y );
@@ -157,7 +154,7 @@
     [_topBarRootView addSubview:_searchTextField];
     
     
-    [self addSubview:_topBarRootView];
+    [rootView addSubview:_topBarRootView];
 }
 
 - (void) showLeftDrawer{
@@ -182,10 +179,10 @@
 -(void)showOrHideWhiteBgView{
     [UIView beginAnimations:nil context:nil];
     CGRect currentRect = _whiteBgView.frame;
-    if (currentRect.origin.y == self.frame.size.height) {
+    if (currentRect.origin.y == self.superview.frame.size.height) {
         currentRect.origin.y = 0;
     } else{
-        currentRect.origin.y = self.frame.size.height;
+        currentRect.origin.y = self.superview.frame.size.height;
     }
     _whiteBgView.frame = currentRect;
     

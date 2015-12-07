@@ -35,8 +35,6 @@
     [self.view addSubview:searchView];
     
 
-    
-
     // 定位
     [self startLocation];
 }
