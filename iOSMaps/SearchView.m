@@ -35,8 +35,6 @@
         
         [self initLeftDrawerView:rootView];
         
-        //[_topBarRootView addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
-        
     }
     return self;
 }
@@ -76,6 +74,25 @@
     }
     recognizer.view.center = CGPointMake(x, recognizer.view.center.y );
     [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        
+//        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
+//        CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
+//        CGFloat slideMult = magnitude / 200;
+//        NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
+//        
+//        float slideFactor = 0.1 * slideMult; // Increase for more of a slide
+//        CGPoint finalPoint = CGPointMake(recognizer.view.center.x + (velocity.x * slideFactor),
+//                                         recognizer.view.center.y + (velocity.y * slideFactor));
+//        finalPoint.x = MIN(MAX(finalPoint.x, 0), _leftDrawerView.bounds.size.width);
+//        finalPoint.y = MIN(MAX(finalPoint.y, 0), _leftDrawerView.bounds.size.height);
+//        
+//        [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+//            recognizer.view.center = finalPoint;
+//        } completion:nil];
+        [self hideLeftDrawer];
+    }
     
 }
 
@@ -135,7 +152,7 @@
 - (void) hideLeftDrawer{
     [UIView beginAnimations:nil context:nil];
     CGRect currentRect = _leftDrawerView.frame;
-    currentRect.origin.x = _leftDrawerView.frame.size.width;
+    currentRect.origin.x = -_leftDrawerView.frame.size.width;
     _leftDrawerView.frame = currentRect;
     
     [UIView commitAnimations];
