@@ -9,10 +9,14 @@
 #import "SearchView.h"
 
 #define kViewHeight 50
+#define kMargin 6
 
 @interface SearchView (){
     UIView *_whiteBgView;
-    UIButton *_myButton;
+    UIView *_topBarRootView;
+    
+    UIButton *_searchButton;
+    UIButton *_drawerSwitchButton;
 }
 @end
 
@@ -26,7 +30,7 @@
         [self initWhiteBgView:rootView];
         [self initSearchView:rootView];
         
-        [_myButton addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
+        //[_topBarRootView addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return self;
@@ -43,22 +47,40 @@
 }
 
 -(void) initSearchView:(UIView *) rootView{
-    _myButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _topBarRootView = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    _myButton.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
-    _myButton.backgroundColor = [UIColor whiteColor];
+    _topBarRootView.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
+    _topBarRootView.backgroundColor = [UIColor whiteColor];
     
     //设置View圆角
-    _myButton.layer.cornerRadius = 2.0f;
+    _topBarRootView.layer.cornerRadius = 2.0f;
     // 阴影的颜色
-    _myButton.layer.shadowColor = [[UIColor blackColor]CGColor];
+    _topBarRootView.layer.shadowColor = [[UIColor blackColor]CGColor];
     // 阴影的透明度
-    _myButton.layer.shadowOpacity = 0.3f;
-    
+    _topBarRootView.layer.shadowOpacity = 0.3f;
     //设置View Shadow的偏移量
-    _myButton.layer.shadowOffset = CGSizeMake(0, 0.5f);
+    _topBarRootView.layer.shadowOffset = CGSizeMake(0, 0.5f);
     
-    [self addSubview:_myButton];
+    
+    _searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _searchButton.frame = CGRectMake(_topBarRootView.frame.size.width - _topBarRootView.frame.size.height + kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
+    UIImage *searchImage = [UIImage imageNamed:@"ic_qu_search"];
+    [_searchButton setImage:searchImage forState:UIControlStateNormal];
+    
+    [_searchButton addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
+    [_topBarRootView addSubview:_searchButton];
+    
+    
+    _drawerSwitchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _drawerSwitchButton.frame = CGRectMake(kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
+    UIImage *srawerImage = [UIImage imageNamed:@"ic_qu_menu_grabber"];
+    [_drawerSwitchButton setImage:srawerImage forState:UIControlStateNormal];
+    
+    //[_drawerSwitchButton addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
+    [_topBarRootView addSubview:_drawerSwitchButton];
+    
+    
+    [self addSubview:_topBarRootView];
 }
 
 -(void)showOrHideWhiteBgView{

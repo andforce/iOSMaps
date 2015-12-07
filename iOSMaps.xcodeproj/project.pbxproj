@@ -23,7 +23,6 @@
 		3A4C406E1C12044A009B520C /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C406B1C12044A009B520C /* button_background@2x.png */; };
 		3A4C406F1C12044A009B520C /* button_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C406C1C12044A009B520C /* button_background@3x.png */; };
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
-		3A69DBAF1C13C07600EABC79 /* launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A69DBAE1C13C07600EABC79 /* launcher.png */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
 		4DCD33311C11915000F68262 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33301C11915000F68262 /* AppDelegate.m */; };
 		4DCD33341C11915000F68262 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33331C11915000F68262 /* ViewController.m */; };
@@ -52,7 +51,6 @@
 		3A4C406C1C12044A009B520C /* button_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@3x.png"; sourceTree = "<group>"; };
 		3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
 		3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
-		3A69DBAE1C13C07600EABC79 /* launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher.png; sourceTree = "<group>"; };
 		4DCD33291C11915000F68262 /* iOSMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD332D1C11915000F68262 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DCD332F1C11915000F68262 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 		4DCD332C1C11915000F68262 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A69DBAE1C13C07600EABC79 /* launcher.png */,
 				3A4C40631C1203EE009B520C /* LocationViewImages */,
 				3A4C40501C11F8CB009B520C /* SearchViewImages */,
 				4DCD332D1C11915000F68262 /* main.m */,
@@ -283,7 +280,6 @@
 				3A4C40691C120405009B520C /* ic_qu_direction_mylocation@3x.png in Resources */,
 				3A4C40681C120405009B520C /* ic_qu_direction_mylocation@2x.png in Resources */,
 				3A4C40551C11F8DE009B520C /* ic_qu_menu_grabber@2x.png in Resources */,
-				3A69DBAF1C13C07600EABC79 /* launcher.png in Resources */,
 				3A4C406D1C12044A009B520C /* button_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
