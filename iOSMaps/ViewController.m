@@ -26,7 +26,7 @@
 
     
     // 顶部的搜索空间
-    SearchView *searchView = [SearchView searvchView];
+    SearchView *searchView = [[SearchView alloc] init: self.view];
     [self.view addSubview:searchView];
     
     

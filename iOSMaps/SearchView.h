@@ -10,6 +10,6 @@
 
 @interface SearchView : UIView
 
-+ (id) searvchView;
+- (id) init:(UIView *)rootView;
 
 @end
