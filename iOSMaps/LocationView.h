@@ -10,7 +10,7 @@
 
 @interface LocationView : UIButton
 
-+(id) locationView: (UIView *) rootView;
+- (id) init: (UIView *) rootView;
 
 - (IBAction)showMyLocation:(UIButton *)sender;
 

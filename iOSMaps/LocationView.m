@@ -13,21 +13,36 @@
 
 @implementation LocationView
 
-+(LocationView *)locationView: (UIView *) rootView{
 
-    LocationView *shadowView=[[LocationView alloc] initWithFrame:CGRectMake(rootView.frame.size.width - kViewR - kViewMargin, rootView.frame.size.height - kViewR - kViewMargin, kViewR,  kViewR)];
-    shadowView.backgroundColor = [UIColor whiteColor];
-    
-    //设置View圆角
-    shadowView.layer.cornerRadius = kViewR / 2.0;
-    // 阴影的颜色
-    shadowView.layer.shadowColor = [[UIColor blackColor]CGColor];
-    // 阴影的透明度
-    shadowView.layer.shadowOpacity = 0.5f;
-    //设置View Shadow的偏移量
-    shadowView.layer.shadowOffset = CGSizeMake(0, 0.5f);
+-(id) init: (UIView *) rootView{
+    if (self == [super init]) {
 
-    return shadowView;
+        self.frame = CGRectMake(rootView.frame.size.width - kViewR - kViewMargin, rootView.frame.size.height - kViewR - kViewMargin, kViewR,  kViewR);
+        self.backgroundColor = [UIColor whiteColor];
+        
+        //设置View圆角
+        self.layer.cornerRadius = kViewR / 2.0;
+        // 阴影的颜色
+        self.layer.shadowColor = [[UIColor blackColor]CGColor];
+        // 阴影的透明度
+        self.layer.shadowOpacity = 0.3f;
+        
+        //设置View Shadow的偏移量
+        self.layer.shadowOffset = CGSizeMake(0, 0.5f);
+        
+        [self addTarget:self action:@selector(changeToHighlight:) forControlEvents:UIControlEventTouchDown];
+        [self addTarget:self action:@selector(changeToNormal:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return self;
+}
+
+
+- (void) changeToHighlight: (LocationView *) sender{
+    sender.layer.shadowOpacity = 0.7;
+}
+
+-(void) changeToNormal: (LocationView *) sender{
+    sender.layer.shadowOpacity = 0.3;
 }
 
 - (IBAction)showMyLocation:(UIButton *)sender {
