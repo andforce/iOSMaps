@@ -78,7 +78,12 @@
     if (x > self.frame.size.width / 3.0f) {
         return;
     }
-    recognizer.view.center = CGPointMake(x, recognizer.view.center.y );
+    //recognizer.view.center = CGPointMake(x, recognizer.view.center.y );
+    CGPoint p = recognizer.view.center;
+    p.x = x;
+    recognizer.view.center = p;
+    
+    
     [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
     
     if (recognizer.state == UIGestureRecognizerStateEnded) {
