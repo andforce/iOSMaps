@@ -12,10 +12,6 @@
 
 @implementation SearchView
 
-+ (SearchView *)searvchView{
-    return [[NSBundle mainBundle] loadNibNamed:@"SearchView" owner:nil options:nil][0];
-}
-
 - (id)init:(UIView *)rootView{
     if (self == [super init]) {
         self.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
