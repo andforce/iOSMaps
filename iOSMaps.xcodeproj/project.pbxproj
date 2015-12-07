@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
-		3A4C404B1C11F55F009B520C /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C404A1C11F55F009B520C /* SearchView.xib */; };
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40541C11F8DE009B520C /* ic_qu_menu_grabber.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40511C11F8DE009B520C /* ic_qu_menu_grabber.png */; };
 		3A4C40551C11F8DE009B520C /* ic_qu_menu_grabber@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40521C11F8DE009B520C /* ic_qu_menu_grabber@2x.png */; };
@@ -35,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A4C404A1C11F55F009B520C /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		3A4C404D1C11F59B009B520C /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		3A4C40511C11F8DE009B520C /* ic_qu_menu_grabber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_qu_menu_grabber.png; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				4DCD33401C11915000F68262 /* Info.plist */,
 				4DCD33381C11915000F68262 /* iOSMaps.xcdatamodeld */,
 				4DCD332C1C11915000F68262 /* Supporting Files */,
-				3A4C404A1C11F55F009B520C /* SearchView.xib */,
 			);
 			path = iOSMaps;
 			sourceTree = "<group>";
@@ -274,7 +271,6 @@
 			files = (
 				3A4C406E1C12044A009B520C /* button_background@2x.png in Resources */,
 				3A4C405B1C11F8EC009B520C /* ic_qu_search@2x.png in Resources */,
-				3A4C404B1C11F55F009B520C /* SearchView.xib in Resources */,
 				3A4C405A1C11F8EC009B520C /* ic_qu_search.png in Resources */,
 				3A4C40561C11F8DE009B520C /* ic_qu_menu_grabber@3x.png in Resources */,
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,

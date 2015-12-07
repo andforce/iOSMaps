@@ -25,16 +25,16 @@
     [super viewDidLoad];
 
     
+    // 右下角的定位按钮
+    LocationView *locationView = [[LocationView alloc] init:self.view];
+    [self.view addSubview:locationView];
+    
+    
     // 顶部的搜索空间
     SearchView *searchView = [[SearchView alloc] init: self.view];
     [self.view addSubview:searchView];
     
-    
-    // 右下角的定位按钮
-    LocationView *locationView = [[LocationView alloc] init:self.view];
 
-    
-    [self.view addSubview:locationView];
     
 
     // 定位
