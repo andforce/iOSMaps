@@ -13,6 +13,7 @@
 
 @interface SearchView (){
     UIView *_whiteBgView;
+    UIView *_leftDrawerView;
     UIView *_topBarRootView;
     
     UIButton *_searchButton;
@@ -32,6 +33,8 @@
         [self initWhiteBgView:rootView];
         [self initSearchView:rootView];
         
+        [self initLeftDrawerView:rootView];
+        
         //[_topBarRootView addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
         
     }
@@ -46,6 +49,17 @@
     
     
     [self addSubview:_whiteBgView];
+}
+
+-(void) initLeftDrawerView:(UIView*) rootView{
+    _leftDrawerView = [[UIView alloc]init];
+    
+    CGFloat with = rootView.frame.size.width * 2 / 3;
+    _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
+    _leftDrawerView.backgroundColor = [UIColor whiteColor];
+    
+    
+    [self addSubview:_leftDrawerView];
 }
 
 -(void) initSearchView:(UIView *) rootView{
@@ -78,7 +92,7 @@
     UIImage *srawerImage = [UIImage imageNamed:@"ic_qu_menu_grabber"];
     [_drawerSwitchButton setImage:srawerImage forState:UIControlStateNormal];
     
-    //[_drawerSwitchButton addTarget:self action:@selector(showOrHideWhiteBgView) forControlEvents:UIControlEventTouchUpInside];
+    [_drawerSwitchButton addTarget:self action:@selector(showLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
     [_topBarRootView addSubview:_drawerSwitchButton];
     
     
@@ -89,6 +103,20 @@
     
     
     [self addSubview:_topBarRootView];
+}
+
+- (void) showLeftDrawer{
+    [UIView beginAnimations:nil context:nil];
+    CGRect currentRect = _leftDrawerView.frame;
+    
+    if (currentRect.origin.x == -_leftDrawerView.frame.size.width) {
+        currentRect.origin.x = 0;
+    } else{
+        currentRect.origin.x = -_leftDrawerView.frame.size.width;
+    }
+    _leftDrawerView.frame = currentRect;
+    
+    [UIView commitAnimations];
 }
 
 -(void)showOrHideWhiteBgView{
