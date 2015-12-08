@@ -10,6 +10,4 @@
 
 @interface SearchView : UIView
 
-- (id) init:(UIView *)rootView;
-
 @end

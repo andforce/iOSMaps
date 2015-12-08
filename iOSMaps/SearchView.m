@@ -7,17 +7,12 @@
 //
 
 #import "SearchView.h"
-#import "LeftDrawerView.h"
 
 
 #define kViewHeight 50
 #define kMargin 6
 
 @interface SearchView ()<UITextFieldDelegate>{
-    UIView *_whiteBgView;
-    
-    LeftDrawerView *_leftDrawerView;
-    
     UIView *_topBarRootView;
     
     UIButton *_searchButton;
@@ -29,37 +24,49 @@
 
 @implementation SearchView
 
-- (id)init:(UIView *)rootView{
+- (id)init {
     if (self == [super init]) {
         
-        [self initWhiteBgView:rootView];
-        [self initSearchView:rootView];
+        [self initWhiteBgView];
+        [self initSearchView];
         
-        _leftDrawerView = [[LeftDrawerView alloc]init];
-        [rootView addSubview:_leftDrawerView];
-
     }
     return self;
 }
 
 
--(void) initWhiteBgView:(UIView *) rootView{
-    _whiteBgView = [[UIView alloc]init];
+-(void) initWhiteBgView{
+
+    self.backgroundColor = [UIColor whiteColor];
+    self.alpha = 0.f;
+}
+
+-(void)didMoveToSuperview{
+    UIView *rootView = [self superview];
     
-    _whiteBgView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
-    _whiteBgView.backgroundColor = [UIColor whiteColor];
-    _whiteBgView.alpha = 0.f;
+    _topBarRootView.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
     
     
-    [rootView addSubview:_whiteBgView];
+    self.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+    
+    
+    _searchButton.frame = CGRectMake(_topBarRootView.frame.size.width - _topBarRootView.frame.size.height + kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
+    
+    
+    _drawerSwitchButton.frame = CGRectMake(kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
+    
+    _searchTextField.frame = CGRectMake(_topBarRootView.frame.origin.x + _drawerSwitchButton.frame.size.width + kMargin / 2.0f, kMargin / 2.0f, _searchButton.frame.origin.x - kMargin - _drawerSwitchButton.frame.size.width - kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin);
+    
+    [rootView addSubview:_topBarRootView];
 }
 
 
 
--(void) initSearchView:(UIView *) rootView{
-    _topBarRootView = [UIButton buttonWithType:UIButtonTypeCustom];
+-(void) initSearchView{
     
-    _topBarRootView.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
+
+    _topBarRootView = [[UIView alloc]init];
+    
     _topBarRootView.backgroundColor = [UIColor whiteColor];
     
     //设置View圆角
@@ -73,7 +80,7 @@
     
     
     _searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _searchButton.frame = CGRectMake(_topBarRootView.frame.size.width - _topBarRootView.frame.size.height + kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
+
     UIImage *searchImage = [UIImage imageNamed:@"ic_qu_search"];
     [_searchButton setImage:searchImage forState:UIControlStateNormal];
     
@@ -82,29 +89,24 @@
     
     
     _drawerSwitchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _drawerSwitchButton.frame = CGRectMake(kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
+
     UIImage *srawerImage = [UIImage imageNamed:@"ic_qu_menu_grabber"];
     [_drawerSwitchButton setImage:srawerImage forState:UIControlStateNormal];
     
-    [_drawerSwitchButton addTarget:self action:@selector(openLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
+    //[_drawerSwitchButton addTarget:self action:@selector(openLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
     [_topBarRootView addSubview:_drawerSwitchButton];
     
     
     _searchTextField = [[UITextField alloc]init];
-    _searchTextField.frame = CGRectMake(_drawerSwitchButton.frame.origin.x + _drawerSwitchButton.frame.size.width + kMargin / 2.0f, kMargin / 2.0f, _searchButton.frame.origin.x - kMargin - _drawerSwitchButton.frame.size.width - kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin);
+
     _searchTextField.placeholder = @"请输入关键字";
 
     [_searchTextField setDelegate:self];
     
     [_topBarRootView addSubview:_searchTextField];
-    
-    
-    [rootView addSubview:_topBarRootView];
+
 }
 
--(void)openLeftDrawer{
-    [_leftDrawerView open];
-}
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     [self showOrHideWhiteBgViewWithAnim];
@@ -119,7 +121,7 @@
 -(void)showOrHideWhiteBgViewWithAnim{
     
     [UIView beginAnimations:nil context:nil];
-    _whiteBgView.alpha = _whiteBgView.alpha > 0.f ? 0.f : 1.f;
+    self.alpha = self.alpha > 0.f ? 0.f : 1.f;
     [UIView commitAnimations];
 }
 

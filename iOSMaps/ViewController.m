@@ -11,6 +11,7 @@
 
 #import "SearchView.h"
 #import "LocationView.h"
+#import "LeftDrawerView.h"
 
 
 @interface ViewController (){
@@ -31,9 +32,12 @@
     
     
     // 顶部的搜索空间
-    SearchView *searchView = [[SearchView alloc] init: self.view];
+    SearchView *searchView = [[SearchView alloc] init];
     [self.view addSubview:searchView];
     
+    
+    LeftDrawerView *leftDrawerView = [[LeftDrawerView alloc]init];
+    [self.view addSubview:leftDrawerView];
 
     // 定位
     [self startLocation];
