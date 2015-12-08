@@ -7,6 +7,8 @@
 //
 
 #import "SearchView.h"
+#import "LeftDrawerView.h"
+
 
 #define kViewHeight 50
 #define kMargin 6
@@ -14,8 +16,7 @@
 @interface SearchView ()<UITextFieldDelegate>{
     UIView *_whiteBgView;
     
-    UIView *_leftDrawerView;
-    UIButton *_leftDrawerMaskView;
+    LeftDrawerView *_leftDrawerView;
     
     UIView *_topBarRootView;
     
@@ -33,63 +34,12 @@
         
         [self initWhiteBgView:rootView];
         [self initSearchView:rootView];
-        [self initLeftDrawerView:rootView];
         
-        self.frame = CGRectMake(0, 0, 5, rootView.frame.size.height);
-        
-        [rootView addSubview:self];
-        
-        UIScreenEdgePanGestureRecognizer *edgePab = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handlerEdgePan:)];
-        edgePab.edges = UIRectEdgeLeft;
-        
-        [self addGestureRecognizer:edgePab];
-        
-        
+        _leftDrawerView = [[LeftDrawerView alloc]init];
+        [rootView addSubview:_leftDrawerView];
+
     }
     return self;
-}
-
-
--(void) handlerEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
-    
-    CGPoint translation = [recognizer translationInView:_leftDrawerView];
-    
-    CGFloat x = _leftDrawerView.center.x + translation.x;
-    
-    if (x > self.superview.frame.size.width / 3.0f) {
-        return;
-    }
-    
-    if (translation.x > 0) {
-        _leftDrawerView.layer.shadowOpacity = 0.5f;
-    }
-    
-    [UIView animateWithDuration:0.05 animations:^{
-        CGPoint p = recognizer.view.center;
-        p.x = x;
-        _leftDrawerView.center = p;
-
-        _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
-        
-    }];
-    
-    
-    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
-        
-        NSLog(@"Touch ===   %f", velocity.x);
-        
-        if (velocity.x > 0) {
-            [self showLeftDrawerWithAdim];
-        } else{
-            [self hideLeftDrawerWithAnim];
-        }
-    }
-
-    
-    NSLog(@"handlerEdgePan");
 }
 
 
@@ -104,124 +54,6 @@
     [rootView addSubview:_whiteBgView];
 }
 
--(void) initLeftDrawerView:(UIView*) rootView{
-    
-    _leftDrawerMaskView = [[UIButton alloc]init];
-    _leftDrawerMaskView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
-    _leftDrawerMaskView.backgroundColor = [UIColor blackColor];
-    _leftDrawerMaskView.alpha = 0.0f;
-    
-
-    [_leftDrawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
-
-    UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
-                                                    initWithTarget:self
-                                                    action:@selector(handleMaskPan:)];
-    [_leftDrawerMaskView addGestureRecognizer:maskPan];
-    
-    [rootView addSubview:_leftDrawerMaskView];
-    
-    
-    _leftDrawerView = [[UIView alloc]init];
-    
-    CGFloat with = rootView.frame.size.width * 2 / 3;
-    _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
-    _leftDrawerView.backgroundColor = [UIColor whiteColor];
-    
-    _leftDrawerView.layer.shadowColor = [[UIColor blackColor]CGColor];
-    // 阴影的透明度
-    _leftDrawerView.layer.shadowOpacity = 0.f;
-    //设置View Shadow的偏移量
-    _leftDrawerView.layer.shadowOffset = CGSizeMake(5.f, 0);
-    
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
-                                                    initWithTarget:self
-                                                    action:@selector(handlePan:)];
-    [_leftDrawerView addGestureRecognizer:panGestureRecognizer];
-    
-    
-    [rootView addSubview:_leftDrawerView];
-}
-
-
-- (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
-    
-    
-    CGPoint translation = [recognizer translationInView:_leftDrawerView];
-    
-    
-    CGFloat x = _leftDrawerView.center.x + translation.x ;
-    
-    NSLog(@" trans x = %f,    center = %f       touch x = %f", x, _leftDrawerView.center.x, translation.x);
-    if (x < _leftDrawerView.frame.size.width / 2.0f) {
-        
-        [UIView animateWithDuration:0.05 animations:^{
-            CGPoint p = recognizer.view.center;
-            p.x = x;
-            _leftDrawerView.center = p;
-            
-            _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
-            
-            NSLog(@" trans x =============================%f" , _leftDrawerView.frame.origin.x);
-            
-            
-        }];
-        
-    }
-    
-    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
-        
-        NSLog(@"Touch ===   %f", velocity.x);
-        
-        if (velocity.x > 0) {
-            [self showLeftDrawerWithAdim];
-        } else{
-            [self hideLeftDrawerWithAnim];
-        }
-    }
-    
-}
-
-
-- (void) handlePan:(UIPanGestureRecognizer*) recognizer
-{
-    CGPoint translation = [recognizer translationInView:recognizer.view];
-    CGFloat x = recognizer.view.center.x + translation.x;
-    if (x > self.superview.frame.size.width / 3.0f) {
-        return;
-    }
-
-    if (translation.x >0 ) {
-        _leftDrawerView.layer.shadowOpacity = 0.5f;
-    }
-    
-    [UIView animateWithDuration:0.05 animations:^{
-        CGPoint p = recognizer.view.center;
-        p.x = x;
-        _leftDrawerView.center = p;
-        _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
-
-    }];
-
-    
-    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
-        
-        NSLog(@"Touch ===   %f", velocity.x);
-        
-        if (velocity.x > 0) {
-            [self showLeftDrawerWithAdim];
-        } else{
-            [self hideLeftDrawerWithAnim];
-        }
-    }
-    
-}
 
 
 -(void) initSearchView:(UIView *) rootView{
@@ -254,7 +86,7 @@
     UIImage *srawerImage = [UIImage imageNamed:@"ic_qu_menu_grabber"];
     [_drawerSwitchButton setImage:srawerImage forState:UIControlStateNormal];
     
-    [_drawerSwitchButton addTarget:self action:@selector(showLeftDrawerWithAdim) forControlEvents:UIControlEventTouchUpInside];
+    [_drawerSwitchButton addTarget:self action:@selector(openLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
     [_topBarRootView addSubview:_drawerSwitchButton];
     
     
@@ -270,6 +102,9 @@
     [rootView addSubview:_topBarRootView];
 }
 
+-(void)openLeftDrawer{
+    [_leftDrawerView open];
+}
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     [self showOrHideWhiteBgViewWithAnim];
@@ -280,34 +115,6 @@
     [self showOrHideWhiteBgViewWithAnim];
     return YES;
 }
-
-- (void) showLeftDrawerWithAdim{
-    [UIView beginAnimations:nil context:nil];
-    CGRect currentRect = _leftDrawerView.frame;
-    currentRect.origin.x = 0;
-    _leftDrawerView.frame = currentRect;
-    
-    _leftDrawerMaskView.alpha =  0.6f;
-    
-    _leftDrawerView.layer.shadowOpacity = 0.5f;
-    
-    [UIView commitAnimations];
-}
-
-
--(void) hideLeftDrawerWithAnim{
-    [UIView beginAnimations:nil context:nil];
-        CGRect currentRect = _leftDrawerView.frame;
-        currentRect.origin.x = -_leftDrawerView.frame.size.width;
-        _leftDrawerView.frame = currentRect;
-    
-    _leftDrawerView.layer.shadowOpacity = 0.f;
-    
-    _leftDrawerMaskView.alpha =  0.0f;
-    [UIView commitAnimations];
-}
-
-
 
 -(void)showOrHideWhiteBgViewWithAnim{
     
