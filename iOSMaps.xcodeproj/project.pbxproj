@@ -15,7 +15,7 @@
 		3A4C405A1C11F8EC009B520C /* ic_qu_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40571C11F8EC009B520C /* ic_qu_search.png */; };
 		3A4C405B1C11F8EC009B520C /* ic_qu_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40581C11F8EC009B520C /* ic_qu_search@2x.png */; };
 		3A4C405C1C11F8EC009B520C /* ic_qu_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40591C11F8EC009B520C /* ic_qu_search@3x.png */; };
-		3A4C40601C11FDEE009B520C /* LocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* LocationView.m */; };
+		3A4C40601C11FDEE009B520C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* CircleView.m */; };
 		3A4C40671C120405009B520C /* ic_qu_direction_mylocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40641C120405009B520C /* ic_qu_direction_mylocation.png */; };
 		3A4C40681C120405009B520C /* ic_qu_direction_mylocation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40651C120405009B520C /* ic_qu_direction_mylocation@2x.png */; };
 		3A4C40691C120405009B520C /* ic_qu_direction_mylocation@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40661C120405009B520C /* ic_qu_direction_mylocation@3x.png */; };
@@ -42,8 +42,8 @@
 		3A4C40571C11F8EC009B520C /* ic_qu_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_qu_search.png; sourceTree = "<group>"; };
 		3A4C40581C11F8EC009B520C /* ic_qu_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_search@2x.png"; sourceTree = "<group>"; };
 		3A4C40591C11F8EC009B520C /* ic_qu_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_search@3x.png"; sourceTree = "<group>"; };
-		3A4C405E1C11FDEE009B520C /* LocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationView.h; sourceTree = "<group>"; };
-		3A4C405F1C11FDEE009B520C /* LocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationView.m; sourceTree = "<group>"; };
+		3A4C405E1C11FDEE009B520C /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		3A4C405F1C11FDEE009B520C /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		3A4C40641C120405009B520C /* ic_qu_direction_mylocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_qu_direction_mylocation.png; sourceTree = "<group>"; };
 		3A4C40651C120405009B520C /* ic_qu_direction_mylocation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_direction_mylocation@2x.png"; sourceTree = "<group>"; };
 		3A4C40661C120405009B520C /* ic_qu_direction_mylocation@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_qu_direction_mylocation@3x.png"; sourceTree = "<group>"; };
@@ -124,8 +124,8 @@
 		3A4C405D1C11FDDA009B520C /* CircleView */ = {
 			isa = PBXGroup;
 			children = (
-				3A4C405E1C11FDEE009B520C /* LocationView.h */,
-				3A4C405F1C11FDEE009B520C /* LocationView.m */,
+				3A4C405E1C11FDEE009B520C /* CircleView.h */,
+				3A4C405F1C11FDEE009B520C /* CircleView.m */,
 			);
 			name = CircleView;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 				3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */,
 				4DCD33341C11915000F68262 /* ViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
-				3A4C40601C11FDEE009B520C /* LocationView.m in Sources */,
+				3A4C40601C11FDEE009B520C /* CircleView.m in Sources */,
 				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,
 				4D91A0CA1C16E6C300093EC6 /* LeftDrawerView.m in Sources */,
 				4DCD332E1C11915000F68262 /* main.m in Sources */,

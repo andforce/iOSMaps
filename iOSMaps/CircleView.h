@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocationView : UIButton
+@interface  CircleView: UIButton
+
+-(id) initWithCircleRadius:(int)radius;
 
 - (IBAction)showMyLocation:(UIButton *)sender;
 
