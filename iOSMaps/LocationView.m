@@ -32,6 +32,7 @@
         
         [self addTarget:self action:@selector(changeToHighlight:) forControlEvents:UIControlEventTouchDown];
         [self addTarget:self action:@selector(changeToNormal:) forControlEvents:UIControlEventTouchUpInside];
+        [self addTarget:self action:@selector(changeToNormal:) forControlEvents:UIControlEventTouchDragOutside];
     }
     return self;
 }
