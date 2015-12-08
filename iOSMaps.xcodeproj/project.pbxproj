@@ -121,13 +121,13 @@
 			name = SearchViewImages;
 			sourceTree = "<group>";
 		};
-		3A4C405D1C11FDDA009B520C /* Location */ = {
+		3A4C405D1C11FDDA009B520C /* CircleView */ = {
 			isa = PBXGroup;
 			children = (
 				3A4C405E1C11FDEE009B520C /* LocationView.h */,
 				3A4C405F1C11FDEE009B520C /* LocationView.m */,
 			);
-			name = Location;
+			name = CircleView;
 			sourceTree = "<group>";
 		};
 		3A4C40631C1203EE009B520C /* LocationViewImages */ = {
@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				4D91A0C71C16E69100093EC6 /* LeftDrawerView */,
-				3A4C405D1C11FDDA009B520C /* Location */,
+				3A4C405D1C11FDDA009B520C /* CircleView */,
 				3A4C404C1C11F566009B520C /* SearchView */,
 			);
 			name = Views;
