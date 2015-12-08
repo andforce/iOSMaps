@@ -10,8 +10,6 @@
 
 @interface LocationView : UIButton
 
-- (id) init: (UIView *) rootView;
-
 - (IBAction)showMyLocation:(UIButton *)sender;
 
 @end

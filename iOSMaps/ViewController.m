@@ -27,7 +27,7 @@
 
     
     // 右下角的定位按钮
-    LocationView *locationView = [[LocationView alloc] init:self.view];
+    LocationView *locationView = [[LocationView alloc] init];
     [self.view addSubview:locationView];
     
     

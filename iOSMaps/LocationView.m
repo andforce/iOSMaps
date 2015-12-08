@@ -14,12 +14,9 @@
 @implementation LocationView
 
 
--(id) init: (UIView *) rootView{
+-(id) init{
     if (self == [super init]) {
-
-        self.frame = CGRectMake(rootView.frame.size.width - kViewR - kViewMargin, rootView.frame.size.height - kViewR - kViewMargin, kViewR,  kViewR);
         self.backgroundColor = [UIColor whiteColor];
-        
         //设置View圆角
         self.layer.cornerRadius = kViewR / 2.0;
         // 阴影的颜色
@@ -35,8 +32,15 @@
         [self addTarget:self action:@selector(changeToNormal:) forControlEvents:UIControlEventTouchDragOutside];
     }
     return self;
+
 }
 
+-(void)didMoveToSuperview{
+    
+    UIView *rootView = [self superview];
+    
+    self.frame = CGRectMake(rootView.frame.size.width - kViewR - kViewMargin, rootView.frame.size.height - kViewR - kViewMargin, kViewR,  kViewR);
+}
 
 - (void) changeToHighlight: (LocationView *) sender{
     sender.layer.shadowOpacity = 0.7;
