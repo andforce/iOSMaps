@@ -68,7 +68,8 @@
         CGPoint p = recognizer.view.center;
         p.x = x;
         _leftDrawerView.center = p;
-        _leftDrawerMaskView.alpha = x / _leftDrawerView.frame.size.width * 0.7f;
+
+        _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
         
     }];
     
@@ -158,9 +159,9 @@
             p.x = x;
             _leftDrawerView.center = p;
             
-            _leftDrawerMaskView.alpha = x / _leftDrawerView.frame.size.width * 0.7f;
+            _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
             
-            NSLog(@" trans x =============================");
+            NSLog(@" trans x =============================%f" , _leftDrawerView.frame.origin.x);
             
             
         }];
@@ -200,7 +201,7 @@
         CGPoint p = recognizer.view.center;
         p.x = x;
         _leftDrawerView.center = p;
-        _leftDrawerMaskView.alpha = x / _leftDrawerView.frame.size.width * 0.7f;
+        _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
 
     }];
 
@@ -273,7 +274,7 @@
     currentRect.origin.x = 0;
     _leftDrawerView.frame = currentRect;
     
-    _leftDrawerMaskView.alpha =  0.7f;
+    _leftDrawerMaskView.alpha =  0.6f;
     
     _leftDrawerView.layer.shadowOpacity = 0.5f;
     
