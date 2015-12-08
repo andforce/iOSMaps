@@ -13,7 +13,10 @@
 
 @interface SearchView (){
     UIView *_whiteBgView;
+    
     UIView *_leftDrawerView;
+    UIView *_leftDrawerMaskView;
+    
     UIView *_topBarRootView;
     
     UIButton *_searchButton;
@@ -32,9 +35,57 @@
         [self initSearchView:rootView];
         [self initLeftDrawerView:rootView];
         
+        self.frame = CGRectMake(0, 0, 5, rootView.frame.size.height);
+        
+        [rootView addSubview:self];
+        
+        UIScreenEdgePanGestureRecognizer *edgePab = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handlerEdgePan:)];
+        edgePab.edges = UIRectEdgeLeft;
+        
+        [self addGestureRecognizer:edgePab];
+        
+        
     }
     return self;
 }
+
+-(void) handlerEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
+    
+    CGPoint translation = [recognizer translationInView:_leftDrawerView];
+    
+    CGFloat x = _leftDrawerView.center.x + translation.x;
+    
+    if (x > self.superview.frame.size.width / 3.0f) {
+        return;
+    }
+    
+    [UIView animateWithDuration:0.05 animations:^{
+        CGPoint p = recognizer.view.center;
+        p.x = x;
+        _leftDrawerView.center = p;
+        _leftDrawerMaskView.alpha = x / _leftDrawerView.frame.size.width * 0.7f;
+        
+    }];
+    
+    
+    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
+        
+        NSLog(@"Touch ===   %f", velocity.x);
+        
+        if (velocity.x > 0) {
+            [self showLeftDrawerWithAdim];
+        } else{
+            [self hideLeftDrawerWithAnim];
+        }
+    }
+
+    
+    NSLog(@"handlerEdgePan");
+}
+
 
 -(void) initWhiteBgView:(UIView *) rootView{
     _whiteBgView = [[UIView alloc]init];
@@ -47,6 +98,14 @@
 }
 
 -(void) initLeftDrawerView:(UIView*) rootView{
+    
+    _leftDrawerMaskView = [[UIView alloc]init];
+    _leftDrawerMaskView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+    _leftDrawerMaskView.backgroundColor = [UIColor blackColor];
+    _leftDrawerMaskView.alpha = 0.0f;
+    [rootView addSubview:_leftDrawerMaskView];
+    
+    
     _leftDrawerView = [[UIView alloc]init];
     
     CGFloat with = rootView.frame.size.width * 2 / 3;
@@ -80,6 +139,8 @@
         CGPoint p = recognizer.view.center;
         p.x = x;
         recognizer.view.center = p;
+        
+        _leftDrawerMaskView.alpha = x / _leftDrawerView.frame.size.width * 0.7f;
 
     }];
 
@@ -152,6 +213,8 @@
     currentRect.origin.x = 0;
     _leftDrawerView.frame = currentRect;
     
+    _leftDrawerMaskView.alpha =  0.7f;
+    
     [UIView commitAnimations];
 }
 
@@ -161,6 +224,7 @@
         CGRect currentRect = _leftDrawerView.frame;
         currentRect.origin.x = -_leftDrawerView.frame.size.width;
         _leftDrawerView.frame = currentRect;
+    _leftDrawerMaskView.alpha =  0.0f;
     [UIView commitAnimations];
 }
 
