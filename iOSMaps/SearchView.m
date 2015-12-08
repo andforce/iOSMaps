@@ -15,7 +15,7 @@
     UIView *_whiteBgView;
     
     UIView *_leftDrawerView;
-    UIView *_leftDrawerMaskView;
+    UIButton *_leftDrawerMaskView;
     
     UIView *_topBarRootView;
     
@@ -49,6 +49,7 @@
     return self;
 }
 
+
 -(void) handlerEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
     
     CGPoint translation = [recognizer translationInView:_leftDrawerView];
@@ -57,6 +58,10 @@
     
     if (x > self.superview.frame.size.width / 3.0f) {
         return;
+    }
+    
+    if (translation.x > 0) {
+        _leftDrawerView.layer.shadowOpacity = 0.5f;
     }
     
     [UIView animateWithDuration:0.05 animations:^{
@@ -99,10 +104,19 @@
 
 -(void) initLeftDrawerView:(UIView*) rootView{
     
-    _leftDrawerMaskView = [[UIView alloc]init];
+    _leftDrawerMaskView = [[UIButton alloc]init];
     _leftDrawerMaskView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
     _leftDrawerMaskView.backgroundColor = [UIColor blackColor];
     _leftDrawerMaskView.alpha = 0.0f;
+    
+
+    [_leftDrawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
+
+    UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
+                                                    initWithTarget:self
+                                                    action:@selector(handleMaskPan:)];
+    [_leftDrawerMaskView addGestureRecognizer:maskPan];
+    
     [rootView addSubview:_leftDrawerMaskView];
     
     
@@ -114,9 +128,9 @@
     
     _leftDrawerView.layer.shadowColor = [[UIColor blackColor]CGColor];
     // 阴影的透明度
-    _leftDrawerView.layer.shadowOpacity = 0.3f;
+    _leftDrawerView.layer.shadowOpacity = 0.f;
     //设置View Shadow的偏移量
-    _leftDrawerView.layer.shadowOffset = CGSizeMake(0.5f, 0);
+    _leftDrawerView.layer.shadowOffset = CGSizeMake(5.f, 0);
     
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
                                                     initWithTarget:self
@@ -127,19 +141,65 @@
     [rootView addSubview:_leftDrawerView];
 }
 
+
+- (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
+    
+    
+    CGPoint translation = [recognizer translationInView:_leftDrawerView];
+    
+    
+    CGFloat x = _leftDrawerView.center.x + translation.x ;
+    
+    NSLog(@" trans x = %f,    center = %f       touch x = %f", x, _leftDrawerView.center.x, translation.x);
+    if (x < _leftDrawerView.frame.size.width / 2.0f) {
+        
+        [UIView animateWithDuration:0.05 animations:^{
+            CGPoint p = recognizer.view.center;
+            p.x = x;
+            _leftDrawerView.center = p;
+            
+            _leftDrawerMaskView.alpha = x / _leftDrawerView.frame.size.width * 0.7f;
+            
+            NSLog(@" trans x =============================");
+            
+            
+        }];
+        
+    }
+    
+    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
+        
+        NSLog(@"Touch ===   %f", velocity.x);
+        
+        if (velocity.x > 0) {
+            [self showLeftDrawerWithAdim];
+        } else{
+            [self hideLeftDrawerWithAnim];
+        }
+    }
+    
+}
+
+
 - (void) handlePan:(UIPanGestureRecognizer*) recognizer
 {
-    CGPoint translation = [recognizer translationInView:_leftDrawerView];
+    CGPoint translation = [recognizer translationInView:recognizer.view];
     CGFloat x = recognizer.view.center.x + translation.x;
     if (x > self.superview.frame.size.width / 3.0f) {
         return;
     }
 
+    if (translation.x >0 ) {
+        _leftDrawerView.layer.shadowOpacity = 0.5f;
+    }
+    
     [UIView animateWithDuration:0.05 animations:^{
         CGPoint p = recognizer.view.center;
         p.x = x;
-        recognizer.view.center = p;
-        
+        _leftDrawerView.center = p;
         _leftDrawerMaskView.alpha = x / _leftDrawerView.frame.size.width * 0.7f;
 
     }];
@@ -215,6 +275,8 @@
     
     _leftDrawerMaskView.alpha =  0.7f;
     
+    _leftDrawerView.layer.shadowOpacity = 0.5f;
+    
     [UIView commitAnimations];
 }
 
@@ -224,6 +286,9 @@
         CGRect currentRect = _leftDrawerView.frame;
         currentRect.origin.x = -_leftDrawerView.frame.size.width;
         _leftDrawerView.frame = currentRect;
+    
+    _leftDrawerView.layer.shadowOpacity = 0.f;
+    
     _leftDrawerMaskView.alpha =  0.0f;
     [UIView commitAnimations];
 }
