@@ -26,6 +26,8 @@
         edgePab.edges = UIRectEdgeLeft;
         
         [self addGestureRecognizer:edgePab];
+        
+        [self setEnadbled:YES];
 
     }
     return self;
@@ -66,8 +68,82 @@
 }
 
 
--(void) handlerEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
+
+
+- (void) showLeftDrawerWithAdim{
+    [UIView beginAnimations:nil context:nil];
     
+    [self setOpened:true];
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        CGRect currentRect = _leftDrawerView.frame;
+        currentRect.origin.x = 0;
+        _leftDrawerView.frame = currentRect;
+        
+        _leftDrawerMaskView.alpha =  0.6f;
+        
+        _leftDrawerView.layer.shadowOpacity = 0.5f;
+    } completion:^(BOOL finished) {
+        [self setOpened:finished];
+    }];
+
+}
+
+
+-(void) hideLeftDrawerWithAnim{
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        CGRect currentRect = _leftDrawerView.frame;
+        currentRect.origin.x = -_leftDrawerView.frame.size.width;
+        _leftDrawerView.frame = currentRect;
+        
+        _leftDrawerView.layer.shadowOpacity = 0.f;
+        
+        _leftDrawerMaskView.alpha =  0.0f;
+    } completion:^(BOOL finished) {
+        [self setOpened:!finished];
+    }];
+}
+
+
+-(void) initLeftDrawerAndMaskView{
+
+    _leftDrawerMaskView = [[UIButton alloc]init];
+    _leftDrawerMaskView.backgroundColor = [UIColor blackColor];
+    _leftDrawerMaskView.alpha = 0.0f;
+    
+    [_leftDrawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(handleMaskPan:)];
+    [_leftDrawerMaskView addGestureRecognizer:maskPan];
+    
+    
+    
+    _leftDrawerView = [[UIView alloc]init];
+    
+
+    _leftDrawerView.backgroundColor = [UIColor whiteColor];
+    
+    _leftDrawerView.layer.shadowColor = [[UIColor blackColor]CGColor];
+    // 阴影的透明度
+    _leftDrawerView.layer.shadowOpacity = 0.f;
+    //设置View Shadow的偏移量
+    _leftDrawerView.layer.shadowOffset = CGSizeMake(5.f, 0);
+    
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
+                                                    initWithTarget:self
+                                                    action:@selector(handlePan:)];
+    [_leftDrawerView addGestureRecognizer:panGestureRecognizer];
+    
+    
+}
+
+-(void) handlerEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
+    if (![self enadbled]) {
+        return;
+    }
     CGPoint translation = [recognizer translationInView:_leftDrawerView];
     
     CGFloat x = _leftDrawerView.center.x + translation.x;
@@ -108,71 +184,10 @@
     NSLog(@"handlerEdgePan");
 }
 
-- (void) showLeftDrawerWithAdim{
-    [UIView beginAnimations:nil context:nil];
-    CGRect currentRect = _leftDrawerView.frame;
-    currentRect.origin.x = 0;
-    _leftDrawerView.frame = currentRect;
-    
-    _leftDrawerMaskView.alpha =  0.6f;
-    
-    _leftDrawerView.layer.shadowOpacity = 0.5f;
-    
-    [UIView commitAnimations];
-}
-
-
--(void) hideLeftDrawerWithAnim{
-    [UIView beginAnimations:nil context:nil];
-    CGRect currentRect = _leftDrawerView.frame;
-    currentRect.origin.x = -_leftDrawerView.frame.size.width;
-    _leftDrawerView.frame = currentRect;
-    
-    _leftDrawerView.layer.shadowOpacity = 0.f;
-    
-    _leftDrawerMaskView.alpha =  0.0f;
-    [UIView commitAnimations];
-}
-
-
--(void) initLeftDrawerAndMaskView{
-
-    _leftDrawerMaskView = [[UIButton alloc]init];
-    _leftDrawerMaskView.backgroundColor = [UIColor blackColor];
-    _leftDrawerMaskView.alpha = 0.0f;
-    
-    [_leftDrawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
-                                       initWithTarget:self
-                                       action:@selector(handleMaskPan:)];
-    [_leftDrawerMaskView addGestureRecognizer:maskPan];
-    
-    
-    
-    _leftDrawerView = [[UIView alloc]init];
-    
-
-    _leftDrawerView.backgroundColor = [UIColor whiteColor];
-    
-    _leftDrawerView.layer.shadowColor = [[UIColor blackColor]CGColor];
-    // 阴影的透明度
-    _leftDrawerView.layer.shadowOpacity = 0.f;
-    //设置View Shadow的偏移量
-    _leftDrawerView.layer.shadowOffset = CGSizeMake(5.f, 0);
-    
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
-                                                    initWithTarget:self
-                                                    action:@selector(handlePan:)];
-    [_leftDrawerView addGestureRecognizer:panGestureRecognizer];
-    
-    
-}
-
-
-
 - (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
-    
+    if (![self enadbled]) {
+        return;
+    }
     
     CGPoint translation = [recognizer translationInView:_leftDrawerView];
     
@@ -213,8 +228,12 @@
 }
 
 
-- (void) handlePan:(UIPanGestureRecognizer*) recognizer
-{
+- (void) handlePan:(UIPanGestureRecognizer*) recognizer{
+    
+    if (![self enadbled]) {
+        return;
+    }
+    
     CGPoint translation = [recognizer translationInView:recognizer.view];
     CGFloat x = recognizer.view.center.x + translation.x;
     if (x > self.superview.frame.size.width / 3.0f) {
