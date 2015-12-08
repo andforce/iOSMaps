@@ -11,7 +11,7 @@
 #define kViewHeight 50
 #define kMargin 6
 
-@interface SearchView (){
+@interface SearchView ()<UITextFieldDelegate>{
     UIView *_whiteBgView;
     
     UIView *_leftDrawerView;
@@ -96,8 +96,9 @@
 -(void) initWhiteBgView:(UIView *) rootView{
     _whiteBgView = [[UIView alloc]init];
     
-    _whiteBgView.frame = CGRectMake(0, rootView.frame.size.height, rootView.frame.size.width, rootView.frame.size.height);
+    _whiteBgView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
     _whiteBgView.backgroundColor = [UIColor whiteColor];
+    _whiteBgView.alpha = 0.f;
     
     
     [rootView addSubview:_whiteBgView];
@@ -244,7 +245,7 @@
     UIImage *searchImage = [UIImage imageNamed:@"ic_qu_search"];
     [_searchButton setImage:searchImage forState:UIControlStateNormal];
     
-    [_searchButton addTarget:self action:@selector(showOrHideWhiteBgViewWithAnim) forControlEvents:UIControlEventTouchUpInside];
+    //[_searchButton addTarget:self action:@selector(showOrHideWhiteBgViewWithAnim) forControlEvents:UIControlEventTouchUpInside];
     [_topBarRootView addSubview:_searchButton];
     
     
@@ -260,6 +261,9 @@
     _searchTextField = [[UITextField alloc]init];
     _searchTextField.frame = CGRectMake(_drawerSwitchButton.frame.origin.x + _drawerSwitchButton.frame.size.width + kMargin / 2.0f, kMargin / 2.0f, _searchButton.frame.origin.x - kMargin - _drawerSwitchButton.frame.size.width - kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin);
     _searchTextField.placeholder = @"请输入关键字";
+
+    [_searchTextField setDelegate:self];
+    
     [_topBarRootView addSubview:_searchTextField];
     
     
@@ -267,6 +271,15 @@
 }
 
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    [self showOrHideWhiteBgViewWithAnim];
+    return YES;
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    [self showOrHideWhiteBgViewWithAnim];
+    return YES;
+}
 
 - (void) showLeftDrawerWithAdim{
     [UIView beginAnimations:nil context:nil];
@@ -299,14 +312,7 @@
 -(void)showOrHideWhiteBgViewWithAnim{
     
     [UIView beginAnimations:nil context:nil];
-    CGRect currentRect = _whiteBgView.frame;
-    if (currentRect.origin.y == self.superview.frame.size.height) {
-        currentRect.origin.y = 0;
-    } else{
-        currentRect.origin.y = self.superview.frame.size.height;
-    }
-    _whiteBgView.frame = currentRect;
-    
+    _whiteBgView.alpha = _whiteBgView.alpha > 0.f ? 0.f : 1.f;
     [UIView commitAnimations];
 }
 
