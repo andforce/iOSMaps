@@ -140,11 +140,27 @@
     
 }
 
+-(void) showOrHideAfterPan: (UIPanGestureRecognizer*) recognizer{
+    [recognizer setTranslation:CGPointZero inView:self];
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint velocity = [recognizer velocityInView:self];
+        
+        NSLog(@"Touch ===   %f", velocity.x);
+        
+        if (velocity.x > 0) {
+            [self showLeftDrawerWithAdim];
+        } else{
+            [self hideLeftDrawerWithAnim];
+        }
+    }
+}
+
 -(void) handlerEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
     if (![self enadbled]) {
         return;
     }
-    CGPoint translation = [recognizer translationInView:_leftDrawerView];
+    CGPoint translation = [recognizer translationInView:recognizer.view];
     
     CGFloat x = _leftDrawerView.center.x + translation.x;
     
@@ -165,20 +181,9 @@
         
     }];
     
+    [recognizer setTranslation:CGPointZero inView:recognizer.view];
     
-    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
-        
-        NSLog(@"Touch ===   %f", velocity.x);
-        
-        if (velocity.x > 0) {
-            [self showLeftDrawerWithAdim];
-        } else{
-            [self hideLeftDrawerWithAnim];
-        }
-    }
+    [self showOrHideAfterPan:recognizer];
     
     
     NSLog(@"handlerEdgePan");
@@ -189,7 +194,7 @@
         return;
     }
     
-    CGPoint translation = [recognizer translationInView:_leftDrawerView];
+    CGPoint translation = [recognizer translationInView:recognizer.view];
     
     
     CGFloat x = _leftDrawerView.center.x + translation.x ;
@@ -211,19 +216,9 @@
         
     }
     
-    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
+    [recognizer setTranslation:CGPointZero inView:recognizer.view];
     
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
-        
-        NSLog(@"Touch ===   %f", velocity.x);
-        
-        if (velocity.x > 0) {
-            [self showLeftDrawerWithAdim];
-        } else{
-            [self hideLeftDrawerWithAnim];
-        }
-    }
+    [self showOrHideAfterPan:recognizer];
     
 }
 
@@ -253,19 +248,9 @@
     }];
     
     
-    [recognizer setTranslation:CGPointZero inView:_leftDrawerView];
+    [recognizer setTranslation:CGPointZero inView:recognizer.view];
     
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
-        CGPoint velocity = [recognizer velocityInView:_leftDrawerView];
-        
-        NSLog(@"Touch ===   %f", velocity.x);
-        
-        if (velocity.x > 0) {
-            [self showLeftDrawerWithAdim];
-        } else{
-            [self hideLeftDrawerWithAnim];
-        }
-    }
+    [self showOrHideAfterPan:recognizer];
     
 }
 
