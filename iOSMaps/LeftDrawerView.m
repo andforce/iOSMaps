@@ -159,43 +159,19 @@
     if (![self enadbled]) {
         return;
     }
-    
-    UIView * panView = recognizer.view;
-    
-    CGPoint translation = [recognizer translationInView:panView];
-    
-    CGPoint currentCenter = _leftDrawerView.center;
-    
-    
-    CGFloat x = currentCenter.x + translation.x;
-    
-    CGFloat macX = _leftDrawerView.frame.size.width / 2;
-    
-    currentCenter.x = x > macX ? macX : x;
-    
-    _leftDrawerView.center = currentCenter;
-    
-    if (translation.x > 0 ) {
-        _leftDrawerView.layer.shadowOpacity = 0.5f;
-    }
-    
-    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + macX ) / (macX * 2) * 0.6f;
-    
-    [recognizer setTranslation:CGPointZero inView:panView];
-    
-    [self showOrHideAfterPan:recognizer];
-    
-    NSLog(@"handlerEdgePan");
+    [self handlePan:recognizer];
 }
 
 - (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
     if (![self enadbled]) {
         return;
     }
-    [self handleMaskPan:recognizer];
+    
+    [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
+       return  x < maxX ? x : maxX;
+    }];
     
 }
-
 
 - (void) handlePan:(UIPanGestureRecognizer*) recognizer{
     
@@ -203,18 +179,26 @@
         return;
     }
     
+    [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
+        return x > maxX ? maxX : x;
+    }];
+}
+
+-(void) dragLeftDrawer:( UIPanGestureRecognizer *)recognizer : ( CGFloat(^)(CGFloat x ,CGFloat maxX)) block{
+    
     UIView * panView = [recognizer.view superview];
     
     CGPoint translation = [recognizer translationInView:panView];
-
+    
     CGPoint currentCenter = _leftDrawerView.center;
     
     
     CGFloat x = currentCenter.x + translation.x;
     
-    CGFloat macX = _leftDrawerView.frame.size.width / 2;
+    CGFloat maxX = _leftDrawerView.frame.size.width / 2;
     
-    currentCenter.x = x > macX ? macX : x;
+    //currentCenter.x = x < maxX ? x : maxX;
+    currentCenter.x = block(x, maxX);
     
     _leftDrawerView.center = currentCenter;
     
@@ -222,15 +206,12 @@
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     }
     
-    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + macX ) / (macX * 2) * 0.6f;
-
+    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + maxX ) / (maxX * 2) * 0.6f;
+    
     [recognizer setTranslation:CGPointZero inView:panView];
     
     [self showOrHideAfterPan:recognizer];
     
-    NSLog(@"handlePan");
-    
 }
-
 
 @end
