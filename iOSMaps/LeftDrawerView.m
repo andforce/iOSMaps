@@ -230,6 +230,8 @@
     }
     
     CGPoint translation = [recognizer translationInView:recognizer.view];
+
+    
     CGFloat x = recognizer.view.center.x + translation.x;
     if (x > self.superview.frame.size.width / 3.0f) {
         return;
@@ -239,18 +241,26 @@
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     }
     
-    [UIView animateWithDuration:0.05 animations:^{
-        CGPoint p = recognizer.view.center;
-        p.x = x;
-        _leftDrawerView.center = p;
-        _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
-        
-    }];
+    CGRect newFrame = recognizer.view.frame;
+    newFrame.origin.x += translation.x * 2;
+    _leftDrawerView.frame = newFrame;
+    _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
     
     
-    [recognizer setTranslation:CGPointZero inView:recognizer.view];
+//    [UIView animateWithDuration:0.05 animations:^{
+//        CGPoint p = recognizer.view.center;
+//        p.x = x;
+//        _leftDrawerView.center = p;
+//        _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
+//        
+//    }];
+    
+    
+    //[recognizer setTranslation:CGPointZero inView:recognizer.view];
     
     [self showOrHideAfterPan:recognizer];
+    
+    NSLog(@"handlePan");
     
 }
 
