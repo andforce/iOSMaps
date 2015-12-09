@@ -159,31 +159,31 @@
     if (![self enadbled]) {
         return;
     }
-    CGPoint translation = [recognizer translationInView:recognizer.view];
     
-    CGFloat x = _leftDrawerView.center.x + translation.x;
+    UIView * panView = recognizer.view;
     
-    if (x > self.superview.frame.size.width / 3.0f) {
-        return;
-    }
+    CGPoint translation = [recognizer translationInView:panView];
     
-    if (translation.x > 0) {
+    CGPoint currentCenter = _leftDrawerView.center;
+    
+    
+    CGFloat x = currentCenter.x + translation.x;
+    
+    CGFloat macX = _leftDrawerView.frame.size.width / 2;
+    
+    currentCenter.x = x > macX ? macX : x;
+    
+    _leftDrawerView.center = currentCenter;
+    
+    if (translation.x > 0 ) {
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     }
     
-    [UIView animateWithDuration:0.05 animations:^{
-        CGPoint p = recognizer.view.center;
-        p.x = x;
-        _leftDrawerView.center = p;
-        
-        _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
-        
-    }];
+    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + macX ) / (macX * 2) * 0.6f;
     
-    [recognizer setTranslation:CGPointZero inView:recognizer.view];
+    [recognizer setTranslation:CGPointZero inView:panView];
     
     [self showOrHideAfterPan:recognizer];
-    
     
     NSLog(@"handlerEdgePan");
 }
@@ -192,32 +192,7 @@
     if (![self enadbled]) {
         return;
     }
-    
-    CGPoint translation = [recognizer translationInView:recognizer.view];
-    
-    
-    CGFloat x = _leftDrawerView.center.x + translation.x ;
-    
-    NSLog(@" trans x = %f,    center = %f       touch x = %f", x, _leftDrawerView.center.x, translation.x);
-    if (x < _leftDrawerView.frame.size.width / 2.0f) {
-        
-        [UIView animateWithDuration:0.05 animations:^{
-            CGPoint p = recognizer.view.center;
-            p.x = x;
-            _leftDrawerView.center = p;
-            
-            _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
-            
-            NSLog(@" trans x =============================%f" , _leftDrawerView.frame.origin.x);
-            
-            
-        }];
-        
-    }
-    
-    [recognizer setTranslation:CGPointZero inView:recognizer.view];
-    
-    [self showOrHideAfterPan:recognizer];
+    [self handleMaskPan:recognizer];
     
 }
 
@@ -228,24 +203,28 @@
         return;
     }
     
-    CGPoint translation = [recognizer translationInView:recognizer.view];
+    UIView * panView = [recognizer.view superview];
+    
+    CGPoint translation = [recognizer translationInView:panView];
 
+    CGPoint currentCenter = _leftDrawerView.center;
     
-    CGFloat x = recognizer.view.center.x + translation.x;
-    if (x > self.superview.frame.size.width / 3.0f) {
-        return;
-    }
     
-    if (translation.x >0 ) {
+    CGFloat x = currentCenter.x + translation.x;
+    
+    CGFloat macX = _leftDrawerView.frame.size.width / 2;
+    
+    currentCenter.x = x > macX ? macX : x;
+    
+    _leftDrawerView.center = currentCenter;
+    
+    if (translation.x > 0 ) {
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     }
     
-    CGRect newFrame = recognizer.view.frame;
-    newFrame.origin.x += translation.x * 2;
-    _leftDrawerView.frame = newFrame;
-    _leftDrawerMaskView.alpha = (_leftDrawerView.frame.origin.x + _leftDrawerView.frame.size.width) / _leftDrawerView.frame.size.width * 0.6f;
+    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + macX ) / (macX * 2) * 0.6f;
 
-    [recognizer setTranslation:CGPointZero inView:recognizer.view];
+    [recognizer setTranslation:CGPointZero inView:panView];
     
     [self showOrHideAfterPan:recognizer];
     
