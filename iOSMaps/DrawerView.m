@@ -15,7 +15,11 @@
 
 @interface DrawerView(){
     UIView *_leftDrawerView;
-    UIButton *_leftDrawerMaskView;
+    UIButton *_drawerMaskView;
+    
+    
+    UIView *_rightDrawerView;
+    UIView *_rightEageView;
 }
 
 @end
@@ -25,7 +29,12 @@
 
 -(id)init{
     if (self == [super init]) {
-        [self initLeftDrawerAndMaskView];
+        
+        [self setDrawerType:DrawerViewTypeLeft];
+        
+        [self initLeftDrawer];
+        
+        [self initMaskView];
         
         UIScreenEdgePanGestureRecognizer *edgePab = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handlerEdgePan:)];
         edgePab.edges = UIRectEdgeLeft;
@@ -38,6 +47,41 @@
     return self;
 }
 
+
+-(id)initWithDrawerType:(DrawerViewType)drawerType{
+   
+    if (self == [super init]) {
+        [self setDrawerType:drawerType];
+        
+        switch (_drawerType) {
+            case DrawerViewTypeLeft:{
+                [self initLeftDrawer];
+                break;
+            }
+            case DrawerViewTypeRight:{
+                [self initRightDrawer];
+                break;
+            }
+            case DrawerViewTypeLeftAnd:{
+                [self initLeftDrawer];
+                [self initRightDrawer];
+                break;
+            }
+                
+            default:{
+                [self initLeftDrawer];
+                break;
+            }
+        }
+        
+        [self initMaskView];
+        
+        [self setEnadbled:YES];
+    }
+
+    
+    return self;
+}
 
 -(void)open{
     [self showLeftDrawerWithAdim];
@@ -60,16 +104,45 @@
     
     NSLog(@"didMoveToSuperview %f", rootView.frame.size.width);
     
-    _leftDrawerMaskView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+
+    _drawerMaskView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+
+    [rootView addSubview:_drawerMaskView];
     
-    [rootView addSubview:_leftDrawerMaskView];
     
-    // init Left Drawer
+    
+    if (_drawerType != DrawerViewTypeLeft) {
+        _rightEageView = [[UIView alloc]init];
+        _rightEageView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+        _rightEageView.backgroundColor = [UIColor redColor];
+        
+        [rootView addSubview:_rightEageView];
+        
+        UIScreenEdgePanGestureRecognizer *rightedgePab = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handlerRightEdgePan:)];
+        rightedgePab.edges = UIRectEdgeRight;
+        
+        [_rightEageView addGestureRecognizer:rightedgePab];
+    }
+    
+    
     CGFloat with = rootView.frame.size.width * kDefaultDrawerRatio;
-    _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
     
     
-    [rootView addSubview:_leftDrawerView];
+    if (_drawerType != DrawerViewTypeRight) {
+        // init Left Drawer
+        _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
+        [rootView addSubview:_leftDrawerView];
+    }
+
+    if (_drawerType != DrawerViewTypeLeft) {
+        // init right Drawer
+        _rightDrawerView.frame = CGRectMake(rootView.frame.size.width + with, 0, with, rootView.frame.size.height);
+        [rootView addSubview:_rightDrawerView];
+        
+        [rootView bringSubviewToFront:_rightDrawerView];
+    }
+    
+
 }
 
 
@@ -84,7 +157,7 @@
         currentRect.origin.x = 0;
         _leftDrawerView.frame = currentRect;
         
-        _leftDrawerMaskView.alpha =  kMaxMaskAlpha;
+        _drawerMaskView.alpha =  kMaxMaskAlpha;
         
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     } completion:^(BOOL finished) {
@@ -106,7 +179,7 @@
         
         _leftDrawerView.layer.shadowOpacity = 0.f;
         
-        _leftDrawerMaskView.alpha =  0.0f;
+        _drawerMaskView.alpha =  0.0f;
     } completion:^(BOOL finished) {
         if (_delegate != nil) {
             [_delegate drawerDidClosed];
@@ -116,21 +189,41 @@
 }
 
 
--(void) initLeftDrawerAndMaskView{
-
-    _leftDrawerMaskView = [[UIButton alloc]init];
-    _leftDrawerMaskView.backgroundColor = [UIColor blackColor];
-    _leftDrawerMaskView.alpha = 0.0f;
+-(void) initRightDrawer{
+    _rightDrawerView = [[UIView alloc]init];
     
-    [_leftDrawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
+    
+    _rightDrawerView.backgroundColor = [UIColor whiteColor];
+    
+    _rightDrawerView.layer.shadowColor = [[UIColor blackColor]CGColor];
+    // 阴影的透明度
+    _rightDrawerView.layer.shadowOpacity = 0.f;
+    //设置View Shadow的偏移量
+    _rightDrawerView.layer.shadowOffset = CGSizeMake(-5.f, 0);
+    
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
+                                                    initWithTarget:self
+                                                    action:@selector(handleRightPan:)];
+    [_rightDrawerView addGestureRecognizer:panGestureRecognizer];
+}
+
+-(void) initMaskView{
+    _drawerMaskView = [[UIButton alloc]init];
+    _drawerMaskView.backgroundColor = [UIColor blackColor];
+    _drawerMaskView.alpha = 0.0f;
+    
+    [_drawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
     
     UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
                                        initWithTarget:self
                                        action:@selector(handleMaskPan:)];
-    [_leftDrawerMaskView addGestureRecognizer:maskPan];
+    [_drawerMaskView addGestureRecognizer:maskPan];
     
-    
-    
+}
+
+
+-(void) initLeftDrawer{
+
     _leftDrawerView = [[UIView alloc]init];
     
 
@@ -144,11 +237,13 @@
     
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc]
                                                     initWithTarget:self
-                                                    action:@selector(handlePan:)];
+                                                    action:@selector(handleLeftPan:)];
     [_leftDrawerView addGestureRecognizer:panGestureRecognizer];
     
-    
 }
+
+
+
 
 -(void) showOrHideAfterPan: (UIPanGestureRecognizer*) recognizer{
     [recognizer setTranslation:CGPointZero inView:self];
@@ -170,8 +265,16 @@
     if (![self enadbled]) {
         return;
     }
-    [self handlePan:recognizer];
+    [self handleLeftPan:recognizer];
 }
+
+-(void)handlerRightEdgePan:(UIScreenEdgePanGestureRecognizer *)recognizer{
+    if (![self enadbled]) {
+        return;
+    }
+    [self handleRightPan:recognizer];
+}
+
 
 - (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
     if (![self enadbled]) {
@@ -185,7 +288,7 @@
     
 }
 
-- (void) handlePan:(UIPanGestureRecognizer*) recognizer{
+- (void) handleLeftPan:(UIPanGestureRecognizer*) recognizer{
     
     if (![self enadbled]) {
         return;
@@ -194,6 +297,54 @@
     [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
         return x > maxX ? maxX : x;
     }];
+}
+
+- (void) handleRightPan:(UIPanGestureRecognizer*) recognizer{
+    
+    if (![self enadbled]) {
+        return;
+    }
+    
+    [self dragRightDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
+        return x < maxX ? x : maxX;
+    }];
+}
+
+
+-(void) dragRightDrawer:(UIPanGestureRecognizer *)recognizer :(TouchX) block{
+    UIView * panView = [recognizer.view superview];
+    
+    CGPoint t = [recognizer translationInView:panView];
+    
+    CGPoint location = [recognizer locationInView:panView];
+    
+    CGPoint currentCenter = _rightDrawerView.center;
+    
+    
+    CGFloat x = location.x + _rightDrawerView.frame.size.width / 2;
+    
+    //CGFloat maxX = _rightDrawerView.frame.size.width / 2;
+    
+    //currentCenter.x = block(x, maxX);
+    
+    NSLog(@"dragRightDrawer %f             %f              %f" , currentCenter.x, t.x, location.x);
+    
+    
+    currentCenter.x = x;
+    
+    _rightDrawerView.center = currentCenter;
+    
+
+    
+    if (t.x > 0 ) {
+        _rightDrawerView.layer.shadowOpacity = 0.5f;
+    }
+    
+    //_rightDrawerView.alpha = (_rightDrawerView.center.x + maxX ) / (maxX * 2) * kMaxMaskAlpha;
+    
+    [recognizer setTranslation:CGPointZero inView:panView];
+    
+    [self showOrHideAfterPan:recognizer];
 }
 
 -(void) dragLeftDrawer:( UIPanGestureRecognizer *)recognizer : (TouchX) block{
@@ -218,7 +369,7 @@
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     }
     
-    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + maxX ) / (maxX * 2) * kMaxMaskAlpha;
+    _drawerMaskView.alpha = (_leftDrawerView.center.x + maxX ) / (maxX * 2) * kMaxMaskAlpha;
     
     [recognizer setTranslation:CGPointZero inView:panView];
     

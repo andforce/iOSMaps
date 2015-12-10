@@ -36,9 +36,9 @@
     [self.view addSubview:searchView];
     
     
-    DrawerView *leftDrawerView = [[DrawerView alloc]init];
-    leftDrawerView.delegate = self;
-    [self.view addSubview:leftDrawerView];
+    DrawerView *drawerView = [[DrawerView alloc]init];
+    drawerView.delegate = self;
+    [self.view addSubview:drawerView];
 
     // 定位
     [self startLocation];

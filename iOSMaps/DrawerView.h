@@ -10,14 +10,29 @@
 #import "DrawerViewDelegate.h"
 
 typedef CGFloat(^TouchX) (CGFloat x, CGFloat maxX);
-@interface DrawerView : UIView
 
 
+typedef NS_ENUM(NSInteger, DrawerViewType) {
+    DrawerViewTypeLeft = 0,                         // left
+    DrawerViewTypeRight,
+    DrawerViewTypeLeftAnd
+
+};
+
+@interface DrawerView : UIView{
+
+}
 
 @property (nonatomic, weak) id<DrawerViewDelegate> delegate;
 
 @property (nonatomic, assign) BOOL opened;
 @property (nonatomic, assign) BOOL enadbled;
+
+@property (nonatomic, assign) DrawerViewType drawerType;
+
+-(id)initWithDrawerType:(DrawerViewType)drawerType;
+
+-(id)init;
 
 -(void)open;
 
