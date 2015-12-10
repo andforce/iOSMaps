@@ -34,8 +34,4 @@ typedef NS_ENUM(NSInteger, DrawerViewType) {
 
 -(id)init;
 
--(void)open;
-
--(void)close;
-
 @end
