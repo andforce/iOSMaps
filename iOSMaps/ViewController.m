@@ -10,7 +10,7 @@
 
 
 #import "SearchView.h"
-#import "CircleView.h"
+#import "CircleLocationView.h"
 #import "DrawerView.h"
 #import "DrawerViewDelegate.h"
 
@@ -27,8 +27,9 @@
 
     
     // 右下角的定位按钮
-    CircleView *locationView = [[CircleView alloc] init];
+    CircleLocationView *locationView = [[CircleLocationView alloc] init];
     [self.view addSubview:locationView];
+    [locationView setLocationImageByUserTrackingMode:self.mapView.userTrackingMode];
     
     
     // 顶部的搜索空间

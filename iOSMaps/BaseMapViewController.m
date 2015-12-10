@@ -44,6 +44,9 @@
     // 比例尺
     _mapView.showsScale = NO;
     
+    MAUserTrackingMode mode = _mapView.userTrackingMode;
+    NSLog(@"MAUserTrackingMode : %ld", mode);
+    
     [self.view addSubview:_mapView];
 }
 

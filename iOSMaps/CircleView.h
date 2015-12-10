@@ -12,6 +12,5 @@
 
 -(id) initWithCircleRadius:(int)radius;
 
-- (IBAction)showMyLocation:(UIButton *)sender;
 
 @end
