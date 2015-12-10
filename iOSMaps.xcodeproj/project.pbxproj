@@ -23,7 +23,7 @@
 		3A4C406E1C12044A009B520C /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C406B1C12044A009B520C /* button_background@2x.png */; };
 		3A4C406F1C12044A009B520C /* button_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C406C1C12044A009B520C /* button_background@3x.png */; };
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
-		4D91A0CA1C16E6C300093EC6 /* LeftDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91A0C91C16E6C300093EC6 /* LeftDrawerView.m */; };
+		4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91A0C91C16E6C300093EC6 /* DrawerView.m */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
 		4DCD33311C11915000F68262 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33301C11915000F68262 /* AppDelegate.m */; };
 		4DCD33341C11915000F68262 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33331C11915000F68262 /* ViewController.m */; };
@@ -52,8 +52,8 @@
 		3A4C406C1C12044A009B520C /* button_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@3x.png"; sourceTree = "<group>"; };
 		3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
 		3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
-		4D91A0C81C16E6C300093EC6 /* LeftDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerView.h; sourceTree = "<group>"; };
-		4D91A0C91C16E6C300093EC6 /* LeftDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerView.m; sourceTree = "<group>"; };
+		4D91A0C81C16E6C300093EC6 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
+		4D91A0C91C16E6C300093EC6 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
 		4DBE58201C191695000B98AF /* DrawerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewDelegate.h; sourceTree = "<group>"; };
 		4DCD33291C11915000F68262 /* iOSMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD332D1C11915000F68262 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		3A69DBA91C1342BF00EABC79 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D91A0C71C16E69100093EC6 /* LeftDrawerView */,
+				4D91A0C71C16E69100093EC6 /* DrawerView */,
 				3A4C405D1C11FDDA009B520C /* CircleView */,
 				3A4C404C1C11F566009B520C /* SearchView */,
 			);
@@ -163,14 +163,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		4D91A0C71C16E69100093EC6 /* LeftDrawerView */ = {
+		4D91A0C71C16E69100093EC6 /* DrawerView */ = {
 			isa = PBXGroup;
 			children = (
-				4D91A0C81C16E6C300093EC6 /* LeftDrawerView.h */,
-				4D91A0C91C16E6C300093EC6 /* LeftDrawerView.m */,
+				4D91A0C81C16E6C300093EC6 /* DrawerView.h */,
+				4D91A0C91C16E6C300093EC6 /* DrawerView.m */,
 				4DBE58201C191695000B98AF /* DrawerViewDelegate.h */,
 			);
-			name = LeftDrawerView;
+			name = DrawerView;
 			sourceTree = "<group>";
 		};
 		4DCD33201C11915000F68262 = {
@@ -360,7 +360,7 @@
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
 				3A4C40601C11FDEE009B520C /* CircleView.m in Sources */,
 				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,
-				4D91A0CA1C16E6C300093EC6 /* LeftDrawerView.m in Sources */,
+				4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */,
 				4DCD332E1C11915000F68262 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

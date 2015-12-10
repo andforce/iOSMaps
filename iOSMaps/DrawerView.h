@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "DrawerViewDelegate.h"
 
-@interface LeftDrawerView : UIView
+typedef CGFloat(^TouchX) (CGFloat x, CGFloat maxX);
+@interface DrawerView : UIView
+
+
 
 @property (nonatomic, weak) id<DrawerViewDelegate> delegate;
 

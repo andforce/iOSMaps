@@ -11,7 +11,7 @@
 
 #import "SearchView.h"
 #import "CircleView.h"
-#import "LeftDrawerView.h"
+#import "DrawerView.h"
 #import "DrawerViewDelegate.h"
 
 @interface ViewController ()<DrawerViewDelegate>{
@@ -36,7 +36,7 @@
     [self.view addSubview:searchView];
     
     
-    LeftDrawerView *leftDrawerView = [[LeftDrawerView alloc]init];
+    DrawerView *leftDrawerView = [[DrawerView alloc]init];
     leftDrawerView.delegate = self;
     [self.view addSubview:leftDrawerView];
 

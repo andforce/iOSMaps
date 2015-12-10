@@ -6,9 +6,14 @@
 //  Copyright © 2015年 andforce. All rights reserved.
 //
 
-#import "LeftDrawerView.h"
+#import "DrawerView.h"
 
-@interface LeftDrawerView(){
+#define kEdge 5
+#define kDefaultDrawerRatio 4/5
+#define kMaxMaskAlpha 0.6f
+
+
+@interface DrawerView(){
     UIView *_leftDrawerView;
     UIButton *_leftDrawerMaskView;
 }
@@ -16,7 +21,7 @@
 @end
 
 
-@implementation LeftDrawerView
+@implementation DrawerView
 
 -(id)init{
     if (self == [super init]) {
@@ -51,7 +56,7 @@
     
     UIView *rootView = [self superview];
     
-    self.frame = CGRectMake(0, 0, 5, rootView.frame.size.height);
+    self.frame = CGRectMake(0, 0, kEdge, rootView.frame.size.height);
     
     NSLog(@"didMoveToSuperview %f", rootView.frame.size.width);
     
@@ -60,7 +65,7 @@
     [rootView addSubview:_leftDrawerMaskView];
     
     // init Left Drawer
-    CGFloat with = rootView.frame.size.width * 2 / 3;
+    CGFloat with = rootView.frame.size.width * kDefaultDrawerRatio;
     _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
     
     
@@ -79,7 +84,7 @@
         currentRect.origin.x = 0;
         _leftDrawerView.frame = currentRect;
         
-        _leftDrawerMaskView.alpha =  0.6f;
+        _leftDrawerMaskView.alpha =  kMaxMaskAlpha;
         
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     } completion:^(BOOL finished) {
@@ -176,6 +181,7 @@
     [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
        return  x < maxX ? x : maxX;
     }];
+
     
 }
 
@@ -190,7 +196,7 @@
     }];
 }
 
--(void) dragLeftDrawer:( UIPanGestureRecognizer *)recognizer : ( CGFloat(^)(CGFloat x ,CGFloat maxX)) block{
+-(void) dragLeftDrawer:( UIPanGestureRecognizer *)recognizer : (TouchX) block{
     
     UIView * panView = [recognizer.view superview];
     
@@ -212,7 +218,7 @@
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     }
     
-    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + maxX ) / (maxX * 2) * 0.6f;
+    _leftDrawerMaskView.alpha = (_leftDrawerView.center.x + maxX ) / (maxX * 2) * kMaxMaskAlpha;
     
     [recognizer setTranslation:CGPointZero inView:panView];
     
