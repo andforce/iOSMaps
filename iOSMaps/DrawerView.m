@@ -64,7 +64,7 @@
                 [self setRightDrawerEnadbled:YES];
                 break;
             }
-            case DrawerViewTypeLeftAnd:{
+            case DrawerViewTypeLeftAndRight:{
                 [self initLeftDrawer];
                 [self initRightDrawer];
                 [self setLeftDrawerEnadbled:YES];
@@ -145,7 +145,27 @@
 
 }
 
+-(void)openLeftDrawer{
+    if (_leftDrawerView != nil && _leftDrawerEnadbled && !_leftDrawerOpened) {
+        [self showLeftDrawerWithAdim:_leftDrawerView];
+    }
+}
+-(void)closeLeftDrawer{
+    if (_leftDrawerView != nil &&  _leftDrawerEnadbled && _leftDrawerOpened) {
+        [self hideLeftDrawerWithAnim:_leftDrawerView];
+    }
+}
 
+-(void)openRightDrawer{
+    if (_rightDrawerView != nil && _rightDrawerEnadbled && !_rightDrawerOpened) {
+        [self showRightDrawerWithAdim:_rightDrawerView];
+    }
+}
+-(void)closeRightDrawer{
+    if (_rightDrawerView != nil && _rightDrawerEnadbled && _rightDrawerOpened) {
+        [self hideRightDrawerWithAnim:_rightDrawerView];
+    }
+}
 
 - (void) showRightDrawerWithAdim:(UIView *)view{
     

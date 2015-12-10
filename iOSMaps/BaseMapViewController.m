@@ -39,6 +39,11 @@
     _mapView.customizeUserLocationAccuracyCircleRepresentation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
     
+    // 指南针
+    _mapView.showsCompass = NO;
+    // 比例尺
+    _mapView.showsScale = NO;
+    
     [self.view addSubview:_mapView];
 }
 
