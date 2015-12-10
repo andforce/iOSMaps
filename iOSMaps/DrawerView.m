@@ -138,8 +138,6 @@
         // init right Drawer
         _rightDrawerView.frame = CGRectMake(rootView.frame.size.width + with, 0, with, rootView.frame.size.height);
         [rootView addSubview:_rightDrawerView];
-        
-        [rootView bringSubviewToFront:_rightDrawerView];
     }
     
 
@@ -207,21 +205,6 @@
     [_rightDrawerView addGestureRecognizer:panGestureRecognizer];
 }
 
--(void) initMaskView{
-    _drawerMaskView = [[UIButton alloc]init];
-    _drawerMaskView.backgroundColor = [UIColor blackColor];
-    _drawerMaskView.alpha = 0.0f;
-    
-    [_drawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
-                                       initWithTarget:self
-                                       action:@selector(handleMaskPan:)];
-    [_drawerMaskView addGestureRecognizer:maskPan];
-    
-}
-
-
 -(void) initLeftDrawer{
 
     _leftDrawerView = [[UIView alloc]init];
@@ -242,6 +225,19 @@
     
 }
 
+-(void) initMaskView{
+    _drawerMaskView = [[UIButton alloc]init];
+    _drawerMaskView.backgroundColor = [UIColor blackColor];
+    _drawerMaskView.alpha = 0.0f;
+    
+    [_drawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(handleMaskPan:)];
+    [_drawerMaskView addGestureRecognizer:maskPan];
+    
+}
 
 
 
