@@ -398,7 +398,7 @@
         _rightDrawerView.layer.shadowOpacity = 0.5f;
     }
     
-    _drawerMaskView.alpha = (panView.frame.size.width - _rightDrawerView.center.x ) / _rightDrawerView.frame.size.width / 2 * kMaxMaskAlpha;
+    _drawerMaskView.alpha = (panView.frame.size.width - _rightDrawerView.center.x ) / (_rightDrawerView.frame.size.width / 2) * kMaxMaskAlpha;
     
     [recognizer setTranslation:CGPointMake(0, 0) inView:panView];
     
