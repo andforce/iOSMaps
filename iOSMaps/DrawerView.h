@@ -25,8 +25,12 @@ typedef NS_ENUM(NSInteger, DrawerViewType) {
 
 @property (nonatomic, weak) id<DrawerViewDelegate> delegate;
 
-@property (nonatomic, assign) BOOL opened;
-@property (nonatomic, assign) BOOL enadbled;
+@property (nonatomic, assign) BOOL leftDrawerOpened;
+@property (nonatomic, assign) BOOL leftDrawerEnadbled;
+
+@property (nonatomic, assign) BOOL rightDrawerOpened;
+@property (nonatomic, assign) BOOL rightDrawerEnadbled;
+
 
 @property (nonatomic, assign) DrawerViewType drawerType;
 

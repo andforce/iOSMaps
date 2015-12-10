@@ -36,12 +36,12 @@
         
         [self initMaskView];
         
-        UIScreenEdgePanGestureRecognizer *edgePab = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handlerEdgePan:)];
-        edgePab.edges = UIRectEdgeLeft;
+        UIScreenEdgePanGestureRecognizer *leftEdgePanRecognizer = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handleLeftEdgePan:)];
+        leftEdgePanRecognizer.edges = UIRectEdgeLeft;
         
-        [self addGestureRecognizer:edgePab];
+        [self addGestureRecognizer:leftEdgePanRecognizer];
         
-        [self setEnadbled:YES];
+        [self setLeftDrawerEnadbled:YES];
 
     }
     return self;
@@ -56,27 +56,30 @@
         switch (_drawerType) {
             case DrawerViewTypeLeft:{
                 [self initLeftDrawer];
+                [self setRightDrawerEnadbled:YES];
                 break;
             }
             case DrawerViewTypeRight:{
                 [self initRightDrawer];
+                [self setRightDrawerEnadbled:YES];
                 break;
             }
             case DrawerViewTypeLeftAnd:{
                 [self initLeftDrawer];
                 [self initRightDrawer];
+                [self setLeftDrawerEnadbled:YES];
+                [self setRightDrawerEnadbled: YES];
                 break;
             }
                 
             default:{
                 [self initLeftDrawer];
+                [self setLeftDrawerEnadbled:YES];
                 break;
             }
         }
         
         [self initMaskView];
-        
-        [self setEnadbled:YES];
     }
 
     
@@ -110,7 +113,7 @@
         
         [rootView addSubview:_rightEageView];
         
-        UIScreenEdgePanGestureRecognizer *rightedgePab = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handlerRightEdgePan:)];
+        UIScreenEdgePanGestureRecognizer *rightedgePab = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handleRightEdgePan:)];
         rightedgePab.edges = UIRectEdgeRight;
         
         [_rightEageView addGestureRecognizer:rightedgePab];
@@ -137,10 +140,49 @@
 
 
 
+- (void) showRightDrawerWithAdim:(UIView *)view{
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        CGRect currentRect = view.frame;
+        currentRect.origin.x = [view superview].frame.size.width - view.frame.size.width;
+        
+        view.frame = currentRect;
+        _drawerMaskView.alpha =  kMaxMaskAlpha;
+        
+        view.layer.shadowOpacity = 0.5f;
+    } completion:^(BOOL finished) {
+        if (_delegate != nil) {
+            [_delegate drawerDidOpened];
+        }
+        [self setRightDrawerOpened:YES];
+    }];
+    
+}
+
+
+-(void) hideRightDrawerWithAnim:(UIView *)view{
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        CGRect currentRect = view.frame;
+        currentRect.origin.x = view.superview.frame.size.width;
+        view.frame = currentRect;
+        
+        view.layer.shadowOpacity = 0.f;
+        
+        _drawerMaskView.alpha =  0.0f;
+    } completion:^(BOOL finished) {
+        if (_delegate != nil) {
+            [_delegate drawerDidClosed];
+        }
+        [self setRightDrawerOpened:NO];
+    }];
+}
+
+
 
 - (void) showLeftDrawerWithAdim:(UIView *)view{
     
-    [self setOpened:true];
+    [self setLeftDrawerOpened:YES];
     
     [UIView animateWithDuration:0.2f animations:^{
         CGRect currentRect = view.frame;
@@ -154,7 +196,7 @@
         if (_delegate != nil) {
             [_delegate drawerDidOpened];
         }
-        [self setOpened:finished];
+        [self setLeftDrawerOpened:NO];
     }];
 
 }
@@ -174,7 +216,7 @@
         if (_delegate != nil) {
             [_delegate drawerDidClosed];
         }
-        [self setOpened:!finished];
+        [self setLeftDrawerOpened:!finished];
     }];
 }
 
@@ -232,8 +274,61 @@
 }
 
 
+-(void) handleLeftEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
+    if (![self leftDrawerEnadbled]) {
+        return;
+    }
+    [self handleLeftPan:recognizer];
+}
 
--(void) showOrHideAfterPan: (UIPanGestureRecognizer*) recognizer :(UIView *)view{
+-(void)handleRightEdgePan:(UIScreenEdgePanGestureRecognizer *)recognizer{
+    if (![self rightDrawerEnadbled]) {
+        return;
+    }
+    [self handleRightPan:recognizer];
+}
+
+
+- (void) handleLeftPan:(UIPanGestureRecognizer*) recognizer{
+    
+    if (![self leftDrawerEnadbled]) {
+        return;
+    }
+    
+    [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
+        return x > maxX ? maxX : x;
+    }];
+}
+
+- (void) handleRightPan:(UIPanGestureRecognizer*) recognizer{
+    
+    if (![self rightDrawerEnadbled]) {
+        return;
+    }
+    
+    [self dragRightDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
+        return x < maxX ? maxX : x;
+    }];
+}
+
+- (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
+
+    if (_leftDrawerOpened) {
+        [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
+            return  x < maxX ? x : maxX;
+        }];
+    }
+    
+    if (_rightDrawerOpened) {
+        [self dragRightDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
+            return x < maxX ? maxX : x;
+        }];
+    }
+    
+    
+}
+
+-(void) showOrHideLeftAfterPan: (UIPanGestureRecognizer*) recognizer :(UIView *)view{
     
     if (recognizer.state == UIGestureRecognizerStateEnded) {
         CGPoint velocity = [recognizer velocityInView:self];
@@ -248,56 +343,6 @@
     }
 }
 
--(void) handlerEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
-    if (![self enadbled]) {
-        return;
-    }
-    [self handleLeftPan:recognizer];
-}
-
--(void)handlerRightEdgePan:(UIScreenEdgePanGestureRecognizer *)recognizer{
-    if (![self enadbled]) {
-        return;
-    }
-    [self handleRightPan:recognizer];
-}
-
-
-- (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
-    if (![self enadbled]) {
-        return;
-    }
-    
-    [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
-       return  x < maxX ? x : maxX;
-    }];
-
-    
-}
-
-- (void) handleLeftPan:(UIPanGestureRecognizer*) recognizer{
-    
-    if (![self enadbled]) {
-        return;
-    }
-    
-    [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
-        return x > maxX ? maxX : x;
-    }];
-}
-
-- (void) handleRightPan:(UIPanGestureRecognizer*) recognizer{
-    
-    if (![self enadbled]) {
-        return;
-    }
-    
-    [self dragRightDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
-        return x < maxX ? maxX : x;
-    }];
-}
-
-
 -(void) showOrHideRightAfterPan: (UIPanGestureRecognizer*) recognizer :(UIView *)view{
     [recognizer setTranslation:CGPointZero inView:self];
     
@@ -307,9 +352,9 @@
         NSLog(@"Touch ===   %f", velocity.x);
         
         if (velocity.x > 0) {
-            [self showLeftDrawerWithAdim: view];
+            [self hideRightDrawerWithAnim: view];
         } else{
-            [self hideLeftDrawerWithAnim: view];
+            [self showRightDrawerWithAdim: view];
         }
     }
 }
@@ -375,7 +420,7 @@
     
     [recognizer setTranslation:CGPointZero inView:panView];
     
-    [self showOrHideAfterPan:recognizer :_leftDrawerView];
+    [self showOrHideLeftAfterPan:recognizer :_leftDrawerView];
     
 }
 
