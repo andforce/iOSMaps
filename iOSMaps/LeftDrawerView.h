@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DrawerViewDelegate.h"
 
 @interface LeftDrawerView : UIView
+
+@property (nonatomic, weak) id<DrawerViewDelegate> delegate;
 
 @property (nonatomic, assign) BOOL opened;
 @property (nonatomic, assign) BOOL enadbled;

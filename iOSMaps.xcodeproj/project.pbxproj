@@ -54,6 +54,7 @@
 		3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
 		4D91A0C81C16E6C300093EC6 /* LeftDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerView.h; sourceTree = "<group>"; };
 		4D91A0C91C16E6C300093EC6 /* LeftDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerView.m; sourceTree = "<group>"; };
+		4DBE58201C191695000B98AF /* DrawerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewDelegate.h; sourceTree = "<group>"; };
 		4DCD33291C11915000F68262 /* iOSMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD332D1C11915000F68262 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DCD332F1C11915000F68262 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 			children = (
 				4D91A0C81C16E6C300093EC6 /* LeftDrawerView.h */,
 				4D91A0C91C16E6C300093EC6 /* LeftDrawerView.m */,
+				4DBE58201C191695000B98AF /* DrawerViewDelegate.h */,
 			);
 			name = LeftDrawerView;
 			sourceTree = "<group>";

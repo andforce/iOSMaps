@@ -12,9 +12,9 @@
 #import "SearchView.h"
 #import "CircleView.h"
 #import "LeftDrawerView.h"
+#import "DrawerViewDelegate.h"
 
-
-@interface ViewController (){
+@interface ViewController ()<DrawerViewDelegate>{
 
 }
 @end
@@ -37,12 +37,20 @@
     
     
     LeftDrawerView *leftDrawerView = [[LeftDrawerView alloc]init];
+    leftDrawerView.delegate = self;
     [self.view addSubview:leftDrawerView];
 
     // 定位
     [self startLocation];
 }
 
+-(void)drawerDidClosed{
+    NSLog(@"drawerDidClosed");
+}
+
+-(void)drawerDidOpened{
+    NSLog(@"drawerDidOpened");
+}
 
 
 -(void) searchWithWord: (NSString *)word andLocation:(AMapGeoPoint *)location type:(NSString *) types{

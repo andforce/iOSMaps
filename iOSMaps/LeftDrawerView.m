@@ -83,6 +83,9 @@
         
         _leftDrawerView.layer.shadowOpacity = 0.5f;
     } completion:^(BOOL finished) {
+        if (_delegate != nil) {
+            [_delegate drawerDidOpened];
+        }
         [self setOpened:finished];
     }];
 
@@ -100,6 +103,9 @@
         
         _leftDrawerMaskView.alpha =  0.0f;
     } completion:^(BOOL finished) {
+        if (_delegate != nil) {
+            [_delegate drawerDidClosed];
+        }
         [self setOpened:!finished];
     }];
 }
