@@ -158,8 +158,8 @@
         
         view.layer.shadowOpacity = 0.5f;
     } completion:^(BOOL finished) {
-        if (_delegate != nil) {
-            [_delegate drawerDidOpened];
+        if (_delegate != nil && [_delegate respondsToSelector:@selector(rightDrawerDidOpened)]) {
+            [_delegate rightDrawerDidOpened];
         }
         [self setRightDrawerOpened:YES];
     }];
@@ -178,8 +178,8 @@
         
         _drawerMaskView.alpha =  0.0f;
     } completion:^(BOOL finished) {
-        if (_delegate != nil) {
-            [_delegate drawerDidClosed];
+        if (_delegate != nil && [_delegate respondsToSelector:@selector(rightDrawerDidClosed)]) {
+            [_delegate rightDrawerDidClosed];
         }
         [self setRightDrawerOpened:NO];
     }];
@@ -198,8 +198,8 @@
         
         view.layer.shadowOpacity = 0.5f;
     } completion:^(BOOL finished) {
-        if (_delegate != nil) {
-            [_delegate drawerDidOpened];
+        if (_delegate != nil && [_delegate respondsToSelector:@selector(leftDrawerDidOpened)]) {
+            [_delegate leftDrawerDidOpened];
         }
         [self setLeftDrawerOpened:YES];
     }];
@@ -218,8 +218,8 @@
         
         _drawerMaskView.alpha =  0.0f;
     } completion:^(BOOL finished) {
-        if (_delegate != nil) {
-            [_delegate drawerDidClosed];
+        if (_delegate != nil && [_delegate respondsToSelector:@selector(leftDrawerDidOpened)]) {
+            [_delegate leftDrawerDidClosed];
         }
         [self setLeftDrawerOpened:NO];
     }];

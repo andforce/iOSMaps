@@ -10,10 +10,12 @@
 
 @protocol DrawerViewDelegate <NSObject>
 
-@required
--(void)drawerDidOpened;
--(void)drawerDidClosed;
-
 @optional
+-(void)leftDrawerDidOpened;
+-(void)leftDrawerDidClosed;
+-(void)rightDrawerDidOpened;
+-(void)rightDrawerDidClosed;
+
+
 
 @end

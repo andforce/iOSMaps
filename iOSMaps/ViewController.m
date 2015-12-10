@@ -44,13 +44,6 @@
     [self startLocation];
 }
 
--(void)drawerDidClosed{
-    NSLog(@"drawerDidClosed");
-}
-
--(void)drawerDidOpened{
-    NSLog(@"drawerDidOpened");
-}
 
 
 -(void) searchWithWord: (NSString *)word andLocation:(AMapGeoPoint *)location type:(NSString *) types{
