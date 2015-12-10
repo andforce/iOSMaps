@@ -36,7 +36,7 @@
     [self.view addSubview:searchView];
     
     
-    DrawerView *drawerView = [[DrawerView alloc]init];
+    DrawerView *drawerView = [[DrawerView alloc]initWithDrawerType:DrawerViewTypeLeftAnd];
     drawerView.delegate = self;
     [self.view addSubview:drawerView];
 

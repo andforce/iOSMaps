@@ -113,7 +113,7 @@
     
     if (_drawerType != DrawerViewTypeLeft) {
         _rightEageView = [[UIView alloc]init];
-        _rightEageView.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+        _rightEageView.frame = CGRectMake(rootView.frame.size.width - kEdge, 0, kEdge, rootView.frame.size.height);
         _rightEageView.backgroundColor = [UIColor redColor];
         
         [rootView addSubview:_rightEageView];
@@ -136,7 +136,7 @@
 
     if (_drawerType != DrawerViewTypeLeft) {
         // init right Drawer
-        _rightDrawerView.frame = CGRectMake(rootView.frame.size.width + with, 0, with, rootView.frame.size.height);
+        _rightDrawerView.frame = CGRectMake(rootView.frame.size.width, 0, with, rootView.frame.size.height);
         [rootView addSubview:_rightDrawerView];
     }
     
@@ -302,7 +302,7 @@
     }
     
     [self dragRightDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
-        return x < maxX ? x : maxX;
+        return x < maxX ? maxX : x;
     }];
 }
 
@@ -310,35 +310,30 @@
 -(void) dragRightDrawer:(UIPanGestureRecognizer *)recognizer :(TouchX) block{
     UIView * panView = [recognizer.view superview];
     
-    CGPoint t = [recognizer translationInView:panView];
-    
-    CGPoint location = [recognizer locationInView:panView];
+    CGPoint translation = [recognizer translationInView:panView];
     
     CGPoint currentCenter = _rightDrawerView.center;
     
     
-    CGFloat x = location.x + _rightDrawerView.frame.size.width / 2;
+    CGFloat x = currentCenter.x + translation.x;
     
-    //CGFloat maxX = _rightDrawerView.frame.size.width / 2;
+    CGFloat maxX = panView.frame.size.width - _rightDrawerView.frame.size.width / 2 ;
     
-    //currentCenter.x = block(x, maxX);
-    
-    NSLog(@"dragRightDrawer %f             %f              %f" , currentCenter.x, t.x, location.x);
-    
-    
-    currentCenter.x = x;
+    currentCenter.x = block(x, maxX);
+
+    NSLog(@"dragRightDrawer %f             %f " , currentCenter.x, translation.x);
     
     _rightDrawerView.center = currentCenter;
     
 
     
-    if (t.x > 0 ) {
+    if (translation.x < 0 ) {
         _rightDrawerView.layer.shadowOpacity = 0.5f;
     }
     
     //_rightDrawerView.alpha = (_rightDrawerView.center.x + maxX ) / (maxX * 2) * kMaxMaskAlpha;
     
-    [recognizer setTranslation:CGPointZero inView:panView];
+    [recognizer setTranslation:CGPointMake(panView.frame.size.width + kEdge, 0) inView:panView];
     
     [self showOrHideAfterPan:recognizer];
 }
@@ -349,7 +344,11 @@
     
     CGPoint translation = [recognizer translationInView:panView];
     
+    
     CGPoint currentCenter = _leftDrawerView.center;
+
+    
+    NSLog(@"dragLeftDrawer %f             %f " , currentCenter.x, translation.x);
     
     
     CGFloat x = currentCenter.x + translation.x;
@@ -367,7 +366,7 @@
     
     _drawerMaskView.alpha = (_leftDrawerView.center.x + maxX ) / (maxX * 2) * kMaxMaskAlpha;
     
-    [recognizer setTranslation:CGPointZero inView:panView];
+    [recognizer setTranslation:CGPointMake(kEdge, 0) inView:panView];
     
     [self showOrHideAfterPan:recognizer];
     
