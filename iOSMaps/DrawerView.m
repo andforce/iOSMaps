@@ -109,7 +109,7 @@
     if (_drawerType != DrawerViewTypeLeft) {
         _rightEageView = [[UIView alloc]init];
         _rightEageView.frame = CGRectMake(rootView.frame.size.width - kEdge, 0, kEdge, rootView.frame.size.height);
-        _rightEageView.backgroundColor = [UIColor redColor];
+       // _rightEageView.backgroundColor = [UIColor redColor];
         
         [rootView addSubview:_rightEageView];
         
@@ -127,6 +127,12 @@
         // init Left Drawer
         _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
         [rootView addSubview:_leftDrawerView];
+        
+        
+        UIScreenEdgePanGestureRecognizer *leftEdgePanRecognizer = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handleLeftEdgePan:)];
+        leftEdgePanRecognizer.edges = UIRectEdgeLeft;
+        
+        [self addGestureRecognizer:leftEdgePanRecognizer];
     }
 
     if (_drawerType != DrawerViewTypeLeft) {
@@ -189,7 +195,7 @@
         currentRect.origin.x = 0;
         view.frame = currentRect;
         
-        view.alpha =  kMaxMaskAlpha;
+        _drawerMaskView.alpha =  kMaxMaskAlpha;
         
         view.layer.shadowOpacity = 0.5f;
     } completion:^(BOOL finished) {
@@ -278,6 +284,12 @@
     if (![self leftDrawerEnadbled]) {
         return;
     }
+    
+    if ([self rightDrawerOpened]) {
+        [self hideRightDrawerWithAnim:_leftDrawerView];
+    }
+    
+    
     [self handleLeftPan:recognizer];
 }
 
@@ -285,6 +297,11 @@
     if (![self rightDrawerEnadbled]) {
         return;
     }
+    
+    if ([self leftDrawerOpened]) {
+        [self hideLeftDrawerWithAnim:_rightDrawerView];
+    }
+
     [self handleRightPan:recognizer];
 }
 
@@ -314,6 +331,7 @@
 - (void) handleMaskPan:(UIPanGestureRecognizer*) recognizer{
 
     if (_leftDrawerOpened) {
+        
         [self dragLeftDrawer:recognizer :^CGFloat(CGFloat x, CGFloat maxX) {
             return  x < maxX ? x : maxX;
         }];
@@ -344,8 +362,6 @@
 }
 
 -(void) showOrHideRightAfterPan: (UIPanGestureRecognizer*) recognizer :(UIView *)view{
-    [recognizer setTranslation:CGPointZero inView:self];
-    
     if (recognizer.state == UIGestureRecognizerStateEnded) {
         CGPoint velocity = [recognizer velocityInView:self];
         
@@ -371,6 +387,7 @@
     
     CGFloat maxX = panView.frame.size.width - _rightDrawerView.frame.size.width / 2 ;
     
+    
     currentCenter.x = block(x, maxX);
 
     NSLog(@"dragRightDrawer %f             %f " , currentCenter.x, translation.x);
@@ -385,7 +402,7 @@
     
     _drawerMaskView.alpha = (panView.frame.size.width - _rightDrawerView.center.x ) / _rightDrawerView.frame.size.width / 2 * kMaxMaskAlpha;
     
-    [recognizer setTranslation:CGPointMake(panView.frame.size.width, 0) inView:panView];
+    [recognizer setTranslation:CGPointMake(0, 0) inView:panView];
     
     [self showOrHideRightAfterPan:recognizer :_rightDrawerView];
 }
