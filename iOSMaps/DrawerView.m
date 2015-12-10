@@ -188,8 +188,6 @@
 
 - (void) showLeftDrawerWithAdim:(UIView *)view{
     
-    [self setLeftDrawerOpened:YES];
-    
     [UIView animateWithDuration:0.2f animations:^{
         CGRect currentRect = view.frame;
         currentRect.origin.x = 0;
@@ -202,7 +200,7 @@
         if (_delegate != nil) {
             [_delegate drawerDidOpened];
         }
-        [self setLeftDrawerOpened:NO];
+        [self setLeftDrawerOpened:YES];
     }];
 
 }
@@ -222,7 +220,7 @@
         if (_delegate != nil) {
             [_delegate drawerDidClosed];
         }
-        [self setLeftDrawerOpened:!finished];
+        [self setLeftDrawerOpened:NO];
     }];
 }
 
@@ -286,7 +284,7 @@
     }
     
     if ([self rightDrawerOpened]) {
-        [self hideRightDrawerWithAnim:_leftDrawerView];
+        [self hideRightDrawerWithAnim:_rightDrawerView];
     }
     
     
@@ -299,7 +297,7 @@
     }
     
     if ([self leftDrawerOpened]) {
-        [self hideLeftDrawerWithAnim:_rightDrawerView];
+        [self hideLeftDrawerWithAnim:_leftDrawerView];
     }
 
     [self handleRightPan:recognizer];
