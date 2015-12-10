@@ -141,6 +141,7 @@
         [rootView addSubview:_rightDrawerView];
     }
     
+    [rootView bringSubviewToFront:self];
 
 }
 
