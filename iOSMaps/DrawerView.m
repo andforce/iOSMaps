@@ -289,7 +289,7 @@
     _drawerMaskView.backgroundColor = [UIColor blackColor];
     _drawerMaskView.alpha = 0.0f;
     
-    [_drawerMaskView addTarget:self action:@selector(hideLeftDrawerWithAnim:) forControlEvents:UIControlEventTouchUpInside];
+    [_drawerMaskView addTarget:self action:@selector(handleMaskClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIPanGestureRecognizer *maskPan = [[UIPanGestureRecognizer alloc]
                                        initWithTarget:self
@@ -298,6 +298,15 @@
     
 }
 
+-(void) handleMaskClick{
+    if(_leftDrawerView != nil && _leftDrawerOpened && _leftDrawerEnadbled){
+        [self hideLeftDrawerWithAnim:_leftDrawerView];
+    }
+    
+    if (_rightDrawerView != nil && _rightDrawerOpened && _rightDrawerEnadbled) {
+        [self hideRightDrawerWithAnim:_rightDrawerView];
+    }
+}
 
 -(void) handleLeftEdgePan:(UIScreenEdgePanGestureRecognizer *) recognizer{
     if (![self leftDrawerEnadbled]) {
