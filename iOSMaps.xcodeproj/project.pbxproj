@@ -110,6 +110,8 @@
 		3A69DBAA1C1342D700EABC79 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4DCD33321C11915000F68262 /* ViewController.h */,
+				4DCD33331C11915000F68262 /* ViewController.m */,
 				3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */,
 				3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */,
 			);
@@ -161,8 +163,6 @@
 				3A69DBA91C1342BF00EABC79 /* Views */,
 				4DCD332F1C11915000F68262 /* AppDelegate.h */,
 				4DCD33301C11915000F68262 /* AppDelegate.m */,
-				4DCD33321C11915000F68262 /* ViewController.h */,
-				4DCD33331C11915000F68262 /* ViewController.m */,
 				4DCD33351C11915000F68262 /* Main.storyboard */,
 				4DCD333B1C11915000F68262 /* Assets.xcassets */,
 				4DCD333D1C11915000F68262 /* LaunchScreen.storyboard */,
