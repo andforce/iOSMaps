@@ -10,10 +10,7 @@
 		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40601C11FDEE009B520C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* CircleView.m */; };
-		3A4C40691C120405009B520C /* location_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C40661C120405009B520C /* location_1.png */; };
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
-		3AC694771C19C807009B0633 /* location_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC694761C19C807009B0633 /* location_2.png */; };
-		3AC694791C19C927009B0633 /* location_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC694781C19C927009B0633 /* location_0.png */; };
 		3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */; };
 		4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91A0C91C16E6C300093EC6 /* DrawerView.m */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
@@ -30,11 +27,8 @@
 		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		3A4C405E1C11FDEE009B520C /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		3A4C405F1C11FDEE009B520C /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
-		3A4C40661C120405009B520C /* location_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_1.png; sourceTree = "<group>"; };
 		3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
 		3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
-		3AC694761C19C807009B0633 /* location_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_2.png; sourceTree = "<group>"; };
-		3AC694781C19C927009B0633 /* location_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_0.png; sourceTree = "<group>"; };
 		3AC6947A1C19CA7A009B0633 /* CircleLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLocationView.h; sourceTree = "<group>"; };
 		3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLocationView.m; sourceTree = "<group>"; };
 		4D91A0C81C16E6C300093EC6 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
@@ -101,16 +95,6 @@
 				3A4C405F1C11FDEE009B520C /* CircleView.m */,
 			);
 			name = CircleView;
-			sourceTree = "<group>";
-		};
-		3A4C40631C1203EE009B520C /* LocationViewImages */ = {
-			isa = PBXGroup;
-			children = (
-				3AC694781C19C927009B0633 /* location_0.png */,
-				3AC694761C19C807009B0633 /* location_2.png */,
-				3A4C40661C120405009B520C /* location_1.png */,
-			);
-			name = LocationViewImages;
 			sourceTree = "<group>";
 		};
 		3A69DBA91C1342BF00EABC79 /* Views */ = {
@@ -192,7 +176,6 @@
 		4DCD332C1C11915000F68262 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A4C40631C1203EE009B520C /* LocationViewImages */,
 				4DCD332D1C11915000F68262 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -259,12 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC694791C19C927009B0633 /* location_0.png in Resources */,
-				3AC694771C19C807009B0633 /* location_2.png in Resources */,
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,
 				4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */,
 				4DCD33371C11915000F68262 /* Main.storyboard in Resources */,
-				3A4C40691C120405009B520C /* location_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
