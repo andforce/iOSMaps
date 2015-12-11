@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "ic_brightness_5_black_18dp.png",
+      "filename" : "ic_brightness_5_black_24dp-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ic_brightness_5_black_24dp.png",
+      "filename" : "ic_brightness_5_black_48dp.png",
       "scale" : "3x"
     }
   ],
