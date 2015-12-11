@@ -13,7 +13,7 @@
 
 -(void)setLocationImageByUserTrackingMode:(long)mode{
 
-    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"location_%1d", mode]];
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"location_%1d", (int)mode]];
     [self setImage:image forState:UIControlStateNormal];
 }
 
