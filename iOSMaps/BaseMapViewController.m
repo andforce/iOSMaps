@@ -50,6 +50,7 @@
     [self.view addSubview:_mapView];
 }
 
+
 -(void) initLocationManager{
     // 定位
     [AMapLocationServices sharedServices].apiKey = kApiKey;

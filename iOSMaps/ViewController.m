@@ -45,14 +45,27 @@
     _drawerView = [[DrawerView alloc]initWithDrawerType:DrawerViewTypeLeft];
     _drawerView.delegate = self;
     [self.view addSubview:_drawerView];
-
+    
     // 定位
     [self startLocation];
 }
 
+-(void) handleMapViewPan:(UIPanGestureRecognizer *) recognizer{
+
+    NSLog(@"handleMapViewPan");
+    
+    UIView * panView = recognizer.view;
+    
+    CGPoint panPoint = [recognizer locationInView:panView];
+    self.mapView.center = panPoint;
+    
+    
+}
 
 -(void) changeUserTrackingMode:(NSInteger)mode{
-    self.mapView.userTrackingMode = mode;
+
+    [self.mapView setUserTrackingMode:mode animated:YES];
+    
     [_locationView changeImageByUserTrackingMode:mode];
     
 }
@@ -61,6 +74,17 @@
     self.mapView.mapType = type;
 }
 
+-(void)mapView:(MAMapView *)mapView regionWillChangeAnimated:(BOOL)animated{
+ 
+    NSLog(@"regionWillChangeAnimated %ld", mapView.userTrackingMode);
+    
+    [_locationView changeImageByUserTrackingMode:mapView.userTrackingMode];
+    
+}
+
+-(void) mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
+    NSLog(@"regionDidChangeAnimated");
+}
 
 
 -(void) onLocationBtnClick{
@@ -94,7 +118,6 @@
     //发起周边搜索
     [self.search AMapPOIAroundSearch: request];
 }
-
 
 -(void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response{
         if(response.pois.count == 0)
