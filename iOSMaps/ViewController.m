@@ -39,6 +39,7 @@
     
     // 顶部的搜索空间
     _searchView = [[SearchView alloc] init];
+
     [self.view addSubview:_searchView];
     
     
