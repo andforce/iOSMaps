@@ -25,7 +25,7 @@
 @implementation SearchView
 
 - (id)init {
-    if (self == [super init]) {
+    if (self = [super init]) {
         
         [self initWhiteBgView];
         [self initSearchView];

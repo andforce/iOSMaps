@@ -13,9 +13,13 @@
 #import "CircleLocationView.h"
 #import "DrawerView.h"
 #import "DrawerViewDelegate.h"
+#import "IMapView.h"
 
-@interface ViewController ()<DrawerViewDelegate>{
-
+@interface ViewController ()<DrawerViewDelegate, IMapView>{
+    CircleLocationView *_locationView;
+    SearchView *_searchView;
+    DrawerView *_drawerView;
+    
 }
 @end
 
@@ -27,25 +31,50 @@
 
     
     // 右下角的定位按钮
-    CircleLocationView *locationView = [[CircleLocationView alloc] init];
-    [self.view addSubview:locationView];
-    [locationView setLocationImageByUserTrackingMode:self.mapView.userTrackingMode];
+    _locationView = [[CircleLocationView alloc] init];
+    [self.view addSubview:_locationView];
+    [_locationView changeImageByUserTrackingMode:self.mapView.userTrackingMode];
+    [_locationView addTarget:self action:@selector(onLocationBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     
     // 顶部的搜索空间
-    SearchView *searchView = [[SearchView alloc] init];
-    [self.view addSubview:searchView];
+    _searchView = [[SearchView alloc] init];
+    [self.view addSubview:_searchView];
     
     
-    DrawerView *drawerView = [[DrawerView alloc]initWithDrawerType:DrawerViewTypeLeftAndRight];
-    drawerView.delegate = self;
-    [self.view addSubview:drawerView];
+    _drawerView = [[DrawerView alloc]initWithDrawerType:DrawerViewTypeLeft];
+    _drawerView.delegate = self;
+    [self.view addSubview:_drawerView];
 
     // 定位
     [self startLocation];
 }
 
 
+-(void) changeUserTrackingMode:(NSInteger)mode{
+    self.mapView.userTrackingMode = mode;
+    [_locationView changeImageByUserTrackingMode:mode];
+    
+}
+
+-(void) changeMapStyle:(NSInteger)type{
+    self.mapView.mapType = type;
+}
+
+
+
+-(void) onLocationBtnClick{
+    MAUserTrackingMode mode = self.mapView.userTrackingMode;
+    if (mode == MAUserTrackingModeFollow) {
+        [self changeUserTrackingMode:MAUserTrackingModeFollowWithHeading];
+    } else if(mode == MAUserTrackingModeFollowWithHeading){
+        [self changeUserTrackingMode:MAUserTrackingModeNone];
+    } else if(mode == MAUserTrackingModeNone){
+        [self changeUserTrackingMode:MAUserTrackingModeFollow];
+    }
+    
+    NSLog(@"onLocationBtnClick current mode: %ld", mode);
+}
 
 -(void) searchWithWord: (NSString *)word andLocation:(AMapGeoPoint *)location type:(NSString *) types{
     //构造AMapPOIAroundSearchRequest对象，设置周边请求参数

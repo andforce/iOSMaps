@@ -11,6 +11,7 @@
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40601C11FDEE009B520C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* CircleView.m */; };
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
+		3AB397F91C1B106800DCDA06 /* MapPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB397F81C1B106800DCDA06 /* MapPresenter.m */; };
 		3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */; };
 		4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91A0C91C16E6C300093EC6 /* DrawerView.m */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
@@ -29,6 +30,9 @@
 		3A4C405F1C11FDEE009B520C /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
 		3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
+		3AB397F71C1B106800DCDA06 /* MapPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPresenter.h; sourceTree = "<group>"; };
+		3AB397F81C1B106800DCDA06 /* MapPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPresenter.m; sourceTree = "<group>"; };
+		3AB397FC1C1B15F100DCDA06 /* IMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMapView.h; sourceTree = "<group>"; };
 		3AC6947A1C19CA7A009B0633 /* CircleLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLocationView.h; sourceTree = "<group>"; };
 		3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLocationView.m; sourceTree = "<group>"; };
 		4D91A0C81C16E6C300093EC6 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
@@ -100,9 +104,8 @@
 		3A69DBA91C1342BF00EABC79 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D91A0C71C16E69100093EC6 /* DrawerView */,
-				3A4C405D1C11FDDA009B520C /* CircleView */,
-				3A4C404C1C11F566009B520C /* SearchView */,
+				3AB397F51C1B0E0C00DCDA06 /* Public */,
+				3AC694721C19C512009B0633 /* MapsActionView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -116,6 +119,34 @@
 				3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3AB397F51C1B0E0C00DCDA06 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				4D91A0C71C16E69100093EC6 /* DrawerView */,
+				3A4C405D1C11FDDA009B520C /* CircleView */,
+				3A4C404C1C11F566009B520C /* SearchView */,
+			);
+			name = Public;
+			sourceTree = "<group>";
+		};
+		3AB397F61C1B0FBF00DCDA06 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3AB397FA1C1B159100DCDA06 /* IViews */,
+				3AB397F71C1B106800DCDA06 /* MapPresenter.h */,
+				3AB397F81C1B106800DCDA06 /* MapPresenter.m */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		3AB397FA1C1B159100DCDA06 /* IViews */ = {
+			isa = PBXGroup;
+			children = (
+				3AB397FC1C1B15F100DCDA06 /* IMapView.h */,
+			);
+			name = IViews;
 			sourceTree = "<group>";
 		};
 		3AC694721C19C512009B0633 /* MapsActionView */ = {
@@ -158,7 +189,7 @@
 		4DCD332B1C11915000F68262 /* iOSMaps */ = {
 			isa = PBXGroup;
 			children = (
-				3AC694721C19C512009B0633 /* MapsActionView */,
+				3AB397F61C1B0FBF00DCDA06 /* Presenters */,
 				3A69DBAA1C1342D700EABC79 /* Controllers */,
 				3A69DBA91C1342BF00EABC79 /* Views */,
 				4DCD332F1C11915000F68262 /* AppDelegate.h */,
@@ -308,6 +339,7 @@
 				4DCD33341C11915000F68262 /* ViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
 				3A4C40601C11FDEE009B520C /* CircleView.m in Sources */,
+				3AB397F91C1B106800DCDA06 /* MapPresenter.m in Sources */,
 				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,
 				4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */,
 				3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */,

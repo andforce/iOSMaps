@@ -20,7 +20,7 @@
 @implementation CircleView
 
 -(id)initWithCircleRadius:(int)radius{
-    if (self == [super init]) {
+    if (self = [super init]) {
         _radius = radius;
         [self initWithR:_radius];
     }
@@ -29,7 +29,7 @@
 }
 
 -(id) init{
-    if (self == [super init]) {
+    if (self = [super init]) {
         _radius = kViewR;
         [self initWithR:_radius];
     }

@@ -28,7 +28,7 @@
 @implementation DrawerView
 
 -(id)init{
-    if (self == [super init]) {
+    if (self = [super init]) {
         
         [self setDrawerType:DrawerViewTypeLeft];
         
@@ -50,7 +50,7 @@
 
 -(id)initWithDrawerType:(DrawerViewType)drawerType{
    
-    if (self == [super init]) {
+    if (self = [super init]) {
         [self setDrawerType:drawerType];
         
         switch (_drawerType) {

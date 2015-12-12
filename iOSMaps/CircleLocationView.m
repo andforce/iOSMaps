@@ -11,7 +11,7 @@
 @implementation CircleLocationView
 
 
--(void)setLocationImageByUserTrackingMode:(long)mode{
+-(void)changeImageByUserTrackingMode:(long)mode{
 
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"location_%1d", (int)mode]];
     [self setImage:image forState:UIControlStateNormal];

@@ -10,6 +10,6 @@
 
 @interface CircleLocationView : CircleView
 
--(void)setLocationImageByUserTrackingMode:(long) mode;
+-(void)changeImageByUserTrackingMode:(long) mode;
 
 @end
