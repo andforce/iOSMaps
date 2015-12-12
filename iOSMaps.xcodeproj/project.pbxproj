@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
+		3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */; };
+		3A1AFF231C1BF04A00B46CC6 /* LeftDrawerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF221C1BF04A00B46CC6 /* LeftDrawerItem.m */; };
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40601C11FDEE009B520C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* CircleView.m */; };
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A1AFF1E1C1BECFF00B46CC6 /* MapDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDrawerView.h; sourceTree = "<group>"; };
+		3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDrawerView.m; sourceTree = "<group>"; };
+		3A1AFF211C1BF04A00B46CC6 /* LeftDrawerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerItem.h; sourceTree = "<group>"; };
+		3A1AFF221C1BF04A00B46CC6 /* LeftDrawerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDrawerItem.m; sourceTree = "<group>"; };
 		3A4C404D1C11F59B009B520C /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		3A4C405E1C11FDEE009B520C /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
@@ -154,6 +160,10 @@
 			children = (
 				3AC6947A1C19CA7A009B0633 /* CircleLocationView.h */,
 				3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */,
+				3A1AFF1E1C1BECFF00B46CC6 /* MapDrawerView.h */,
+				3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */,
+				3A1AFF211C1BF04A00B46CC6 /* LeftDrawerItem.h */,
+				3A1AFF221C1BF04A00B46CC6 /* LeftDrawerItem.m */,
 			);
 			name = MapsActionView;
 			sourceTree = "<group>";
@@ -334,11 +344,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */,
 				4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */,
 				3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */,
 				4DCD33341C11915000F68262 /* ViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
 				3A4C40601C11FDEE009B520C /* CircleView.m in Sources */,
+				3A1AFF231C1BF04A00B46CC6 /* LeftDrawerItem.m in Sources */,
 				3AB397F91C1B106800DCDA06 /* MapPresenter.m in Sources */,
 				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,
 				4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */,

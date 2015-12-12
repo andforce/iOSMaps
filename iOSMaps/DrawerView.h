@@ -19,6 +19,11 @@ typedef NS_ENUM(NSInteger, DrawerViewType) {
 
 };
 
+typedef NS_ENUM(NSInteger, DrawerIndex) {
+    DrawerIndexLeft = 0,                         // left
+    DrawerIndexRight,
+};
+
 @interface DrawerView : UIView{
 
 }
@@ -33,6 +38,8 @@ typedef NS_ENUM(NSInteger, DrawerViewType) {
 
 
 @property (nonatomic, assign) DrawerViewType drawerType;
+
+-(UIView *) findDrawerWithDrawerIndex:(DrawerIndex)type;
 
 -(id)initWithDrawerType:(DrawerViewType)drawerType;
 

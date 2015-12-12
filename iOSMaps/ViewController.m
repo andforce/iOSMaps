@@ -11,14 +11,14 @@
 
 #import "SearchView.h"
 #import "CircleLocationView.h"
-#import "DrawerView.h"
+#import "MapDrawerView.h"
 #import "DrawerViewDelegate.h"
 #import "IMapView.h"
 
 @interface ViewController ()<DrawerViewDelegate, IMapView>{
     CircleLocationView *_locationView;
     SearchView *_searchView;
-    DrawerView *_drawerView;
+    MapDrawerView *_drawerView;
     
 }
 @end
@@ -42,13 +42,14 @@
     [self.view addSubview:_searchView];
     
     
-    _drawerView = [[DrawerView alloc]initWithDrawerType:DrawerViewTypeLeft];
+    _drawerView = [[MapDrawerView alloc]initWithDrawerType:DrawerViewTypeLeft];
     _drawerView.delegate = self;
     [self.view addSubview:_drawerView];
     
     // 定位
     [self startLocation];
 }
+
 
 -(void) handleMapViewPan:(UIPanGestureRecognizer *) recognizer{
 

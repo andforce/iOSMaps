@@ -56,7 +56,7 @@
         switch (_drawerType) {
             case DrawerViewTypeLeft:{
                 [self initLeftDrawer];
-                [self setRightDrawerEnadbled:YES];
+                [self setLeftDrawerEnadbled:YES];
                 break;
             }
             case DrawerViewTypeRight:{
@@ -86,6 +86,9 @@
     return self;
 }
 
+-(UIView *) findDrawerWithDrawerIndex:(DrawerIndex)type{
+    return type == DrawerViewTypeLeft ? _leftDrawerView : _rightDrawerView;
+}
 
 -(void)didAddSubview:(UIView *)subview{
     NSLog(@"didAddSubview");
@@ -128,6 +131,10 @@
         _leftDrawerView.frame = CGRectMake(- with, 0, with, rootView.frame.size.height);
         [rootView addSubview:_leftDrawerView];
         
+        if ([_delegate respondsToSelector:@selector(didDrawerMoveToSuperview:)]) {
+            [_delegate didDrawerMoveToSuperview:DrawerIndexLeft];
+        }
+        
         
         UIScreenEdgePanGestureRecognizer *leftEdgePanRecognizer = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(handleLeftEdgePan:)];
         leftEdgePanRecognizer.edges = UIRectEdgeLeft;
@@ -139,6 +146,10 @@
         // init right Drawer
         _rightDrawerView.frame = CGRectMake(rootView.frame.size.width, 0, with, rootView.frame.size.height);
         [rootView addSubview:_rightDrawerView];
+        
+        if ([_delegate respondsToSelector:@selector(didDrawerMoveToSuperview:)]) {
+            [_delegate didDrawerMoveToSuperview:DrawerIndexRight];
+        }
     }
     
     [rootView bringSubviewToFront:self];

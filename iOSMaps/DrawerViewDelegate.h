@@ -16,6 +16,8 @@
 -(void)rightDrawerDidOpened;
 -(void)rightDrawerDidClosed;
 
+-(void)didDrawerMoveToSuperview:(NSInteger) index;
+
 
 
 @end
