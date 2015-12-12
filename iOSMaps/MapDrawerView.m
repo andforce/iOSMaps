@@ -7,6 +7,7 @@
 //
 
 #import "MapDrawerView.h"
+#import "LeftDrawerItem.h"
 
 @implementation MapDrawerView
 
@@ -31,6 +32,26 @@
         leftDrawerTopView.frame = topFrame;
         
         [leftDrawer addSubview:leftDrawerTopView];
+        
+        // 添加地图样式切换
+        LeftDrawerItem *changeMapStype = [[LeftDrawerItem alloc]initWithLeftIcon:@"ic_public_18pt" andRightText:@"卫星地图"];
+        
+        [leftDrawer addSubview:changeMapStype];
+        
+        // 添加摄像头
+        
+        LeftDrawerItem *cameraShow = [[LeftDrawerItem alloc] initWithLeftIcon:@"ic_timelapse_18pt" andRightText:@"摄像头"];
+        [leftDrawer addSubview:cameraShow];
+        
+        // 添加设置
+        LeftDrawerItem *settingButton = [[LeftDrawerItem alloc] initWithLeftIcon:@"ic_settings_18pt" andRightText:@"设置"];
+        [leftDrawer addSubview:settingButton];\
+        
+        // 添加关于
+        
+        LeftDrawerItem *aboutButton = [[LeftDrawerItem alloc] initWithLeftIcon:@"ic_toys_18pt" andRightText:@"关于"];
+        [leftDrawer addSubview:aboutButton];
+        
     }
 
 }

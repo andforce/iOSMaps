@@ -8,6 +8,8 @@
 
 #import "LeftDrawerItem.h"
 
+#define kMarginLeft 15
+
 @implementation LeftDrawerItem
 
 
@@ -17,13 +19,37 @@
         
         UIImage *leftImage = [UIImage imageNamed:name];
         [self setImage:leftImage forState:UIControlStateNormal];
-        [self setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 5, 15)];
+
         
         [self setTitle:text forState:UIControlStateNormal];
-        [self setTitleEdgeInsets:UIEdgeInsetsMake(10, 0, 5, 30)];
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        [self setBackgroundColor:[UIColor grayColor]];
+        self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+
         
     }
     
     return self;
+}
+
+-(void)didMoveToSuperview{
+    [super didMoveToSuperview];
+    NSArray * childViews = self.superview.subviews;
+    
+    UIView * lastView = childViews[childViews.count - 2];
+    
+    CGRect lastFrame = lastView.frame;
+
+    self.frame = CGRectMake(0, lastFrame.origin.y + lastFrame.size.height, self.superview.frame.size.width, 50);
+    
+    
+    
+    [self setImageEdgeInsets:UIEdgeInsetsMake(0, kMarginLeft, 0, 0)];
+    
+    
+    [self setTitleEdgeInsets:UIEdgeInsetsMake(0, kMarginLeft * 2, 0, 0)];
+    
+    
 }
 @end
