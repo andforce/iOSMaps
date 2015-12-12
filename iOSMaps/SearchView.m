@@ -7,6 +7,8 @@
 //
 
 #import "SearchView.h"
+#import "UIColor+MyColor.h"
+#import "UIButton+BackgroundColor.h"
 
 
 #define kViewHeight 50
@@ -83,6 +85,9 @@
 
     UIImage *searchImage = [UIImage imageNamed:@"ic_qu_search"];
     [_searchButton setImage:searchImage forState:UIControlStateNormal];
+    [_searchButton setBackgroundColor:[UIColor colorWithButtonHighLight] forState:UIControlStateHighlighted];
+
+
     
     //[_searchButton addTarget:self action:@selector(showOrHideWhiteBgViewWithAnim) forControlEvents:UIControlEventTouchUpInside];
     [_topBarRootView addSubview:_searchButton];
@@ -92,6 +97,7 @@
 
     UIImage *srawerImage = [UIImage imageNamed:@"ic_qu_menu_grabber"];
     [_drawerSwitchButton setImage:srawerImage forState:UIControlStateNormal];
+    [_drawerSwitchButton setBackgroundColor:[UIColor colorWithButtonHighLight] forState:UIControlStateHighlighted];
     
     //[_drawerSwitchButton addTarget:self action:@selector(openLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
     [_topBarRootView addSubview:_drawerSwitchButton];
