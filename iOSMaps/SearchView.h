@@ -13,5 +13,6 @@
 @interface SearchView : UIView
 
 
+-(void) addDrawerOpenButtonClickListener:(OnClickListener) drawerClickListener;
 
 @end

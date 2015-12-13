@@ -113,7 +113,9 @@
 
 }
 
-
+-(void)addDrawerOpenButtonClickListener:(OnClickListener)drawerClickListener{
+    [_drawerSwitchButton addOnClickListener:drawerClickListener];
+}
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     [self showOrHideWhiteBgViewWithAnim];

@@ -40,6 +40,13 @@
     // 顶部的搜索空间
     _searchView = [[SearchView alloc] init];
 
+
+    __block OnClickListener blockSef = ^{
+        [_drawerView openLeftDrawer];
+    };
+    
+    [_searchView addDrawerOpenButtonClickListener:blockSef];
+    
     [self.view addSubview:_searchView];
     
     

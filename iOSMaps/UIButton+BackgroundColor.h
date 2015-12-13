@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 
 
+typedef void(^OnClickListener)();
+
+
 
 @interface UIButton(BackgroundColor)
 
+@property (nonatomic, assign) OnClickListener listener;
+
+
+-(void) addOnClickListener: (OnClickListener) listener;
 
 -(void)setBackgroundColor:(UIColor *) color forState:(UIControlState) state;
 
