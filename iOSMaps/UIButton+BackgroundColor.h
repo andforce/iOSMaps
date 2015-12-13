@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-typedef void(^OnClickListener)();
+typedef void(^OnClickListener)(id view);
 
 
 

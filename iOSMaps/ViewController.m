@@ -41,7 +41,7 @@
     _searchView = [[SearchView alloc] init];
 
 
-    __block OnClickListener blockSef = ^{
+    __block OnClickListener blockSef = ^(id view){
         [_drawerView openLeftDrawer];
     };
     
@@ -85,7 +85,7 @@
 
 -(void)mapView:(MAMapView *)mapView regionWillChangeAnimated:(BOOL)animated{
  
-    NSLog(@"regionWillChangeAnimated %ld", mapView.userTrackingMode);
+    NSLog(@"regionWillChangeAnimated %ld", (long)mapView.userTrackingMode);
     
     [_locationView changeImageByUserTrackingMode:mapView.userTrackingMode];
     
@@ -106,7 +106,7 @@
         [self changeUserTrackingMode:MAUserTrackingModeFollow];
     }
     
-    NSLog(@"onLocationBtnClick current mode: %ld", mode);
+    NSLog(@"onLocationBtnClick current mode: %ld", (long)mode);
 }
 
 -(void) searchWithWord: (NSString *)word andLocation:(AMapGeoPoint *)location type:(NSString *) types{
@@ -135,7 +135,7 @@
         }
     
         //通过 AMapPOISearchResponse 对象处理搜索结果
-        NSString *strCount = [NSString stringWithFormat:@"count: %ld",response.count];
+        NSString *strCount = [NSString stringWithFormat:@"count: %ld",(long)response.count];
     
         NSString *strSuggestion = [NSString stringWithFormat:@"Suggestion: %@", response.suggestion];
         NSString *strPoi = @"";

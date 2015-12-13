@@ -31,12 +31,12 @@ static const void *OnClickListenerKey = &OnClickListenerKey;
 
 -(void)addOnClickListener:(OnClickListener)listener{
     self.listener = listener;
-    [self addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    [self addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
--(void)click{
-    self.listener();
+-(void)click:(id) view{
+    self.listener(view);
 }
 
 @end
