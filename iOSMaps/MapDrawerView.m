@@ -45,24 +45,24 @@
         
         // 添加地图样式切换
         changeMapStype = [[LeftDrawerItem alloc]initWithLeftIcon:@"ic_public_18pt" andRightText:@"卫星地图"];
-        changeMapStype.tag = 1;
+        changeMapStype.tag = DrawerItemTypeSatellite;
         [leftDrawer addSubview:changeMapStype];
         
         // 添加摄像头
         
         cameraShow = [[LeftDrawerItem alloc] initWithLeftIcon:@"ic_timelapse_18pt" andRightText:@"摄像头"];
-        cameraShow.tag = 2;
+        cameraShow.tag = DrawerItemTypeCamera;
         [leftDrawer addSubview:cameraShow];
         
         // 添加设置
         settingButton = [[LeftDrawerItem alloc] initWithLeftIcon:@"ic_settings_18pt" andRightText:@"设置"];
-        settingButton.tag = 3;
-        [leftDrawer addSubview:settingButton];\
+        settingButton.tag = DrawerItemTypeSetting;
+        [leftDrawer addSubview:settingButton];
         
         // 添加关于
         
         aboutButton = [[LeftDrawerItem alloc] initWithLeftIcon:@"ic_toys_18pt" andRightText:@"关于"];
-        aboutButton.tag = 4;
+        aboutButton.tag = DrawerItemTypeAbout;
         [leftDrawer addSubview:aboutButton];
         
     }

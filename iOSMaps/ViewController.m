@@ -29,6 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // 初始化Presenter
+    _mapPresenter = [[MapPresenter alloc] initWithGaoDeMap:self];
+    
     
     // 右下角的定位按钮
     _locationView = [[CircleLocationView alloc] init];
@@ -54,10 +57,32 @@
     _drawerView.delegate = self;
     [self.view addSubview:_drawerView];
     
+    
+    // Drawer Item 点击回调
     __block OnClickListener itemClickListener = ^(id view){
         NSLog(@"addOnItemClickListener   %d", ((UIButton*)view).tag);
+        
+        switch (((UIButton*)view).tag) {
+            case DrawerItemTypeSatellite:{
+                
+                [self.mapPresenter changeMapStyle:MAMapTypeSatellite];
+                
+                break;
+            }
+            case DrawerItemTypeCamera:{
+                break;
+            }
+            case DrawerItemTypeSetting:{
+                break;
+            }
+            case DrawerItemTypeAbout:{
+                break;
+            }
+        }
+        
         [_drawerView closeLeftDrawer];
     };
+
     [_drawerView addOnItemClickListener:itemClickListener];
     
     // 定位
@@ -65,17 +90,6 @@
 }
 
 
--(void) handleMapViewPan:(UIPanGestureRecognizer *) recognizer{
-
-    NSLog(@"handleMapViewPan");
-    
-    UIView * panView = recognizer.view;
-    
-    CGPoint panPoint = [recognizer locationInView:panView];
-    self.mapView.center = panPoint;
-    
-    
-}
 
 -(void) changeUserTrackingMode:(NSInteger)mode{
 
@@ -87,6 +101,11 @@
 
 -(void) changeMapStyle:(NSInteger)type{
     self.mapView.mapType = type;
+    UIButton *button = [[_drawerView findDrawerWithDrawerIndex:DrawerIndexLeft] viewWithTag:DrawerItemTypeSatellite];
+    button.selected = YES;
+    
+    NSLog(@"changeMapStyle =======>>>   %@     %d", [[_drawerView findDrawerWithDrawerIndex:DrawerIndexLeft] subviews], DrawerItemTypeSatellite);
+    
 }
 
 -(void)mapView:(MAMapView *)mapView regionWillChangeAnimated:(BOOL)animated{
@@ -105,11 +124,17 @@
 -(void) onLocationBtnClick{
     MAUserTrackingMode mode = self.mapView.userTrackingMode;
     if (mode == MAUserTrackingModeFollow) {
-        [self changeUserTrackingMode:MAUserTrackingModeFollowWithHeading];
+        
+        [self.mapPresenter changeUserTrackingMode:MAUserTrackingModeFollowWithHeading];
+        
     } else if(mode == MAUserTrackingModeFollowWithHeading){
-        [self changeUserTrackingMode:MAUserTrackingModeNone];
+
+        [self.mapPresenter changeUserTrackingMode:MAUserTrackingModeNone];
+        
     } else if(mode == MAUserTrackingModeNone){
-        [self changeUserTrackingMode:MAUserTrackingModeFollow];
+        
+        [self.mapPresenter changeUserTrackingMode:MAUserTrackingModeFollow];
+
     }
     
     NSLog(@"onLocationBtnClick current mode: %ld", (long)mode);

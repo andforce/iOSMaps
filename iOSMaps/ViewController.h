@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseMapViewController.h"
+#include "MapPresenter.h"
 
 
 @interface ViewController : BaseMapViewController
+
+@property (nonatomic , strong) MapPresenter * mapPresenter;
 
 
 @end

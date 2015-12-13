@@ -9,6 +9,14 @@
 #import "DrawerView.h"
 #import "UIButton+BackgroundColor.h"
 
+typedef NS_ENUM(NSInteger, DrawerItemType) {
+    DrawerItemTypeSatellite = 100,
+    DrawerItemTypeCamera,
+    DrawerItemTypeSetting,
+    DrawerItemTypeAbout
+    
+};
+
 
 @interface MapDrawerView : DrawerView
 
