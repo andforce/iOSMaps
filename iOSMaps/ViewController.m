@@ -60,7 +60,7 @@
     
     // Drawer Item 点击回调
     __block OnClickListener itemClickListener = ^(id view){
-        NSLog(@"addOnItemClickListener   %d", ((UIButton*)view).tag);
+        NSLog(@"addOnItemClickListener   %ld", (long)((UIButton*)view).tag);
         
         switch (((UIButton*)view).tag) {
             case DrawerItemTypeSatellite:{
@@ -104,7 +104,7 @@
     UIButton *button = [[_drawerView findDrawerWithDrawerIndex:DrawerIndexLeft] viewWithTag:DrawerItemTypeSatellite];
     button.selected = YES;
     
-    NSLog(@"changeMapStyle =======>>>   %@     %d", [[_drawerView findDrawerWithDrawerIndex:DrawerIndexLeft] subviews], DrawerItemTypeSatellite);
+    NSLog(@"changeMapStyle =======>>>   %@     %ld", [[_drawerView findDrawerWithDrawerIndex:DrawerIndexLeft] subviews], (long)DrawerItemTypeSatellite);
     
 }
 

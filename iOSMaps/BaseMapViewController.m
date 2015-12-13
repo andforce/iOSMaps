@@ -45,7 +45,7 @@
     _mapView.showsScale = NO;
     
     MAUserTrackingMode mode = _mapView.userTrackingMode;
-    NSLog(@"MAUserTrackingMode : %d", mode);
+    NSLog(@"MAUserTrackingMode : %ld", (long)mode);
     
     [self.view addSubview:_mapView];
 }
