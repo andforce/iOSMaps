@@ -7,7 +7,11 @@
 //
 
 #import "DrawerView.h"
+#import "UIButton+BackgroundColor.h"
+
 
 @interface MapDrawerView : DrawerView
+
+-(void)addOnItemClickListener:(OnClickListener)listener;
 
 @end

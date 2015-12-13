@@ -54,6 +54,12 @@
     _drawerView.delegate = self;
     [self.view addSubview:_drawerView];
     
+    __block OnClickListener itemClickListener = ^(id view){
+        NSLog(@"addOnItemClickListener   %d", ((UIButton*)view).tag);
+        [_drawerView closeLeftDrawer];
+    };
+    [_drawerView addOnItemClickListener:itemClickListener];
+    
     // 定位
     [self startLocation];
 }
