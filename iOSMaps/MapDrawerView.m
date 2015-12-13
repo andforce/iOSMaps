@@ -8,6 +8,7 @@
 
 #import "MapDrawerView.h"
 #import "LeftDrawerItem.h"
+#import "Constances.h"
 
 @interface MapDrawerView(){
     LeftDrawerItem *changeMapStype;

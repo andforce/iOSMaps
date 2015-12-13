@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Constances.h"
+#import <AMapNaviKit/AMapNaviKit.h>
+
 
 @interface AppDelegate ()
 
@@ -16,7 +19,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    // 设置默认的地图样式
+    NSDictionary *defaultValues = [NSDictionary dictionaryWithObjectsAndKeys: KMapStyleKey, [NSNumber numberWithInteger:MAMapTypeSatellite], nil];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    
     return YES;
 }
 

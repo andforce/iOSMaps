@@ -14,6 +14,8 @@
 #import "MapDrawerView.h"
 #import "DrawerViewDelegate.h"
 #import "IMapView.h"
+#import "CommonUtils.h"
+#import "Constances.h"
 
 @interface ViewController ()<DrawerViewDelegate, IMapView>{
     CircleLocationView *_locationView;
@@ -87,6 +89,16 @@
     
     // 定位
     [self startLocation];
+    
+    
+    ////////////////test block
+    //[CommonUtils writeUserData:KMapStyleKey withValue:100];
+    NSLog(@"CommonUtils ========> %ld", (long)[CommonUtils readUserData:KMapStyleKey withDefault:99]);
+    ////////////////test block
+    
+    
+    // 加载用户设置
+    [_mapPresenter changeMapStyle:[CommonUtils readUserData:KMapStyleKey withDefault:0]];
 }
 
 
@@ -101,8 +113,9 @@
 
 -(void) changeMapStyle:(NSInteger)type{
     self.mapView.mapType = type;
+    
     UIButton *button = [[_drawerView findDrawerWithDrawerIndex:DrawerIndexLeft] viewWithTag:DrawerItemTypeSatellite];
-    button.selected = YES;
+    button.selected = type == MAMapTypeSatellite;
     
     NSLog(@"changeMapStyle =======>>>   %@     %ld", [[_drawerView findDrawerWithDrawerIndex:DrawerIndexLeft] subviews], (long)DrawerItemTypeSatellite);
     

@@ -53,6 +53,7 @@
 		3AB397FC1C1B15F100DCDA06 /* IMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMapView.h; sourceTree = "<group>"; };
 		3AC6947A1C19CA7A009B0633 /* CircleLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLocationView.h; sourceTree = "<group>"; };
 		3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLocationView.m; sourceTree = "<group>"; };
+		3ADA377F1C1DBC8B00EA2919 /* Constances.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constances.h; sourceTree = "<group>"; };
 		4D91A0C81C16E6C300093EC6 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
 		4D91A0C91C16E6C300093EC6 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
 		4DBE58201C191695000B98AF /* DrawerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewDelegate.h; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 				3A1AFF311C1C433100B46CC6 /* UIImage+Tint.m */,
 				3A1AFF331C1C4FCF00B46CC6 /* UIColor+MyColor.h */,
 				3A1AFF341C1C4FCF00B46CC6 /* UIColor+MyColor.m */,
+				3ADA377F1C1DBC8B00EA2919 /* Constances.h */,
 			);
 			path = iOSMaps;
 			sourceTree = "<group>";

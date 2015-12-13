@@ -25,4 +25,23 @@
     
     return theImage;
 }
+
++(NSInteger)readUserData:(NSString *)key withDefault:(NSInteger)def{
+    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+
+    NSUInteger value = [defaults integerForKey:key];
+    
+    return value;
+}
+
+
++(void)writeUserData:(NSString *)key withValue:(NSInteger)value{
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    [defaults setInteger:value forKey:key];
+    [defaults synchronize];
+}
+
+
+
 @end

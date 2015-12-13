@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Constances.h"
 
 @interface CommonUtils : NSObject
 
 +(UIImage *)createImageWithColor:(UIColor *)color;
+
++(NSInteger) readUserData:(NSString *)key withDefault:(NSInteger) def;
+
++(void) writeUserData:(NSString *)key withValue:(NSInteger) value;
+
 
 @end
