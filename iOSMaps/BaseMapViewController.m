@@ -7,6 +7,8 @@
 //
 
 #import "BaseMapViewController.h"
+#import <AMapNaviKit/MAMapView.h>
+#import <AMapNaviKit/MAMapServices.h>
 
 @interface BaseMapViewController ()
 

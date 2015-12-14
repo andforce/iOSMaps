@@ -8,14 +8,14 @@
 
 #import "AppDelegate.h"
 #import "Constances.h"
-#import <AMapNaviKit/AMapNaviKit.h>
+#import <AMapNaviKit/MAMapView.h>
 
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate	
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

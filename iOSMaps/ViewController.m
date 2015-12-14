@@ -17,6 +17,8 @@
 #import "CommonUtils.h"
 #import "Constances.h"
 
+#import <AMapNaviKit/MAMapView.h>
+
 @interface ViewController ()<DrawerViewDelegate, IMapView>{
     CircleLocationView *_locationView;
     SearchView *_searchView;
