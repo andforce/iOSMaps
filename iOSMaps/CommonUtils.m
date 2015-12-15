@@ -26,7 +26,7 @@
     return theImage;
 }
 
-+(NSInteger)readUserData:(NSString *)key withDefault:(NSInteger)def{
++(NSInteger)readUserData:(NSString *)key{
     
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
 

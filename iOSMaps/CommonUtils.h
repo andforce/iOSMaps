@@ -14,7 +14,7 @@
 
 +(UIImage *)createImageWithColor:(UIColor *)color;
 
-+(NSInteger) readUserData:(NSString *)key withDefault:(NSInteger) def;
++(NSInteger) readUserData:(NSString *)key;
 
 +(void) writeUserData:(NSString *)key withValue:(NSInteger) value;
 

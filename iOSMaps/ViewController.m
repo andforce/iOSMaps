@@ -68,8 +68,9 @@
         
         switch (((UIButton*)view).tag) {
             case DrawerItemTypeSatellite:{
-                
-                [self.mapPresenter changeMapStyle:MAMapTypeSatellite];
+                BOOL selected = ((UIButton*)view).selected;
+
+                [self.mapPresenter changeMapStyle: selected ? MAMapTypeStandard : MAMapTypeSatellite];
                 
                 break;
             }
@@ -95,12 +96,12 @@
     
     ////////////////test block
     //[CommonUtils writeUserData:KMapStyleKey withValue:100];
-    NSLog(@"CommonUtils ========> %ld", (long)[CommonUtils readUserData:KMapStyleKey withDefault:99]);
+    NSLog(@"CommonUtils ========> %ld", (long)[CommonUtils readUserData:KMapStyleKey]);
     ////////////////test block
     
     
     // 加载用户设置
-    [_mapPresenter changeMapStyle:[CommonUtils readUserData:KMapStyleKey withDefault:0]];
+    [_mapPresenter changeMapStyle:[CommonUtils readUserData:KMapStyleKey]];
 }
 
 

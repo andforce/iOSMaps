@@ -22,7 +22,7 @@
     
     
     // 设置默认的地图样式
-    NSDictionary *defaultValues = [NSDictionary dictionaryWithObjectsAndKeys: KMapStyleKey, [NSNumber numberWithInteger:MAMapTypeSatellite], nil];
+    NSDictionary *defaultValues = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInteger:MAMapTypeStandard], KMapStyleKey, nil];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
     [[NSUserDefaults standardUserDefaults] synchronize];

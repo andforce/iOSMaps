@@ -7,6 +7,7 @@
 //
 
 #import "MapPresenter.h"
+#import "CommonUtils.h"
 
 @implementation MapPresenter
 
@@ -26,6 +27,8 @@
 
 
 -(void) changeMapStyle:(NSInteger)type{
+    [CommonUtils writeUserData:KMapStyleKey withValue:type];
+    
     [_iMapView changeMapStyle:type];
 }
 @end
