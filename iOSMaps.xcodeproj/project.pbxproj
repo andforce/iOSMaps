@@ -60,6 +60,7 @@
 		4D0574CF1C21332B0047FC75 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		4D0574D41C213C320047FC75 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4D0574D51C213C320047FC75 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4D0574D91C2144A00047FC75 /* ControllerSwitchDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerSwitchDelegate.h; sourceTree = "<group>"; };
 		4D91A0C81C16E6C300093EC6 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
 		4D91A0C91C16E6C300093EC6 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
 		4DBE58201C191695000B98AF /* DrawerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 				4D0574CF1C21332B0047FC75 /* SettingViewController.m */,
 				4D0574D41C213C320047FC75 /* MainViewController.h */,
 				4D0574D51C213C320047FC75 /* MainViewController.m */,
+				4D0574D91C2144A00047FC75 /* ControllerSwitchDelegate.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

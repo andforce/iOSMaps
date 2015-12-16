@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseMapViewController.h"
-#include "MapPresenter.h"
-
+#import "MapPresenter.h"
+#import "ControllerSwitchDelegate.h"
 
 @interface MapViewController : BaseMapViewController
 
 @property (nonatomic , strong) MapPresenter * mapPresenter;
+@property (nonatomic, strong) id<ControllerSwitchDelegate> controllerSwitchDelegate;
 
 
 @end

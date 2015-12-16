@@ -9,8 +9,9 @@
 #import "MainViewController.h"
 #import "MapViewController.h"
 #import "SettingViewController.h"
+#import "ControllerSwitchDelegate.h"
 
-@interface MainViewController (){
+@interface MainViewController ()<ControllerSwitchDelegate>{
     MapViewController *_mapVC;
     SettingViewController *_settingVC;
 }
@@ -24,6 +25,8 @@
     [super viewDidLoad];
 
     _mapVC = [[MapViewController alloc]init];
+    _mapVC.controllerSwitchDelegate = self;
+    
     _settingVC = [[SettingViewController alloc]init];
     
     [self addChildViewController:_mapVC];
@@ -31,14 +34,27 @@
     
     [self.view addSubview:_mapVC.view];
     
-//    [self transitionFromViewController:_mapVC toViewController:_settingVC duration:10 options:UIViewAnimationOptionTransitionCurlUp animations:^{
-//        
-//        
-//    } completion:^(BOOL finished) {
-//        
-//    }];
+
     
     
+}
+
+-(void)switchToSettingController{
+        [self transitionFromViewController:_mapVC toViewController:_settingVC duration:0.2 options:UIViewAnimationOptionTransitionCurlUp animations:^{
+    
+    
+        } completion:^(BOOL finished) {
+    
+        }];
+}
+
+-(void)switchToMapController{
+        [self transitionFromViewController:_settingVC toViewController:_mapVC duration:0.2 options:UIViewAnimationOptionTransitionCurlUp animations:^{
+    
+    
+        } completion:^(BOOL finished) {
+    
+        }];
 }
 
 - (void)didReceiveMemoryWarning {
