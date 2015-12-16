@@ -19,8 +19,21 @@
     _settingTableView.dataSource = self;
     
     
-}
+    
+    
+    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
+    NSLog(@"status width - %f", rectStatus.size.width); // 宽度
+    NSLog(@"status height - %f", rectStatus.size.height);   // 高度
+    
+    CGFloat size = _topBanner.frame.size.height - rectStatus.size.height;
+    
+    CGRect backBtnFrame = CGRectMake(0, rectStatus.size.height, size, size);
+ 
+    _backButton.frame = backBtnFrame;
 
+    
+    
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -38,4 +51,9 @@
     return 1;
 }
 
+- (IBAction)backButtonClick:(id)sender {
+    if (_controllerSwitchDelegate != nil) {
+        [_controllerSwitchDelegate switchToMapController];
+    }
+}
 @end

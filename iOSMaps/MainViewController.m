@@ -30,7 +30,7 @@
     _mapVC.controllerSwitchDelegate = self;
     
     _mapSettingVC = [[MapSettingViewController alloc]init];
-   
+    _mapSettingVC.controllerSwitchDelegate = self;
     
     
     [self addChildViewController:_mapVC];
@@ -65,7 +65,7 @@
 
 -(void)switchToMapController{
     
-        [self transitionFromViewController:_mapVC toViewController:_mapSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self transitionFromViewController:_mapSettingVC toViewController:_mapVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
             
         } completion:^(BOOL finished) {
     
