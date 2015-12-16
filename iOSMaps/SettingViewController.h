@@ -10,4 +10,9 @@
 
 @interface SettingViewController : MapViewController
 
+
+@property (nonatomic, strong) id<ControllerSwitchDelegate> controllerSwitchDelegate;
+
+@property(nonatomic, assign) UIButton *button;
+
 @end

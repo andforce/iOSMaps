@@ -14,15 +14,29 @@
 
 @implementation SettingViewController
 
+@dynamic controllerSwitchDelegate;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGRect parentFrame = self.view.frame;
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 200, 200);
-    [button setTitle:@"Button" forState:UIControlStateNormal];// = @"Button";
+    _button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, parentFrame.size.width, parentFrame.size.height);
+    
+    button.backgroundColor = [UIColor grayColor];
+    [button setTitle:@"Button" forState:UIControlStateNormal];
+    
+    [button addTarget:self action:@selector(switchToMapView) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
     
+}
+
+-(void) switchToMapView{
+    if (self.controllerSwitchDelegate != nil) {
+        
+        [self.controllerSwitchDelegate switchToMapController];
+    }
 }
 
 

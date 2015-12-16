@@ -28,6 +28,8 @@
     _mapVC.controllerSwitchDelegate = self;
     
     _settingVC = [[SettingViewController alloc]init];
+    _settingVC.controllerSwitchDelegate = self;
+    
     
     [self addChildViewController:_mapVC];
     [self addChildViewController:_settingVC];
@@ -35,12 +37,18 @@
     [self.view addSubview:_mapVC.view];
     
 
+    [self transitionFromViewController:_settingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
+        
+        
+    } completion:^(BOOL finished) {
+        
+    }];
     
     
 }
 
 -(void)switchToSettingController{
-        [self transitionFromViewController:_mapVC toViewController:_settingVC duration:0.2 options:UIViewAnimationOptionTransitionCurlUp animations:^{
+        [self transitionFromViewController:_mapVC toViewController:_settingVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
     
     
         } completion:^(BOOL finished) {
@@ -49,7 +57,7 @@
 }
 
 -(void)switchToMapController{
-        [self transitionFromViewController:_settingVC toViewController:_mapVC duration:0.2 options:UIViewAnimationOptionTransitionCurlUp animations:^{
+        [self transitionFromViewController:_settingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
     
     
         } completion:^(BOOL finished) {

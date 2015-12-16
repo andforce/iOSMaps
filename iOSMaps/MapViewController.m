@@ -80,6 +80,9 @@
                 break;
             }
             case DrawerItemTypeSetting:{
+                if (_controllerSwitchDelegate != NULL) {
+                    [_controllerSwitchDelegate switchToSettingController];
+                }
                 break;
             }
             case DrawerItemTypeAbout:{
@@ -141,12 +144,7 @@
 
 -(void) onLocationBtnClick{
     
-    BOOL d = YES;
     
-    if (d && _controllerSwitchDelegate != NULL) {
-        [_controllerSwitchDelegate switchToSettingController];
-        return;
-    }
     
     MAUserTrackingMode mode = self.mapView.userTrackingMode;
     if (mode == MAUserTrackingModeFollow) {
