@@ -11,7 +11,7 @@
 #include "MapPresenter.h"
 
 
-@interface ViewController : BaseMapViewController
+@interface MapViewController : BaseMapViewController
 
 @property (nonatomic , strong) MapPresenter * mapPresenter;
 

@@ -6,7 +6,7 @@
 //  Copyright © 2015年 andforce. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MapViewController.h"
 
 
 #import "SearchView.h"
@@ -17,9 +17,11 @@
 #import "CommonUtils.h"
 #import "Constances.h"
 
+#import "SettingViewController.h"
+
 #import <AMapNaviKit/MAMapView.h>
 
-@interface ViewController ()<DrawerViewDelegate, IMapView>{
+@interface MapViewController ()<DrawerViewDelegate, IMapView>{
     CircleLocationView *_locationView;
     SearchView *_searchView;
     MapDrawerView *_drawerView;
@@ -27,7 +29,7 @@
 }
 @end
 
-@implementation ViewController
+@implementation MapViewController
 
 
 - (void)viewDidLoad {
@@ -138,6 +140,7 @@
 
 
 -(void) onLocationBtnClick{
+    
     MAUserTrackingMode mode = self.mapView.userTrackingMode;
     if (mode == MAUserTrackingModeFollow) {
         
