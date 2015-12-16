@@ -8,12 +8,14 @@
 
 #import "MainViewController.h"
 #import "MapViewController.h"
-#import "SettingViewController.h"
 #import "ControllerSwitchDelegate.h"
+#import "MapSettingViewController.h"
+
 
 @interface MainViewController ()<ControllerSwitchDelegate>{
     MapViewController *_mapVC;
-    SettingViewController *_settingVC;
+    
+    MapSettingViewController *_mapSettingVC;
 }
 
 
@@ -27,17 +29,18 @@
     _mapVC = [[MapViewController alloc]init];
     _mapVC.controllerSwitchDelegate = self;
     
-    _settingVC = [[SettingViewController alloc]init];
-    _settingVC.controllerSwitchDelegate = self;
+    _mapSettingVC = [[MapSettingViewController alloc]init];
+   
     
     
     [self addChildViewController:_mapVC];
-    [self addChildViewController:_settingVC];
+
+    [self addChildViewController:_mapSettingVC];
     
     [self.view addSubview:_mapVC.view];
     
 
-    [self transitionFromViewController:_settingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
+    [self transitionFromViewController:_mapSettingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
         
         
     } completion:^(BOOL finished) {
@@ -48,8 +51,12 @@
 }
 
 -(void)switchToSettingController{
-        [self transitionFromViewController:_mapVC toViewController:_settingVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
-    
+        [self transitionFromViewController:_mapVC toViewController:_mapSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+            //NSLog(@"=======000000099999999999999999999999999999999switchToSettingController");
+            
+
+            
+            
     
         } completion:^(BOOL finished) {
     
@@ -57,9 +64,9 @@
 }
 
 -(void)switchToMapController{
-        [self transitionFromViewController:_settingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
     
-    
+        [self transitionFromViewController:_mapVC toViewController:_mapSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+            
         } completion:^(BOOL finished) {
     
         }];

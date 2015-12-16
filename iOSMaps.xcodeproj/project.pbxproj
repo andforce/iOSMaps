@@ -19,8 +19,9 @@
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
 		3AB397F91C1B106800DCDA06 /* MapPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB397F81C1B106800DCDA06 /* MapPresenter.m */; };
 		3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */; };
-		4D0574D01C21332B0047FC75 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0574CF1C21332B0047FC75 /* SettingViewController.m */; };
 		4D0574D61C213C320047FC75 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0574D51C213C320047FC75 /* MainViewController.m */; };
+		4D0574E21C217FB50047FC75 /* MapSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0574E01C217FB50047FC75 /* MapSettingViewController.m */; };
+		4D0574E31C217FB50047FC75 /* MapSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0574E11C217FB50047FC75 /* MapSettingViewController.xib */; };
 		4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91A0C91C16E6C300093EC6 /* DrawerView.m */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
 		4DCD33311C11915000F68262 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33301C11915000F68262 /* AppDelegate.m */; };
@@ -56,11 +57,12 @@
 		3AC6947A1C19CA7A009B0633 /* CircleLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLocationView.h; sourceTree = "<group>"; };
 		3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLocationView.m; sourceTree = "<group>"; };
 		3ADA377F1C1DBC8B00EA2919 /* Constances.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constances.h; sourceTree = "<group>"; };
-		4D0574CE1C21332B0047FC75 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		4D0574CF1C21332B0047FC75 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		4D0574D41C213C320047FC75 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4D0574D51C213C320047FC75 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4D0574D91C2144A00047FC75 /* ControllerSwitchDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerSwitchDelegate.h; sourceTree = "<group>"; };
+		4D0574DF1C217FB50047FC75 /* MapSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingViewController.h; sourceTree = "<group>"; };
+		4D0574E01C217FB50047FC75 /* MapSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingViewController.m; sourceTree = "<group>"; };
+		4D0574E11C217FB50047FC75 /* MapSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSettingViewController.xib; sourceTree = "<group>"; };
 		4D91A0C81C16E6C300093EC6 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
 		4D91A0C91C16E6C300093EC6 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
 		4DBE58201C191695000B98AF /* DrawerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewDelegate.h; sourceTree = "<group>"; };
@@ -145,11 +147,12 @@
 				4DCD33331C11915000F68262 /* MapViewController.m */,
 				3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */,
 				3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */,
-				4D0574CE1C21332B0047FC75 /* SettingViewController.h */,
-				4D0574CF1C21332B0047FC75 /* SettingViewController.m */,
 				4D0574D41C213C320047FC75 /* MainViewController.h */,
 				4D0574D51C213C320047FC75 /* MainViewController.m */,
 				4D0574D91C2144A00047FC75 /* ControllerSwitchDelegate.h */,
+				4D0574DF1C217FB50047FC75 /* MapSettingViewController.h */,
+				4D0574E01C217FB50047FC75 /* MapSettingViewController.m */,
+				4D0574E11C217FB50047FC75 /* MapSettingViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,
 				4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */,
+				4D0574E31C217FB50047FC75 /* MapSettingViewController.xib in Resources */,
 				4DCD33371C11915000F68262 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +384,7 @@
 			files = (
 				3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */,
 				4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */,
-				4D0574D01C21332B0047FC75 /* SettingViewController.m in Sources */,
+				4D0574E21C217FB50047FC75 /* MapSettingViewController.m in Sources */,
 				3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */,
 				4DCD33341C11915000F68262 /* MapViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,

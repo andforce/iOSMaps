@@ -17,7 +17,6 @@
 #import "CommonUtils.h"
 #import "Constances.h"
 
-#import "SettingViewController.h"
 
 #import <AMapNaviKit/MAMapView.h>
 
