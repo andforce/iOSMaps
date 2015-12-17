@@ -17,4 +17,6 @@
 
 -(void) addDrawerOpenButtonClickListener:(OnClickListener) drawerClickListener;
 
+-(void)enterSearch:(BOOL) isEnterSearch;
+
 @end

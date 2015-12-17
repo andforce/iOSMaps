@@ -71,6 +71,17 @@
     
 }
 
+-(void)enterSearch:(BOOL)isEnterSearch{
+    if (isEnterSearch) {
+        UIImage *exit = [UIImage imageNamed:@"ic_arrow_back_18pt"];
+        [_drawerSwitchButton setImage:exit forState:UIControlStateNormal];
+    } else{
+        UIImage *enter = [UIImage imageNamed:@"ic_qu_menu_grabber"];
+        [_drawerSwitchButton setImage:enter forState:UIControlStateNormal];
+        
+    }
+}
+
 
 
 -(void) initSearchView{
@@ -143,7 +154,10 @@
 -(void)showOrHideWhiteBgViewWithAnim{
     [UIView beginAnimations:nil context:nil];
     CGFloat alpha = _maskView.alpha;
+    [self enterSearch:alpha == 0.f];
+    
     _maskView.alpha = alpha > 0.f ? 0.f : 1.f;
+
     [UIView commitAnimations];
 }
 
