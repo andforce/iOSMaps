@@ -47,14 +47,11 @@
     [self addChildViewController:_scrollSettingVC];
     
     
-    [self.view addSubview:_mapVC.view];
-    
-
     [self transitionFromViewController:_scrollSettingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
-        
         
     } completion:^(BOOL finished) {
         
+        [self.view addSubview:_mapVC.view];
     }];
     
     
@@ -69,18 +66,21 @@
             
     
         } completion:^(BOOL finished) {
-    
+            
         }];
 }
 
 -(void)switchToMapController{
     
-        [self transitionFromViewController:_scrollSettingVC toViewController:_mapVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self.view addSubview:_mapVC.view];
+    
+        [self transitionFromViewController:_mapVC toViewController:_scrollSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
             
             [_scrollSettingVC switchSetting];
             
         } completion:^(BOOL finished) {
-    
+            NSLog(@"child count is >>>>>>>>>>>>>>> %lu", (unsigned long)self.view.subviews.count);
+            [self.view addSubview:_mapVC.view];
         }];
 }
 
