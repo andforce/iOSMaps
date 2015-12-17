@@ -65,7 +65,7 @@
             //NSLog(@"=======000000099999999999999999999999999999999switchToSettingController");
             
 
-            
+            [_scrollSettingVC switchSetting];
             
     
         } completion:^(BOOL finished) {
@@ -76,6 +76,8 @@
 -(void)switchToMapController{
     
         [self transitionFromViewController:_scrollSettingVC toViewController:_mapVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+            
+            [_scrollSettingVC switchSetting];
             
         } completion:^(BOOL finished) {
     

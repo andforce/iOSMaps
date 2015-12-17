@@ -19,4 +19,6 @@
 
 @property (nonatomic, strong) id<ControllerSwitchDelegate> controllerSwitchDelegate;
 
+-(void) switchSetting;
+
 @end
