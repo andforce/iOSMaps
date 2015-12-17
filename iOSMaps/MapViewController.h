@@ -11,11 +11,17 @@
 #import "MapPresenter.h"
 #import "ControllerSwitchDelegate.h"
 
+#import "SearchView.h"
+
 @interface MapViewController : BaseMapViewController
 
 @property (nonatomic , strong) MapPresenter * mapPresenter;
 @property (nonatomic, strong) id<ControllerSwitchDelegate> controllerSwitchDelegate;
 
+@property (nonatomic ,strong) SearchView *searchView;
+
+
+-(void)switchMaps;
 
 @end
 

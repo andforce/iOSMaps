@@ -23,7 +23,7 @@
 
 @interface MapViewController ()<DrawerViewDelegate, IMapView>{
     CircleLocationView *_locationView;
-    SearchView *_searchView;
+
     MapDrawerView *_drawerView;
     
 }
@@ -111,6 +111,16 @@
 }
 
 
+-(void)switchMaps{
+    CGRect tmp = _searchView.frame;
+    
+    if (tmp.origin.y == kViewHeight / 2.0f) {
+        tmp.origin.y = -kViewHeight;
+    } else{
+        tmp.origin.y = kViewHeight / 2.0f;
+    }
+    _searchView.frame = tmp;
+}
 
 -(void) changeUserTrackingMode:(NSInteger)mode{
 
