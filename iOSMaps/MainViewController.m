@@ -16,7 +16,7 @@
 @interface MainViewController ()<ControllerSwitchDelegate>{
     MapViewController *_mapVC;
     
-    MapSettingViewController *_mapSettingVC;
+    //MapSettingViewController *_mapSettingVC;
     
     MapScrollSetttingViewController *_scrollSettingVC;
 }
@@ -32,16 +32,17 @@
     _mapVC = [[MapViewController alloc]init];
     _mapVC.controllerSwitchDelegate = self;
     
-    _mapSettingVC = [[MapSettingViewController alloc]init];
-    _mapSettingVC.controllerSwitchDelegate = self;
+//    _mapSettingVC = [[MapSettingViewController alloc]init];
+//    _mapSettingVC.controllerSwitchDelegate = self;
     
     
     _scrollSettingVC = [[MapScrollSetttingViewController alloc]init];
+    _scrollSettingVC.controllerSwitchDelegate = self;
     
     
     [self addChildViewController:_mapVC];
 
-    [self addChildViewController:_mapSettingVC];
+//    [self addChildViewController:_mapSettingVC];
     
     [self addChildViewController:_scrollSettingVC];
     
@@ -74,7 +75,7 @@
 
 -(void)switchToMapController{
     
-        [self transitionFromViewController:_mapSettingVC toViewController:_mapVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self transitionFromViewController:_scrollSettingVC toViewController:_mapVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
             
         } completion:^(BOOL finished) {
     

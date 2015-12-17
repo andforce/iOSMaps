@@ -45,4 +45,9 @@
 }
 
 
+- (IBAction)backButtonClick:(id)sender {
+    if (_controllerSwitchDelegate != nil) {
+        [_controllerSwitchDelegate switchToMapController];
+    }
+}
 @end
