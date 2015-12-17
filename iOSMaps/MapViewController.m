@@ -16,6 +16,7 @@
 #import "IMapView.h"
 #import "CommonUtils.h"
 #import "Constances.h"
+#import "SearchView.h"
 
 
 #import <AMapNaviKit/MAMapView.h>
@@ -47,6 +48,7 @@
     
     // 顶部的搜索空间
     _searchView = [[SearchView alloc] init];
+    _searchView.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, self.view.frame.size.width - kViewHeight / 2.0f, kViewHeight);
 
 
     __block OnClickListener blockSef = ^(id view){

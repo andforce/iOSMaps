@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "UIButton+BackgroundColor.h"
 
+#define kViewHeight 50
+#define kMargin 6
 
 @interface SearchView : UIView
 

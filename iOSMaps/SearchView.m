@@ -11,11 +11,10 @@
 #import "UIButton+BackgroundColor.h"
 
 
-#define kViewHeight 50
-#define kMargin 6
+
 
 @interface SearchView ()<UITextFieldDelegate>{
-    UIView *_topBarRootView;
+    UIView *_maskView;
     
     UIButton *_searchButton;
     UIButton *_drawerSwitchButton;
@@ -29,7 +28,10 @@
 - (id)init {
     if (self = [super init]) {
         
-        [self initWhiteBgView];
+        //UIView *rootView = [self superview];
+        //self.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
+        
+        
         [self initSearchView];
         
     }
@@ -37,29 +39,36 @@
 }
 
 
--(void) initWhiteBgView{
-
-    self.backgroundColor = [UIColor whiteColor];
-    self.alpha = 0.f;
-}
-
 -(void)didMoveToSuperview{
     UIView *rootView = [self superview];
     
-    _topBarRootView.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
+    NSLog(@"didMoveToSuperviewdidMoveToSuperviewdidMoveToSuperviewdidMoveToSuperviewdidMoveToSuperview");
+    
+//    self.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+//    self.backgroundColor = [UIColor redColor];
     
     
-    self.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
+    _searchButton.frame = CGRectMake(self.frame.size.width - self.frame.size.height + kMargin / 2.0f, kMargin / 2.0f, self.frame.size.height - kMargin, self.frame.size.height - kMargin);
     
     
-    _searchButton.frame = CGRectMake(_topBarRootView.frame.size.width - _topBarRootView.frame.size.height + kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
+    _drawerSwitchButton.frame = CGRectMake(kMargin / 2.0f, kMargin / 2.0f, self.frame.size.height - kMargin, self.frame.size.height - kMargin);
+    
+    _searchTextField.frame = CGRectMake(self.frame.origin.x + _drawerSwitchButton.frame.size.width + kMargin / 2.0f, kMargin / 2.0f, _searchButton.frame.origin.x - kMargin - _drawerSwitchButton.frame.size.width - kMargin / 2.0f, self.frame.size.height - kMargin);
+    
+    //[rootView addSubview:_topBarRootView];
+    
+    _maskView = [[UIView alloc]init];
+    
+    CGRect root = rootView.frame;
+    _maskView.frame = CGRectMake(0, 0, root.size.width, root.size.height);
+    _maskView.backgroundColor = [UIColor whiteColor];
+    _maskView.alpha = 0.0;
     
     
-    _drawerSwitchButton.frame = CGRectMake(kMargin / 2.0f, kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin, _topBarRootView.frame.size.height - kMargin);
     
-    _searchTextField.frame = CGRectMake(_topBarRootView.frame.origin.x + _drawerSwitchButton.frame.size.width + kMargin / 2.0f, kMargin / 2.0f, _searchButton.frame.origin.x - kMargin - _drawerSwitchButton.frame.size.width - kMargin / 2.0f, _topBarRootView.frame.size.height - kMargin);
+    [rootView addSubview:_maskView];
+    [rootView bringSubviewToFront:self];
     
-    [rootView addSubview:_topBarRootView];
 }
 
 
@@ -67,18 +76,18 @@
 -(void) initSearchView{
     
 
-    _topBarRootView = [[UIView alloc]init];
+    //_topBarRootView = [[UIView alloc]init];
     
-    _topBarRootView.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor whiteColor];
     
     //设置View圆角
-    _topBarRootView.layer.cornerRadius = 2.0f;
+    self.layer.cornerRadius = 2.0f;
     // 阴影的颜色
-    _topBarRootView.layer.shadowColor = [[UIColor blackColor]CGColor];
+    self.layer.shadowColor = [[UIColor blackColor]CGColor];
     // 阴影的透明度
-    _topBarRootView.layer.shadowOpacity = 0.3f;
+    self.layer.shadowOpacity = 0.3f;
     //设置View Shadow的偏移量
-    _topBarRootView.layer.shadowOffset = CGSizeMake(0, 0.5f);
+    self.layer.shadowOffset = CGSizeMake(0, 0.5f);
     
     
     _searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -90,7 +99,7 @@
 
     
     //[_searchButton addTarget:self action:@selector(showOrHideWhiteBgViewWithAnim) forControlEvents:UIControlEventTouchUpInside];
-    [_topBarRootView addSubview:_searchButton];
+    [self addSubview:_searchButton];
     
     
     _drawerSwitchButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -100,7 +109,7 @@
     [_drawerSwitchButton setBackgroundColor:[UIColor colorWithButtonHighLight] forState:UIControlStateHighlighted];
     
     //[_drawerSwitchButton addTarget:self action:@selector(openLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
-    [_topBarRootView addSubview:_drawerSwitchButton];
+    [self addSubview:_drawerSwitchButton];
     
     
     _searchTextField = [[UITextField alloc]init];
@@ -109,7 +118,11 @@
 
     [_searchTextField setDelegate:self];
     
-    [_topBarRootView addSubview:_searchTextField];
+    [self addSubview:_searchTextField];
+    
+    
+    
+    
 
 }
 
@@ -128,9 +141,9 @@
 }
 
 -(void)showOrHideWhiteBgViewWithAnim{
-    
     [UIView beginAnimations:nil context:nil];
-    self.alpha = self.alpha > 0.f ? 0.f : 1.f;
+    CGFloat alpha = _maskView.alpha;
+    _maskView.alpha = alpha > 0.f ? 0.f : 1.f;
     [UIView commitAnimations];
 }
 
