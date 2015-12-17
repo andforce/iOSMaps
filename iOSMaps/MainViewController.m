@@ -10,12 +10,15 @@
 #import "MapViewController.h"
 #import "ControllerSwitchDelegate.h"
 #import "MapSettingViewController.h"
+#import "MapScrollSetttingViewController.h"
 
 
 @interface MainViewController ()<ControllerSwitchDelegate>{
     MapViewController *_mapVC;
     
     MapSettingViewController *_mapSettingVC;
+    
+    MapScrollSetttingViewController *_scrollSettingVC;
 }
 
 
@@ -33,14 +36,20 @@
     _mapSettingVC.controllerSwitchDelegate = self;
     
     
+    _scrollSettingVC = [[MapScrollSetttingViewController alloc]init];
+    
+    
     [self addChildViewController:_mapVC];
 
     [self addChildViewController:_mapSettingVC];
     
+    [self addChildViewController:_scrollSettingVC];
+    
+    
     [self.view addSubview:_mapVC.view];
     
 
-    [self transitionFromViewController:_mapSettingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
+    [self transitionFromViewController:_scrollSettingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
         
         
     } completion:^(BOOL finished) {
@@ -51,7 +60,7 @@
 }
 
 -(void)switchToSettingController{
-        [self transitionFromViewController:_mapVC toViewController:_mapSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self transitionFromViewController:_mapVC toViewController:_scrollSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
             //NSLog(@"=======000000099999999999999999999999999999999switchToSettingController");
             
 
