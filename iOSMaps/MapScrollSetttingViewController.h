@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MapScrollSetttingViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *topBanner;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
