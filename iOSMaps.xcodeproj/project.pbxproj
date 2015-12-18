@@ -32,6 +32,7 @@
 		4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33381C11915000F68262 /* iOSMaps.xcdatamodeld */; };
 		4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD333B1C11915000F68262 /* Assets.xcassets */; };
 		4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DCD333D1C11915000F68262 /* LaunchScreen.storyboard */; };
+		4DE93EC01C23A43A006EA967 /* SelectorUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE93EBF1C23A43A006EA967 /* SelectorUIButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,8 @@
 		4DCD333B1C11915000F68262 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DCD333E1C11915000F68262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DCD33401C11915000F68262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE93EBE1C23A43A006EA967 /* SelectorUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorUIButton.h; sourceTree = "<group>"; };
+		4DE93EBF1C23A43A006EA967 /* SelectorUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorUIButton.m; sourceTree = "<group>"; };
 		58F9DC11FC3E7E9A622A2C41 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		73408F1F001C22930F462080 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2D0A083A325F260A4E512E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,8 +124,6 @@
 			children = (
 				3A4C404D1C11F59B009B520C /* SearchView.h */,
 				3A4C404E1C11F59B009B520C /* SearchView.m */,
-				3A1AFF361C1C571400B46CC6 /* UIButton+BackgroundColor.h */,
-				3A1AFF371C1C571400B46CC6 /* UIButton+BackgroundColor.m */,
 			);
 			name = SearchView;
 			sourceTree = "<group>";
@@ -168,6 +169,7 @@
 		3AB397F51C1B0E0C00DCDA06 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				4DE93EBD1C23A3F7006EA967 /* SelectorUIButon */,
 				4D91A0C71C16E69100093EC6 /* DrawerView */,
 				3A4C405D1C11FDDA009B520C /* CircleView */,
 				3A4C404C1C11F566009B520C /* SearchView */,
@@ -265,6 +267,17 @@
 				4DCD332D1C11915000F68262 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DE93EBD1C23A3F7006EA967 /* SelectorUIButon */ = {
+			isa = PBXGroup;
+			children = (
+				3A1AFF361C1C571400B46CC6 /* UIButton+BackgroundColor.h */,
+				3A1AFF371C1C571400B46CC6 /* UIButton+BackgroundColor.m */,
+				4DE93EBE1C23A43A006EA967 /* SelectorUIButton.h */,
+				4DE93EBF1C23A43A006EA967 /* SelectorUIButton.m */,
+			);
+			name = SelectorUIButon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE93EC01C23A43A006EA967 /* SelectorUIButton.m in Sources */,
 				4D0574E71C2276F60047FC75 /* MapScrollSetttingViewController.m in Sources */,
 				3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */,
 				4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */,

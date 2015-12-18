@@ -9,6 +9,7 @@
 #import "SearchView.h"
 #import "UIColor+MyColor.h"
 #import "UIButton+BackgroundColor.h"
+#import "SelectorUIButton.h"
 
 
 
@@ -16,8 +17,8 @@
 @interface SearchView ()<UITextFieldDelegate>{
     UIView *_maskView;
     
-    UIButton *_searchButton;
-    UIButton *_drawerSwitchButton;
+    SelectorUIButton *_searchButton;
+    SelectorUIButton *_drawerSwitchButton;
     
     UITextField *_searchTextField;
 }
@@ -101,23 +102,21 @@
     self.layer.shadowOffset = CGSizeMake(0, 0.5f);
     
     
-    _searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _searchButton = [SelectorUIButton buttonWithType:UIButtonTypeCustom];
 
     UIImage *searchImage = [UIImage imageNamed:@"ic_qu_search"];
     [_searchButton setImage:searchImage forState:UIControlStateNormal];
-    [_searchButton setBackgroundColor:[UIColor colorWithButtonHighLight] forState:UIControlStateHighlighted];
-
 
     
     //[_searchButton addTarget:self action:@selector(showOrHideWhiteBgViewWithAnim) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_searchButton];
     
     
-    _drawerSwitchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _drawerSwitchButton = [SelectorUIButton buttonWithType:UIButtonTypeCustom];
 
     UIImage *srawerImage = [UIImage imageNamed:@"ic_qu_menu_grabber"];
     [_drawerSwitchButton setImage:srawerImage forState:UIControlStateNormal];
-    [_drawerSwitchButton setBackgroundColor:[UIColor colorWithButtonHighLight] forState:UIControlStateHighlighted];
+    
     
     //[_drawerSwitchButton addTarget:self action:@selector(openLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_drawerSwitchButton];
