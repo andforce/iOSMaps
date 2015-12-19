@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
 		2F34C8304519CE2F96093C3A /* Cameras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C4E6F43D54D13BB1693B /* Cameras.m */; };
-		3A19F63E1C2559B200AAADA0 /* MAAnnotationImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A19F63D1C2559B200AAADA0 /* MAAnnotationImpl.m */; };
 		3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */; };
 		3A1AFF231C1BF04A00B46CC6 /* LeftDrawerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF221C1BF04A00B46CC6 /* LeftDrawerItem.m */; };
 		3A1AFF2F1C1C26C200B46CC6 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF2E1C1C26C200B46CC6 /* CommonUtils.m */; };
@@ -43,8 +42,6 @@
 /* Begin PBXFileReference section */
 		2F34C4E6F43D54D13BB1693B /* Cameras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cameras.m; sourceTree = "<group>"; };
 		2F34CF397B0EFC6C14404EFD /* Cameras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameras.h; sourceTree = "<group>"; };
-		3A19F63C1C2559B200AAADA0 /* MAAnnotationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAnnotationImpl.h; sourceTree = "<group>"; };
-		3A19F63D1C2559B200AAADA0 /* MAAnnotationImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAnnotationImpl.m; sourceTree = "<group>"; };
 		3A1AFF1E1C1BECFF00B46CC6 /* MapDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDrawerView.h; sourceTree = "<group>"; };
 		3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDrawerView.m; sourceTree = "<group>"; };
 		3A1AFF211C1BF04A00B46CC6 /* LeftDrawerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerItem.h; sourceTree = "<group>"; };
@@ -187,8 +184,6 @@
 				3A6D3CC51C244A30007FF7A7 /* CameraBean.m */,
 				2F34C4E6F43D54D13BB1693B /* Cameras.m */,
 				2F34CF397B0EFC6C14404EFD /* Cameras.h */,
-				3A19F63C1C2559B200AAADA0 /* MAAnnotationImpl.h */,
-				3A19F63D1C2559B200AAADA0 /* MAAnnotationImpl.m */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -462,7 +457,6 @@
 				3A1AFF351C1C4FCF00B46CC6 /* UIColor+MyColor.m in Sources */,
 				4D0574D61C213C320047FC75 /* MainViewController.m in Sources */,
 				3A6D3CCA1C244A7E007FF7A7 /* CameraDAO.m in Sources */,
-				3A19F63E1C2559B200AAADA0 /* MAAnnotationImpl.m in Sources */,
 				4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */,
 				3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */,
 				3A1AFF2F1C1C26C200B46CC6 /* CommonUtils.m in Sources */,

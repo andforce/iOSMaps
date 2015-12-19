@@ -17,15 +17,19 @@
 #import "CommonUtils.h"
 #import "Constances.h"
 #import "SearchView.h"
-#import "MAAnnotationImpl.h"
+
 #import <AMapNaviKit/MAMapView.h>
 #import <AMapNaviKit/MAAnnotation.h>
+#import <AMapNaviKit/MAPointAnnotation.h>
+#import <AMapNaviKit/MAAnnotationView.h>
+#import <AMapNaviKit/MACircle.h>
+#import <AMapNaviKit/MACircleView.h>
 #import <AMapNavi/AMapNaviKit/MAAnnotation.h>
 #import "CameraDAO.h"
 #import "CameraBean.h"
 
 
-@interface MapViewController ()<DrawerViewDelegate, IMapView>{
+@interface MapViewController ()<DrawerViewDelegate, IMapView, MAMapViewDelegate>{
     CircleLocationView *_locationView;
 
     MapDrawerView *_drawerView;
@@ -149,7 +153,7 @@
 //    [self.mapView addAnnotation:pointAnnotation];
     
     for (CameraBean *cameraBean in cameras) {
-        MAAnnotationImpl *pointAnnotation = [[MAAnnotationImpl alloc] init];
+        MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
         
         pointAnnotation.coordinate = CLLocationCoordinate2DMake(cameraBean.latitude, cameraBean.longtitude);
         
@@ -160,9 +164,53 @@
         
         
         [self.mapView addAnnotation:pointAnnotation];
+        
+        
+//        //构造圆
+//        MACircle *circle = [MACircle circleWithCenterCoordinate:CLLocationCoordinate2DMake(cameraBean.latitude, cameraBean.longtitude) radius:100];
+//        //在地图上添加圆
+//        [self.mapView addOverlay: circle];
+        
     }
 
+    self.mapView.showTraffic= YES;
+
 }
+
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation {
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]){
+        if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
+            static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+            MAAnnotationView *annotationView = (MAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+            if (annotationView == nil) {
+                annotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+                                                              reuseIdentifier:reuseIndetifier];
+            }
+            annotationView.image = [UIImage imageNamed:@"icon_camera_location"];
+            //设置中心点偏移，使得标注底部中间点成为经纬度对应点
+            annotationView.centerOffset = CGPointMake(0, -annotationView.image.size.height / 2);
+            return annotationView;
+        }
+        return nil;
+    }
+    
+    return nil;
+}
+
+//- (MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id <MAOverlay>)overlay{
+//    if ([overlay isKindOfClass:[MACircle class]]){
+//        MACircleView *circleView = [[MACircleView alloc] initWithCircle:overlay];
+//        
+//        circleView.lineWidth = 5.f;
+//        circleView.strokeColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.8];
+//        circleView.fillColor = [UIColor colorWithRed:1.0 green:0.8 blue:0.0 alpha:0.8];
+//        circleView.lineDash = YES;
+//        
+//        return circleView;
+//    }
+//    return nil;
+//}
+
 
 -(void)switchMaps{
     CGRect tmp = _searchView.frame;
