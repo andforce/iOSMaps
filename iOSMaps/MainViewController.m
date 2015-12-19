@@ -56,27 +56,11 @@
         
         [self.view addSubview:_mapVC.view];
     }];
-    
-    CameraDAO *dao = [[CameraDAO alloc]init];
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"presetCameraDB" ofType:@"json"];
-    
-    NSMutableArray *cameras = [dao praseCameras:path];
-    NSData *oneCamera = [cameras.lastObject objectForKey:@"latitude"];
-
-    NSError *error;
-
-    NSData *jsonData = [[NSData alloc]initWithContentsOfFile:path];
-
-    Cameras * bean = [[Cameras alloc] initWithData:jsonData error:&error];
-
-    NSLog(@"%d",bean.Cameras.count);
 
 }
 
 -(void)switchToSettingController{
         [self transitionFromViewController:_mapVC toViewController:_scrollSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
-            //NSLog(@"=======000000099999999999999999999999999999999switchToSettingController");
-            
 
             [_mapVC switchMaps];
             [_scrollSettingVC switchSetting];

@@ -1,1747 +1,3241 @@
 {
-    "Cameras": [
-        {
-            "cameraId": 1,
-            "name": "双清路北",
-            "latitude": 40.026214599609375,
-            "longtitude": 116.35411834716797,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 2,
-            "name": "学清路北口位置细化",
-            "latitude": 40.0267448425293,
-            "longtitude": 116.35834503173828,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 7,
-            "name": "紫竹",
-            "latitude": 39.944313049316406,
-            "longtitude": 116.33098602294922,
-            "direction": "W->E,E->W,S->N,N->S"
-        },
-        {
-            "cameraId": 8,
-            "name": "二拨子",
-            "latitude": 40.09407424926758,
-            "longtitude": 116.30962371826172,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 10,
-            "name": "鼓楼西大街西口",
-            "latitude": 39.95427322387695,
-            "longtitude": 116.3864974975586,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 14,
-            "name": "北太平桥南天桥",
-            "latitude": 39.972110748291016,
-            "longtitude": 116.37682342529297,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 16,
-            "name": "北宫门",
-            "latitude": 40.012413024902344,
-            "longtitude": 116.27935028076172,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 17,
-            "name": "南北双向摄像头",
-            "latitude": 40.010894775390625,
-            "longtitude": 116.27999877929688,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 19,
-            "name": "限行监控",
-            "latitude": 39.9289665222168,
-            "longtitude": 116.46177673339844,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 20,
-            "name": "北京市丰台区成寿寺路家世界东口南向北",
-            "latitude": 39.85947036743164,
-            "longtitude": 116.45198822021484,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 21,
-            "name": "北京市朝阳区霄云里南街北向南",
-            "latitude": 39.96623229980469,
-            "longtitude": 116.4640121459961,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 22,
-            "name": "东便门桥",
-            "latitude": 39.906455993652344,
-            "longtitude": 116.44302368164062,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 23,
-            "name": "康斯丹郡附近",
-            "latitude": 40.02167510986328,
-            "longtitude": 116.42320251464844,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 24,
-            "name": "横街子，五环入口",
-            "latitude": 39.82949447631836,
-            "longtitude": 116.51760864257812,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 25,
-            "name": "右安南桥",
-            "latitude": 39.863563537597656,
-            "longtitude": 116.3714370727539,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 26,
-            "name": "同华南路",
-            "latitude": 39.78665542602539,
-            "longtitude": 116.36851501464844,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 28,
-            "name": "吉祥寺桥北",
-            "latitude": 40.04835891723633,
-            "longtitude": 116.48727416992188,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 29,
-            "name": "赵公口桥东",
-            "latitude": 39.86338424682617,
-            "longtitude": 116.4234848022461,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 30,
-            "name": "进京证",
-            "latitude": 39.906166076660156,
-            "longtitude": 116.32781982421875,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 31,
-            "name": "高峰期外地车",
-            "latitude": 39.83650207519531,
-            "longtitude": 116.32282257080078,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 33,
-            "name": "雍和宫桥南",
-            "latitude": 39.95475387573242,
-            "longtitude": 116.42292785644531,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 34,
-            "name": "化工桥东向西",
-            "latitude": 39.853515625,
-            "longtitude": 116.54747009277344,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 35,
-            "name": "房山梨园桥高速进京",
-            "latitude": 39.70659255981445,
-            "longtitude": 116.11186218261719,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 36,
-            "name": "香泉环岛第4出口",
-            "latitude": 39.99830627441406,
-            "longtitude": 116.23092651367188,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 37,
-            "name": "进京证",
-            "latitude": 40.00662612915039,
-            "longtitude": 116.35945129394531,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 38,
-            "name": "金宝路西口",
-            "latitude": 39.92161560058594,
-            "longtitude": 116.43347930908203,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 39,
-            "name": "左安门内大街 北向南",
-            "latitude": 39.88008499145508,
-            "longtitude": 116.44608306884766,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 40,
-            "name": "西罗园路南向北",
-            "latitude": 39.86467742919922,
-            "longtitude": 116.40047454833984,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 41,
-            "name": "颐和园路南向北方向",
-            "latitude": 40.01100540161133,
-            "longtitude": 116.27991485595703,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 43,
-            "name": "东单路口",
-            "latitude": 39.91431427001953,
-            "longtitude": 116.42485809326172,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 44,
-            "name": "老山南路西",
-            "latitude": 39.91639709472656,
-            "longtitude": 116.22118377685547,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 45,
-            "name": "鲁谷桥东",
-            "latitude": 39.90957260131836,
-            "longtitude": 116.21749114990234,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 48,
-            "name": "机场第二高速",
-            "latitude": 39.951820373535156,
-            "longtitude": 116.593017578125,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 49,
-            "name": "工大桥北内环  由北向南",
-            "latitude": 39.88321304321289,
-            "longtitude": 116.49848175048828,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 50,
-            "name": "顺平路",
-            "latitude": 40.12305450439453,
-            "longtitude": 116.62898254394531,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 51,
-            "name": "南法信",
-            "latitude": 40.134071350097656,
-            "longtitude": 116.61677551269531,
-            "direction": "W->E,E->W,S->N,N->S"
-        },
-        {
-            "cameraId": 53,
-            "name": "T1",
-            "latitude": 40.08610153198242,
-            "longtitude": 116.59483337402344,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 54,
-            "name": "监控拍摄",
-            "latitude": 39.99407958984375,
-            "longtitude": 116.51099395751953,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 55,
-            "name": "五景桥",
-            "latitude": 39.9224853515625,
-            "longtitude": 116.21690368652344,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 56,
-            "name": "西城区供电局路口西向东",
-            "latitude": 39.90642166137695,
-            "longtitude": 116.40189361572266,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 57,
-            "name": "进京探头",
-            "latitude": 39.860107421875,
-            "longtitude": 116.2446517944336,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 60,
-            "name": "京承高速进京方向1.7公里处",
-            "latitude": 40.001739501953125,
-            "longtitude": 116.45423126220703,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 61,
-            "name": "安贞桥西外环",
-            "latitude": 39.97523498535156,
-            "longtitude": 116.4126968383789,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 62,
-            "name": "花园桥东天桥",
-            "latitude": 39.93828201293945,
-            "longtitude": 116.32160949707031,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 63,
-            "name": "台湖收费站北",
-            "latitude": 39.82274627685547,
-            "longtitude": 116.60487365722656,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 64,
-            "name": "七棵树桥西由西向东",
-            "latitude": 39.964900970458984,
-            "longtitude": 116.53484344482422,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 65,
-            "name": "三营门路口摄像头",
-            "latitude": 39.81321716308594,
-            "longtitude": 116.4088134765625,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 66,
-            "name": "高峰限行拍照",
-            "latitude": 39.86103057861328,
-            "longtitude": 116.24472045898438,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 67,
-            "name": "进京证不定时拍摄",
-            "latitude": 39.86330795288086,
-            "longtitude": 116.42040252685547,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 68,
-            "name": "旱河路北段",
-            "latitude": 39.99626922607422,
-            "longtitude": 116.22979736328125,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 70,
-            "name": "阜成门内大街",
-            "latitude": 39.92930603027344,
-            "longtitude": 116.36399841308594,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 71,
-            "name": "家乐福",
-            "latitude": 39.96615982055664,
-            "longtitude": 116.45111846923828,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 72,
-            "name": "联合大学特殊教育学院",
-            "latitude": 39.87406539916992,
-            "longtitude": 116.42530059814453,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 73,
-            "name": "安宁庄西二旗",
-            "latitude": 40.055442810058594,
-            "longtitude": 116.32530975341797,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 76,
-            "name": "祈年大街路口西向东！具体位置不详",
-            "latitude": 39.89898681640625,
-            "longtitude": 116.41885375976562,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 77,
-            "name": "三中南面",
-            "latitude": 40.338043212890625,
-            "longtitude": 116.645263671875,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 78,
-            "name": "京津塘高速距收费站南1公里南向北",
-            "latitude": 39.80794143676758,
-            "longtitude": 116.5338134765625,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 79,
-            "name": "京津塘高速距收费站南1公里",
-            "latitude": 39.807865142822266,
-            "longtitude": 116.53385925292969,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 80,
-            "name": "321",
-            "latitude": 39.90286636352539,
-            "longtitude": 116.32393646240234,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 81,
-            "name": "322",
-            "latitude": 40.02274703979492,
-            "longtitude": 116.32428741455078,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 82,
-            "name": "月坛南桥",
-            "latitude": 39.91965103149414,
-            "longtitude": 116.36324310302734,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 83,
-            "name": "华威桥西100米",
-            "latitude": 39.87701416015625,
-            "longtitude": 116.46611022949219,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 85,
-            "name": "大生庄路口",
-            "latitude": 39.772335052490234,
-            "longtitude": 116.40805053710938,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 86,
-            "name": "康化桥西",
-            "latitude": 39.841739654541016,
-            "longtitude": 116.5301284790039,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 87,
-            "name": "朝阳门桥西 西向东",
-            "latitude": 39.93031311035156,
-            "longtitude": 116.440185546875,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 88,
-            "name": "摄像头",
-            "latitude": 39.83668899536133,
-            "longtitude": 116.35811614990234,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 89,
-            "name": "三元桥东",
-            "latitude": 39.95762252807617,
-            "longtitude": 116.46830749511719,
-            "direction": "E->W,S->N"
-        },
-        {
-            "cameraId": 90,
-            "name": "京开西红门",
-            "latitude": 39.790252685546875,
-            "longtitude": 116.35323333740234,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 91,
-            "name": "外地车限时",
-            "latitude": 39.86346435546875,
-            "longtitude": 116.37135314941406,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 93,
-            "name": "白纸坊桥西向东",
-            "latitude": 39.883262634277344,
-            "longtitude": 116.35699462890625,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 94,
-            "name": "安华里西中间那个门",
-            "latitude": 39.97318649291992,
-            "longtitude": 116.4086685180664,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 95,
-            "name": "安华里西中间的门",
-            "latitude": 39.97318649291992,
-            "longtitude": 116.4086685180664,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 96,
-            "name": "西单北大街",
-            "latitude": 39.92071533203125,
-            "longtitude": 116.3795394897461,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 97,
-            "name": "西二环复兴门北",
-            "latitude": 39.91983413696289,
-            "longtitude": 116.3637466430664,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 98,
-            "name": "八角桥东天桥",
-            "latitude": 39.91309356689453,
-            "longtitude": 116.2178955078125,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 99,
-            "name": "燕莎桥",
-            "latitude": 39.955787658691406,
-            "longtitude": 116.46778869628906,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 100,
-            "name": "三元桥",
-            "latitude": 39.95994567871094,
-            "longtitude": 116.46419525146484,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 101,
-            "name": "灵境胡同",
-            "latitude": 39.92037582397461,
-            "longtitude": 116.3776626586914,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 102,
-            "name": "供电局",
-            "latitude": 39.906673431396484,
-            "longtitude": 116.3982162475586,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 103,
-            "name": "白纸坊桥西向东",
-            "latitude": 39.883277893066406,
-            "longtitude": 116.35702514648438,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 106,
-            "name": "四惠东双向",
-            "latitude": 39.91415023803711,
-            "longtitude": 116.51752471923828,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 107,
-            "name": "西坝河东里西门南面",
-            "latitude": 39.969573974609375,
-            "longtitude": 116.44439697265625,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 108,
-            "name": "和平东桥南，北向南",
-            "latitude": 39.97374725341797,
-            "longtitude": 116.43132019042969,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 109,
-            "name": "十字路口拍进京证",
-            "latitude": 39.968868255615234,
-            "longtitude": 116.44365692138672,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 110,
-            "name": "七圣路西坝河南路交口",
-            "latitude": 39.96885299682617,
-            "longtitude": 116.44364929199219,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 111,
-            "name": "招商局路口",
-            "latitude": 40.327606201171875,
-            "longtitude": 116.65141296386719,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 112,
-            "name": "大瓦窑桥东向下辅路",
-            "latitude": 39.861263275146484,
-            "longtitude": 116.2445068359375,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 113,
-            "name": "丽湖北门西向东",
-            "latitude": 40.31665802001953,
-            "longtitude": 116.63330841064453,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 114,
-            "name": "肖家河桥南",
-            "latitude": 40.01814651489258,
-            "longtitude": 116.2938003540039,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 115,
-            "name": "大羊坊桥下",
-            "latitude": 39.826141357421875,
-            "longtitude": 116.51129913330078,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 116,
-            "name": "上清桥高速主路北向南",
-            "latitude": 40.0286865234375,
-            "longtitude": 116.36026000976562,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 117,
-            "name": "师大北路东口",
-            "latitude": 39.97098922729492,
-            "longtitude": 116.36756134033203,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 118,
-            "name": "抓拍",
-            "latitude": 39.912620544433594,
-            "longtitude": 116.44230651855469,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 119,
-            "name": "月坛北桥下东向西",
-            "latitude": 39.924312591552734,
-            "longtitude": 116.36327362060547,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 120,
-            "name": "欣羊桥北",
-            "latitude": 39.79486083984375,
-            "longtitude": 116.32010650634766,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 121,
-            "name": "姚家园路",
-            "latitude": 39.939788818359375,
-            "longtitude": 116.50122833251953,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 122,
-            "name": "进京证1",
-            "latitude": 39.889015197753906,
-            "longtitude": 116.54691314697266,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 123,
-            "name": "有交警查限行",
-            "latitude": 39.92879867553711,
-            "longtitude": 116.38835144042969,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 124,
-            "name": "西黄村桥东向西",
-            "latitude": 39.939208984375,
-            "longtitude": 116.21858978271484,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 125,
-            "name": "鼓楼南街与南环路路口南向北",
-            "latitude": 40.218719482421875,
-            "longtitude": 116.24047088623047,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 126,
-            "name": "招商局路口",
-            "latitude": 40.32737731933594,
-            "longtitude": 116.65116882324219,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 128,
-            "name": "限行",
-            "latitude": 39.874671936035156,
-            "longtitude": 116.35546112060547,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 129,
-            "name": "拍进京证",
-            "latitude": 40.22107696533203,
-            "longtitude": 116.25719451904297,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 130,
-            "name": "方面",
-            "latitude": 40.234344482421875,
-            "longtitude": 116.25635528564453,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 131,
-            "name": "这7)",
-            "latitude": 40.23504638671875,
-            "longtitude": 116.24576568603516,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 132,
-            "name": "地税局路口红绿灯",
-            "latitude": 40.31497573852539,
-            "longtitude": 116.63787841796875,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 133,
-            "name": "欧尚十字路口",
-            "latitude": 39.93013381958008,
-            "longtitude": 116.58980560302734,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 134,
-            "name": "进京证",
-            "latitude": 40.067169189453125,
-            "longtitude": 116.49067687988281,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 135,
-            "name": "拍进京证",
-            "latitude": 40.225894927978516,
-            "longtitude": 116.23357391357422,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 136,
-            "name": "紫竹桥东天桥 由东向西",
-            "latitude": 39.946510314941406,
-            "longtitude": 116.32125091552734,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 137,
-            "name": "长春桥北 北向南",
-            "latitude": 39.964866638183594,
-            "longtitude": 116.30061340332031,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 138,
-            "name": "高峰期摄像头",
-            "latitude": 40.02862548828125,
-            "longtitude": 116.38082122802734,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 139,
-            "name": "马甸桥下",
-            "latitude": 39.97443389892578,
-            "longtitude": 116.38728332519531,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 140,
-            "name": "机场辅路望京公园",
-            "latitude": 40.001712799072266,
-            "longtitude": 116.50395202636719,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 141,
-            "name": "摄像头",
-            "latitude": -11.126861572265625,
-            "longtitude": -10.965066909790039,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 142,
-            "name": "东向西",
-            "latitude": 40.228153228759766,
-            "longtitude": 116.26802825927734,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 143,
-            "name": "实测",
-            "latitude": 40.21878433227539,
-            "longtitude": 116.24720001220703,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 144,
-            "name": "实测",
-            "latitude": 40.23493576049805,
-            "longtitude": 116.2332534790039,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 145,
-            "name": "实测",
-            "latitude": 40.22024917602539,
-            "longtitude": 116.23361206054688,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 146,
-            "name": "南环东路与燕平街路口北侧南向北",
-            "latitude": 40.219032287597656,
-            "longtitude": 116.2511978149414,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 147,
-            "name": "左安门桥",
-            "latitude": 39.87702178955078,
-            "longtitude": 116.44591522216797,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 148,
-            "name": "晋元桥阜石路主路西向东",
-            "latitude": 39.93037033081055,
-            "longtitude": 116.21878814697266,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 149,
-            "name": "被拍",
-            "latitude": 39.96921920776367,
-            "longtitude": 116.4524154663086,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 151,
-            "name": "朝阳门桥北内环北向南",
-            "latitude": 39.9307861328125,
-            "longtitude": 116.4409408569336,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 152,
-            "name": "朝阳路由东向西辅路中间车道",
-            "latitude": 39.92224884033203,
-            "longtitude": 116.54988098144531,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 153,
-            "name": "南环路与西环路路口东侧",
-            "latitude": 40.21803283691406,
-            "longtitude": 116.23371887207031,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 154,
-            "name": "拍进京证",
-            "latitude": 40.218017578125,
-            "longtitude": 116.23368835449219,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 155,
-            "name": "进京证",
-            "latitude": 40.23495864868164,
-            "longtitude": 116.23983764648438,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 156,
-            "name": "拍照",
-            "latitude": 39.90541458129883,
-            "longtitude": 116.37271118164062,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 157,
-            "name": "古城北小街",
-            "latitude": 39.91337585449219,
-            "longtitude": 116.19559478759766,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 158,
-            "name": "五环亦庄桥出口",
-            "latitude": 39.81218338012695,
-            "longtitude": 116.48225402832031,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 159,
-            "name": "高峰期限行",
-            "latitude": 40.02709197998047,
-            "longtitude": 116.36280822753906,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 160,
-            "name": "拍进京证",
-            "latitude": 40.21967697143555,
-            "longtitude": 116.26490783691406,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 161,
-            "name": "拍进京证",
-            "latitude": 40.21967697143555,
-            "longtitude": 116.26490783691406,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 162,
-            "name": "家乐福天桥",
-            "latitude": 39.96657180786133,
-            "longtitude": 116.4511947631836,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 163,
-            "name": "十字路口北向南",
-            "latitude": 39.9688606262207,
-            "longtitude": 116.44367218017578,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 165,
-            "name": "禁令",
-            "latitude": 40.3473014831543,
-            "longtitude": 116.65090942382812,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 166,
-            "name": "禁令",
-            "latitude": 40.31897735595703,
-            "longtitude": 116.64434051513672,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 167,
-            "name": "禁令",
-            "latitude": 40.31897735595703,
-            "longtitude": 116.64434051513672,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 168,
-            "name": "禁令",
-            "latitude": 40.339088439941406,
-            "longtitude": 116.63684844970703,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 169,
-            "name": "光明桥西",
-            "latitude": 39.890350341796875,
-            "longtitude": 116.45046997070312,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 170,
-            "name": "仓南胡同东口",
-            "latitude": 39.933441162109375,
-            "longtitude": 116.44013977050781,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 171,
-            "name": "月坛桥西",
-            "latitude": 39.919498443603516,
-            "longtitude": 116.36222076416016,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 172,
-            "name": "违反禁今标志",
-            "latitude": 39.920265197753906,
-            "longtitude": 116.46805572509766,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 173,
-            "name": "三元东桥南由东向西",
-            "latitude": 39.959651947021484,
-            "longtitude": 116.46565246582031,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 174,
-            "name": "麻痹",
-            "latitude": 40.22712326049805,
-            "longtitude": 116.2684097290039,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 175,
-            "name": "东向北右拐",
-            "latitude": 39.86393737792969,
-            "longtitude": 116.32364654541016,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 176,
-            "name": "垂杨柳医院路口双向",
-            "latitude": 39.893470764160156,
-            "longtitude": 116.4676284790039,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 177,
-            "name": "安宁庄G6辅路桥下",
-            "latitude": 40.06035614013672,
-            "longtitude": 116.3352279663086,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 178,
-            "name": "吉祥寺桥北",
-            "latitude": 40.04703140258789,
-            "longtitude": 116.4866943359375,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 179,
-            "name": "肖家河桥南北向南",
-            "latitude": 40.01975631713867,
-            "longtitude": 116.29363250732422,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 180,
-            "name": "三元西桥南第二个天桥",
-            "latitude": 39.9662971496582,
-            "longtitude": 116.45088195800781,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 181,
-            "name": "高峰",
-            "latitude": 39.85438919067383,
-            "longtitude": 116.29004669189453,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 182,
-            "name": "管庄桥北",
-            "latitude": 39.95687484741211,
-            "longtitude": 116.59156036376953,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 183,
-            "name": "早晚高峰",
-            "latitude": 39.79104232788086,
-            "longtitude": 116.43083953857422,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 184,
-            "name": "化工桥西向东",
-            "latitude": 39.85190963745117,
-            "longtitude": 116.55000305175781,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 185,
-            "name": "四通桥南天桥",
-            "latitude": 39.966678619384766,
-            "longtitude": 116.32940673828125,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 186,
-            "name": "为公桥东",
-            "latitude": 39.96291732788086,
-            "longtitude": 116.31781005859375,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 187,
-            "name": "紫竹桥东天桥",
-            "latitude": 39.94626235961914,
-            "longtitude": 116.32118225097656,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 188,
-            "name": "杏石口桥东",
-            "latitude": 39.96052551269531,
-            "longtitude": 116.23052215576172,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 189,
-            "name": "上清桥",
-            "latitude": 40.02360534667969,
-            "longtitude": 116.36434936523438,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 190,
-            "name": "肖家河桥南",
-            "latitude": 40.01835250854492,
-            "longtitude": 116.29399871826172,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 191,
-            "name": "厢白旗桥南",
-            "latitude": 40.02305221557617,
-            "longtitude": 116.32351684570312,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 192,
-            "name": "晋元桥东天桥",
-            "latitude": 39.93035888671875,
-            "longtitude": 116.22592163085938,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 193,
-            "name": "新兴桥东天桥",
-            "latitude": 39.913387298583984,
-            "longtitude": 116.32101440429688,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 194,
-            "name": "新兴桥主路",
-            "latitude": 39.91341781616211,
-            "longtitude": 116.3167495727539,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 195,
-            "name": "增光路西口东",
-            "latitude": 39.934104919433594,
-            "longtitude": 116.31777954101562,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 196,
-            "name": "联想桥西",
-            "latitude": 39.97309112548828,
-            "longtitude": 116.33677673339844,
-            "direction": "E->W,W->E"
-        },
-        {
-            "cameraId": 197,
-            "name": "五方桥西",
-            "latitude": 39.8763427734375,
-            "longtitude": 116.53092956542969,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 198,
-            "name": "白家楼桥西",
-            "latitude": 39.929725646972656,
-            "longtitude": 116.54571533203125,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 199,
-            "name": "大羊坊桥",
-            "latitude": 39.823822021484375,
-            "longtitude": 116.50574493408203,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 200,
-            "name": "七棵树路五环路西",
-            "latitude": 39.970298767089844,
-            "longtitude": 116.53211975097656,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 201,
-            "name": "平房桥西",
-            "latitude": 39.94773483276367,
-            "longtitude": 116.53878784179688,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 202,
-            "name": "京通快速",
-            "latitude": 39.91565704345703,
-            "longtitude": 116.58343505859375,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 203,
-            "name": "朝阳门桥",
-            "latitude": 39.93038558959961,
-            "longtitude": 116.44208526611328,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 204,
-            "name": "安华桥南",
-            "latitude": 39.97241973876953,
-            "longtitude": 116.40105438232422,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 205,
-            "name": "黑庄户桥",
-            "latitude": 39.87309646606445,
-            "longtitude": 116.59588623046875,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 206,
-            "name": "林翠桥南",
-            "latitude": 40.025882720947266,
-            "longtitude": 116.381103515625,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 207,
-            "name": "化工桥北",
-            "latitude": 39.86305618286133,
-            "longtitude": 116.55571746826172,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 208,
-            "name": "大黄庄桥西天桥",
-            "latitude": 39.922359466552734,
-            "longtitude": 116.54627227783203,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 209,
-            "name": "安贞桥南天桥",
-            "latitude": 39.971866607666016,
-            "longtitude": 116.4141845703125,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 210,
-            "name": "潘家园桥西",
-            "latitude": 39.881866455078125,
-            "longtitude": 116.46656799316406,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 211,
-            "name": "奥林西桥",
-            "latitude": 40.02706527709961,
-            "longtitude": 116.39068603515625,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 212,
-            "name": "金盏桥北",
-            "latitude": 40.01020431518555,
-            "longtitude": 116.60108947753906,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 213,
-            "name": "双桥东天桥",
-            "latitude": 39.91509246826172,
-            "longtitude": 116.59486389160156,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 214,
-            "name": "京良桥",
-            "latitude": 39.78080749511719,
-            "longtitude": 116.16939544677734,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 215,
-            "name": "方庄桥",
-            "latitude": 39.8648567199707,
-            "longtitude": 116.44535827636719,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 216,
-            "name": "铁营桥",
-            "latitude": 39.864559173583984,
-            "longtitude": 116.43865966796875,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 217,
-            "name": "大红门桥",
-            "latitude": 39.83861541748047,
-            "longtitude": 116.41339874267578,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 218,
-            "name": "西沙桥",
-            "latitude": 40.170326232910156,
-            "longtitude": 116.2520980834961,
-            "direction": "N->S,S->N"
-        },
-        {
-            "cameraId": 219,
-            "name": "立水桥北路 ",
-            "latitude": 40.059329986572266,
-            "longtitude": 116.41970825195312,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 220,
-            "name": "二拨子桥",
-            "latitude": 40.09634017944336,
-            "longtitude": 116.30707550048828,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 221,
-            "name": "百葛桥",
-            "latitude": 40.17777633666992,
-            "longtitude": 116.2488021850586,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 222,
-            "name": "积水潭桥",
-            "latitude": 39.95457077026367,
-            "longtitude": 116.37848663330078,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 223,
-            "name": "虎坊桥 ",
-            "latitude": 39.89568328857422,
-            "longtitude": 116.3911361694336,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 224,
-            "name": "北京站东街东口",
-            "latitude": 39.91105651855469,
-            "longtitude": 116.44038391113281,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 225,
-            "name": "海运仓胡同东口",
-            "latitude": 39.94258117675781,
-            "longtitude": 116.43984985351562,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 226,
-            "name": "金星桥南天桥",
-            "latitude": 39.76502227783203,
-            "longtitude": 116.34999084472656,
-            "direction": "N->S,S->N"
-        },
-        {
-            "cameraId": 227,
-            "name": "双源桥北天桥",
-            "latitude": 39.71088790893555,
-            "longtitude": 116.33914947509766,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 228,
-            "name": "德茂桥",
-            "latitude": 39.78941345214844,
-            "longtitude": 116.43294525146484,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 229,
-            "name": "衙门口桥",
-            "latitude": 39.89753723144531,
-            "longtitude": 116.2147445678711,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 230,
-            "name": "八角桥东天桥",
-            "latitude": 39.91307830810547,
-            "longtitude": 116.22075653076172,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 231,
-            "name": "鲁谷桥",
-            "latitude": 39.91309356689453,
-            "longtitude": 116.22077178955078,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 232,
-            "name": "丰北桥北",
-            "latitude": 39.87553024291992,
-            "longtitude": 116.2878646850586,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 233,
-            "name": "闵西桥",
-            "latitude": 39.978729248046875,
-            "longtitude": 116.23352813720703,
-            "direction": "E->W,W->E"
-        },
-        {
-            "cameraId": 234,
-            "name": "马甸桥南天桥",
-            "latitude": 39.96988296508789,
-            "longtitude": 116.38631439208984,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 235,
-            "name": "安贞桥",
-            "latitude": 39.97520446777344,
-            "longtitude": 116.41551971435547,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 236,
-            "name": "和平西桥",
-            "latitude": 39.97480392456055,
-            "longtitude": 116.42449188232422,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 237,
-            "name": "农展桥北",
-            "latitude": 39.9501953125,
-            "longtitude": 116.46830749511719,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 238,
-            "name": "莲花桥",
-            "latitude": 39.90306854248047,
-            "longtitude": 116.31700134277344,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 239,
-            "name": "桦皮厂胡同北口",
-            "latitude": 39.94999313354492,
-            "longtitude": 116.36553955078125,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 240,
-            "name": "小街桥",
-            "latitude": 39.95510482788086,
-            "longtitude": 116.43193817138672,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 241,
-            "name": "东四十条西天桥",
-            "latitude": 39.939666748046875,
-            "longtitude": 116.43742370605469,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 242,
-            "name": "正义路南口",
-            "latitude": 39.90765380859375,
-            "longtitude": 116.41311645507812,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 243,
-            "name": "复兴门",
-            "latitude": 39.91250228881836,
-            "longtitude": 116.36284637451172,
-            "direction": "N->S,S->N"
-        },
-        {
-            "cameraId": 244,
-            "name": "车公庄东天桥",
-            "latitude": 39.93815612792969,
-            "longtitude": 116.36542510986328,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 245,
-            "name": "西四",
-            "latitude": 39.9300537109375,
-            "longtitude": 116.3797607421875,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 246,
-            "name": "美术馆路口",
-            "latitude": 39.93061828613281,
-            "longtitude": 116.41712951660156,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 247,
-            "name": "南沙窝桥",
-            "latitude": 39.903289794921875,
-            "longtitude": 116.28034210205078,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 248,
-            "name": "岳各庄北桥",
-            "latitude": 39.891361236572266,
-            "longtitude": 116.28091430664062,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 249,
-            "name": "小红门桥",
-            "latitude": 39.83885192871094,
-            "longtitude": 116.46556854248047,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 250,
-            "name": "窑洼湖桥",
-            "latitude": 39.890777587890625,
-            "longtitude": 116.49614715576172,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 251,
-            "name": "宵云桥南天桥",
-            "latitude": 39.970340728759766,
-            "longtitude": 116.48628997802734,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 252,
-            "name": "望和桥南京承高速1.7km",
-            "latitude": 39.9908447265625,
-            "longtitude": 116.44728088378906,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 253,
-            "name": "学清路北口",
-            "latitude": 40.02768325805664,
-            "longtitude": 116.3582992553711,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 254,
-            "name": "功德寺桥",
-            "latitude": 40.007667541503906,
-            "longtitude": 116.26364135742188,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 255,
-            "name": "七星园北门",
-            "latitude": 39.90620803833008,
-            "longtitude": 116.21945190429688,
-            "direction": "W->E,E->W"
-        },
-        {
-            "cameraId": 256,
-            "name": "大瓦窑桥",
-            "latitude": 39.86525344848633,
-            "longtitude": 116.2438735961914,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 257,
-            "name": "金西桥",
-            "latitude": 39.77750015258789,
-            "longtitude": 116.38026428222656,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 258,
-            "name": "环铁桥",
-            "latitude": 39.98420333862305,
-            "longtitude": 116.52465057373047,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 259,
-            "name": "广顺桥",
-            "latitude": 40.02080535888672,
-            "longtitude": 116.4738998413086,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 260,
-            "name": "马驹桥",
-            "latitude": 39.75822067260742,
-            "longtitude": 116.57544708251953,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 261,
-            "name": "五元桥南天桥",
-            "latitude": 40.00362777709961,
-            "longtitude": 116.50408935546875,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 262,
-            "name": "京通快速路3.28km",
-            "latitude": 39.91425323486328,
-            "longtitude": 116.50639343261719,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 263,
-            "name": "顾家庄桥南路口南",
-            "latitude": 40.02238845825195,
-            "longtitude": 116.44649505615234,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 264,
-            "name": "三元桥西北外环",
-            "latitude": 39.96411895751953,
-            "longtitude": 116.45964813232422,
-            "direction": "E->W"
-        },
-        {
-            "cameraId": 265,
-            "name": "鲁瞳桥",
-            "latitude": 40.11139678955078,
-            "longtitude": 116.48983001708984,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 266,
-            "name": "管庄桥北天桥",
-            "latitude": 39.91545104980469,
-            "longtitude": 116.60708618164062,
-            "direction": "S->N,N->S"
-        },
-        {
-            "cameraId": 267,
-            "name": "西单路口",
-            "latitude": 39.913265228271484,
-            "longtitude": 116.38069915771484,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 268,
-            "name": "宣武门路口",
-            "latitude": 39.905799865722656,
-            "longtitude": 116.38076782226562,
-            "direction": "W->E"
-        },
-        {
-            "cameraId": 269,
-            "name": "右安门桥",
-            "latitude": 39.8751106262207,
-            "longtitude": 116.37081909179688,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 270,
-            "name": "陶然桥北",
-            "latitude": 39.879608154296875,
-            "longtitude": 116.39411163330078,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 271,
-            "name": "广渠门桥西",
-            "latitude": 39.8995246887207,
-            "longtitude": 116.4444580078125,
-            "direction": "西向东"
-        },
-        {
-            "cameraId": 272,
-            "name": "首都机场南路与小天竺路交叉路口",
-            "latitude": 40.055145263671875,
-            "longtitude": 116.59346771240234,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 273,
-            "name": "安定门桥南",
-            "latitude": 39.95417022705078,
-            "longtitude": 116.41458892822266,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 274,
-            "name": "北京市东城区玉蜓桥北过街天桥",
-            "latitude": 39.881553649902344,
-            "longtitude": 116.42767333984375,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 275,
-            "name": "开阳桥北天桥",
-            "latitude": 39.87980270385742,
-            "longtitude": 116.38096618652344,
-            "direction": "S->N"
-        },
-        {
-            "cameraId": 276,
-            "name": "杏坛路",
-            "latitude": 39.97160339355469,
-            "longtitude": 116.36753845214844,
-            "direction": "N->S"
-        },
-        {
-            "cameraId": 277,
-            "name": "李营桥北",
-            "latitude": 39.7955322265625,
-            "longtitude": 116.32044219970703,
-            "direction": "S->N"
-        }
-    ]
+  "cameras": [
+    {
+      "cameraId": 1,
+      "name": "双清路北",
+      "address": "北京市海淀区东升地区双清路1号",
+      "latitude": 40.020542,
+      "longtitude": 116.347513,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 2,
+      "name": "学清路北口位置细化",
+      "address": "北京市海淀区清河街道饭点儿串吧",
+      "latitude": 40.021035,
+      "longtitude": 116.351755,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 7,
+      "name": "紫竹",
+      "address": "北京市海淀区甘家口街道紫竹院路甲10号",
+      "latitude": 39.93856,
+      "longtitude": 116.324421,
+      "direction": "W->E,E->W,S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1800231231",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 8,
+      "name": "二拨子",
+      "address": "北京市昌平区回龙观地区龙城丽宫国际酒店(东北一门)",
+      "latitude": 40.087953,
+      "longtitude": 116.303159,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1800231231",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 10,
+      "name": "鼓楼西大街西口",
+      "address": "北京市西城区什刹海街道德胜门内大街8号",
+      "latitude": 39.948106,
+      "longtitude": 116.380082,
+      "direction": "E->W",
+      "note": "不知道具体位置，我走的就是这条路往北走的",
+      "deviceId": null,
+      "nickname": "noock",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 14,
+      "name": "北太平桥南天桥",
+      "address": "北京市西城区有色金属研究院幼儿园",
+      "latitude": 39.966107,
+      "longtitude": 116.370334,
+      "direction": "N->S",
+      "note": "待核",
+      "deviceId": null,
+      "nickname": "noock",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 16,
+      "name": "北宫门",
+      "address": "抓拍外地车摄像头-(40.006090,116.272959)",
+      "latitude": 40.00609,
+      "longtitude": 116.272959,
+      "direction": "S->N,N->S",
+      "note": "抓拍进京证",
+      "deviceId": null,
+      "nickname": "noock",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 17,
+      "name": "南北双向摄像头",
+      "address": "抓拍外地车摄像头-(40.004562,116.273600)",
+      "latitude": 40.004562,
+      "longtitude": 116.2736,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "荣耀",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 19,
+      "name": "限行监控",
+      "address": "抓拍外地车摄像头-(39.923317,116.455184)",
+      "latitude": 39.923317,
+      "longtitude": 116.455184,
+      "direction": "W->E",
+      "note": "由西向东",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-624404143",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 20,
+      "name": "北京市丰台区成寿寺路家世界东口南向北",
+      "address": "抓拍外地车摄像头-(39.853720,116.445391)",
+      "latitude": 39.85372,
+      "longtitude": 116.445391,
+      "direction": "S->N",
+      "note": "成寿寺中路口红绿灯南边",
+      "deviceId": null,
+      "nickname": "noock",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 21,
+      "name": "北京市朝阳区霄云里南街北向南",
+      "address": "抓拍外地车摄像头-(39.960588,116.457396)",
+      "latitude": 39.960588,
+      "longtitude": 116.457396,
+      "direction": "N->S",
+      "note": "霄云里南街小胡同应该没有，这里有一排，应该有可能，希望有人确认",
+      "deviceId": null,
+      "nickname": "noock",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 22,
+      "name": "东便门桥",
+      "address": "抓拍外地车摄像头-(39.900576,116.436482)",
+      "latitude": 39.900576,
+      "longtitude": 116.436482,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1910932750",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 23,
+      "name": "康斯丹郡附近",
+      "address": "抓拍外地车摄像头-(40.015758,116.417895)",
+      "latitude": 40.015456,
+      "longtitude": 116.416788,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 24,
+      "name": "横街子，五环入口",
+      "address": "抓拍外地车摄像头-(39.843601,116.512443)",
+      "latitude": 39.82319,
+      "longtitude": 116.51123,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-152256922",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 25,
+      "name": "右安南桥",
+      "address": "抓拍外地车摄像头-(39.781976,116.362351)",
+      "latitude": 39.85765,
+      "longtitude": 116.364892,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--942286493",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 26,
+      "name": "同华南路",
+      "address": "抓拍外地车摄像头-(39.780799,116.361977)",
+      "latitude": 39.780799,
+      "longtitude": 116.361977,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--942286493",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 28,
+      "name": "吉祥寺桥北",
+      "address": "抓拍外地车摄像头-(40.042351,116.481122)",
+      "latitude": 40.042531,
+      "longtitude": 116.480732,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 29,
+      "name": "赵公口桥东",
+      "address": "抓拍外地车摄像头-(39.857216,116.416617)",
+      "latitude": 39.857164,
+      "longtitude": 116.417048,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1237582008",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 30,
+      "name": "进京证",
+      "address": "抓拍外地车摄像头-(39.900363,116.321263)",
+      "latitude": 39.900363,
+      "longtitude": 116.321263,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--669210665",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 31,
+      "name": "高峰期外地车",
+      "address": "抓拍外地车摄像头-(39.830623,116.316294)",
+      "latitude": 39.830623,
+      "longtitude": 116.316294,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-561400255",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 33,
+      "name": "雍和宫桥南",
+      "address": "抓拍外地车摄像头-(39.947670,116.417665)",
+      "latitude": 39.948532,
+      "longtitude": 116.416519,
+      "direction": "N->S",
+      "note": "具体位置不清楚，单行道，不能绕行，还堵车",
+      "deviceId": null,
+      "nickname": "818",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 34,
+      "name": "化工桥东向西",
+      "address": "北京市朝阳区豆各庄地区稻香村",
+      "latitude": 39.847358,
+      "longtitude": 116.541021,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 35,
+      "name": "房山梨园桥高速进京",
+      "address": "抓拍外地车摄像头-(39.700935,116.105274)",
+      "latitude": 39.700935,
+      "longtitude": 116.105274,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "阿兵",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 36,
+      "name": "香泉环岛第4出口",
+      "address": "抓拍外地车摄像头-(39.992647,116.224287)",
+      "latitude": 39.992647,
+      "longtitude": 116.224287,
+      "direction": "W->E,E->W",
+      "note": "环岛奔五泉山路的路口",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 37,
+      "name": "进京证",
+      "address": "抓拍外地车摄像头-(40.000896,116.352852)",
+      "latitude": 40.000896,
+      "longtitude": 116.352852,
+      "direction": "S->N",
+      "note": "学清路北口南向北",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1030723225",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 38,
+      "name": "金宝路西口",
+      "address": "抓拍外地车摄像头-(39.904079,116.416942)",
+      "latitude": 39.915566,
+      "longtitude": 116.427017,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 39,
+      "name": "左安门内大街 北向南",
+      "address": "抓拍外地车摄像头-(39.874251,116.439512)",
+      "latitude": 39.874251,
+      "longtitude": 116.439512,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "sky",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 40,
+      "name": "西罗园路南向北",
+      "address": "抓拍外地车摄像头-(39.858344,116.394081)",
+      "latitude": 39.858344,
+      "longtitude": 116.394081,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "sky",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 41,
+      "name": "颐和园路南向北方向",
+      "address": "北京市海淀区青龙桥街道香山路2号院号",
+      "latitude": 40.004674,
+      "longtitude": 116.273523,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 43,
+      "name": "东单路口",
+      "address": "抓拍外地车摄像头-(39.908068,116.418438)",
+      "latitude": 39.908123,
+      "longtitude": 116.418443,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 44,
+      "name": "老山南路西",
+      "address": "抓拍外地车摄像头-(39.910619,116.214729)",
+      "latitude": 39.910743,
+      "longtitude": 116.214587,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "天浪影",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 45,
+      "name": "鲁谷桥东",
+      "address": "抓拍外地车摄像头-(39.903893,116.210905)",
+      "latitude": 39.903883,
+      "longtitude": 116.210901,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "天浪影",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 48,
+      "name": "机场第二高速",
+      "address": "抓拍外地车摄像头-(39.946157,116.586429)",
+      "latitude": 39.946157,
+      "longtitude": 116.586429,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1405186968",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 49,
+      "name": "工大桥北内环  由北向南",
+      "address": "抓拍外地车摄像头-(39.877180,116.491985)",
+      "latitude": 39.87718,
+      "longtitude": 116.491985,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 50,
+      "name": "顺平路",
+      "address": "抓拍外地车摄像头-(40.128490,116.611797)",
+      "latitude": 40.11684,
+      "longtitude": 116.622546,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "阿哲",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 51,
+      "name": "南法信",
+      "address": "抓拍外地车摄像头-(40.128072,116.610267)",
+      "latitude": 40.128072,
+      "longtitude": 116.610267,
+      "direction": "W->E,E->W,S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "阿哲",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 53,
+      "name": "T1",
+      "address": "抓拍外地车摄像头-(40.080419,116.588234)",
+      "latitude": 40.080419,
+      "longtitude": 116.588234,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "阿哲",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 54,
+      "name": "监控拍摄",
+      "address": "抓拍外地车摄像头-(39.987833,116.504572)",
+      "latitude": 39.987833,
+      "longtitude": 116.504572,
+      "direction": "E->W",
+      "note": "酒仙桥北路，过环铁桥往西丁字路口",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 55,
+      "name": "五景桥",
+      "address": "抓拍外地车摄像头-(39.916800,116.210316)",
+      "latitude": 39.9168,
+      "longtitude": 116.210316,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 56,
+      "name": "西城区供电局路口西向东",
+      "address": "抓拍外地车摄像头-(39.900086,116.395526)",
+      "latitude": 39.900086,
+      "longtitude": 116.395526,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 57,
+      "name": "进京探头",
+      "address": "抓拍外地车摄像头-(39.854647,116.238018)",
+      "latitude": 39.854311,
+      "longtitude": 116.238071,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 60,
+      "name": "京承高速进京方向1.7公里处",
+      "address": "北京市朝阳区来广营地区湖光桥",
+      "latitude": 39.996017,
+      "longtitude": 116.447623,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-625597606",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 61,
+      "name": "安贞桥西外环",
+      "address": "北京市朝阳区安贞街道安贞桥",
+      "latitude": 39.968905,
+      "longtitude": 116.406306,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-683878516",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 62,
+      "name": "花园桥东天桥",
+      "address": "抓拍外地车摄像头-(39.932385,116.315098)",
+      "latitude": 39.932385,
+      "longtitude": 116.315098,
+      "direction": "E->W",
+      "note": "主路有，辅路没有",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--127661726",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 63,
+      "name": "台湖收费站北",
+      "address": "北京市通州区台湖镇亦庄火车站(地铁站)",
+      "latitude": 39.816959,
+      "longtitude": 116.59833,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 64,
+      "name": "七棵树桥西由西向东",
+      "address": "北京市朝阳区东坝地区七棵树桥",
+      "latitude": 39.958587,
+      "longtitude": 116.528469,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 65,
+      "name": "三营门路口摄像头",
+      "address": "北京市丰台区南苑街道桃源村农家小厨",
+      "latitude": 39.806878,
+      "longtitude": 116.402459,
+      "direction": "N->S",
+      "note": "主路上有一排摄像头拍进京证，走辅路可以躲过去",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 66,
+      "name": "高峰限行拍照",
+      "address": "北京市丰台区卢沟桥街道六建搅拌站",
+      "latitude": 39.85523,
+      "longtitude": 116.238145,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 67,
+      "name": "进京证不定时拍摄",
+      "address": "北京市丰台区东铁匠营街道南三环中路53号",
+      "latitude": 39.857045,
+      "longtitude": 116.413987,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1439705096",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 68,
+      "name": "旱河路北段",
+      "address": "北京市海淀区四季青镇旱河路甲6号",
+      "latitude": 39.990612,
+      "longtitude": 116.223164,
+      "direction": "S->N,N->S",
+      "note": "修地铁临时拆除探头架子，后期还会复原",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 70,
+      "name": "阜成门内大街",
+      "address": "北京市西城区金融街街道阜成门内大街349号",
+      "latitude": 39.923532,
+      "longtitude": 116.357447,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 71,
+      "name": "家乐福",
+      "address": "北京市朝阳区左家庄街道静安西街7号",
+      "latitude": 39.960401,
+      "longtitude": 116.444533,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 72,
+      "name": "联合大学特殊教育学院",
+      "address": "北京市丰台区东铁匠营街道北京联合大学特殊教育学院",
+      "latitude": 39.867868,
+      "longtitude": 116.418843,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 73,
+      "name": "安宁庄西二旗",
+      "address": "北京市海淀区清河街道正宗铁锅柴鸡",
+      "latitude": 40.049606,
+      "longtitude": 116.318779,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 76,
+      "name": "祈年大街路口西向东！具体位置不详",
+      "address": "北京市东城区天坛街道珠市口东大街4-20号",
+      "latitude": 39.892713,
+      "longtitude": 116.41245,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 77,
+      "name": "三中南面",
+      "address": "北京市怀柔区泉河街道迎宾路34号",
+      "latitude": 40.331694,
+      "longtitude": 116.638885,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 78,
+      "name": "京津塘高速距收费站南1公里南向北",
+      "address": "北京市大兴区北京经济技术开发区北京鸿禧国际高尔夫俱乐部",
+      "latitude": 39.801628,
+      "longtitude": 116.52744,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 79,
+      "name": "京津塘高速距收费站南1公里",
+      "address": "北京市大兴区北京经济技术开发区北京鸿禧国际高尔夫俱乐部",
+      "latitude": 39.801557,
+      "longtitude": 116.527488,
+      "direction": "S->N",
+      "note": "不是每次都被拍",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 80,
+      "name": "321",
+      "address": "北京市海淀区莲花池东路122号",
+      "latitude": 39.897005,
+      "longtitude": 116.31739,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--402877471",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 81,
+      "name": "322",
+      "address": "北京市海淀区青龙桥街道中关村北大街16号",
+      "latitude": 40.016889,
+      "longtitude": 116.317744,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--402877471",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 82,
+      "name": "月坛南桥",
+      "address": "北京市西城区月坛街道复兴门北大街5号",
+      "latitude": 39.913884,
+      "longtitude": 116.356679,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 83,
+      "name": "华威桥西100米",
+      "address": "北京市朝阳区潘家园街道华威南路29号",
+      "latitude": 39.871361,
+      "longtitude": 116.459472,
+      "direction": "E->W",
+      "note": "天雅古玩城门口",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--161975624",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 85,
+      "name": "大生庄路口",
+      "address": "北京市大兴区西红门地区大生庄西路12号",
+      "latitude": 39.765986,
+      "longtitude": 116.401666,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-160000426",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 86,
+      "name": "康化桥西",
+      "address": "北京市朝阳区十八里店地区金川康利石材",
+      "latitude": 39.835401,
+      "longtitude": 116.523756,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "小越越",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 87,
+      "name": "朝阳门桥西 西向东",
+      "address": "北京市东城区朝阳门街道朝阳门内大街29号",
+      "latitude": 39.924389,
+      "longtitude": 116.433683,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 88,
+      "name": "摄像头",
+      "address": "北京市丰台区新村街道南四环中路251号",
+      "latitude": 39.830983,
+      "longtitude": 116.35153,
+      "direction": "W->E",
+      "note": "马家楼桥东外环由西向东处\n2013.8.15\n19时04分",
+      "deviceId": null,
+      "nickname": "欲速则不达",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 89,
+      "name": "三元桥东",
+      "address": "北京市朝阳区左家庄街道北京发展大厦(东门)",
+      "latitude": 39.951974,
+      "longtitude": 116.461703,
+      "direction": "E->W,S->N",
+      "note": "晚高峰被拍",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1771663656",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 90,
+      "name": "京开西红门",
+      "address": "北京市大兴区西红门地区G45大广高速41号",
+      "latitude": 39.784584,
+      "longtitude": 116.346635,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 91,
+      "name": "外地车限时",
+      "address": "北京市丰台区右安门街道右安门外大街101号",
+      "latitude": 39.857559,
+      "longtitude": 116.364814,
+      "direction": "S->N",
+      "note": "2015 03 11%17.16",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1695372080",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 93,
+      "name": "白纸坊桥西向东",
+      "address": "北京市西城区白纸坊街道广安门南街34号",
+      "latitude": 39.877561,
+      "longtitude": 116.350377,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--245088795",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 94,
+      "name": "安华里西中间那个门",
+      "address": "北京市朝阳区安贞街道中国石油经济技术研究院",
+      "latitude": 39.966841,
+      "longtitude": 116.40229,
+      "direction": "N->S",
+      "note": "被拍过一次，新装的",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-1397790702",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 95,
+      "name": "安华里西中间的门",
+      "address": "北京市朝阳区安贞街道中国石油经济技术研究院",
+      "latitude": 39.966841,
+      "longtitude": 116.40229,
+      "direction": "S->N",
+      "note": "被拍过一次",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-1397790702",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 96,
+      "name": "西单北大街",
+      "address": "北京市西城区金融街街道西单北大街109-11号",
+      "latitude": 39.914668,
+      "longtitude": 116.373078,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "子云",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 97,
+      "name": "西二环复兴门北",
+      "address": "北京市西城区金融街街道复兴门北大街5号",
+      "latitude": 39.914064,
+      "longtitude": 116.357196,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "子云",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 98,
+      "name": "八角桥东天桥",
+      "address": "北京市石景山区鲁谷街道八角桥",
+      "latitude": 39.907412,
+      "longtitude": 116.211307,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 99,
+      "name": "燕莎桥",
+      "address": "北京市朝阳区左家庄街道东三环北路9号",
+      "latitude": 39.95014,
+      "longtitude": 116.46118,
+      "direction": "W->E",
+      "note": "燕莎桥西向东",
+      "deviceId": null,
+      "nickname": "Aodi6",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 100,
+      "name": "三元桥",
+      "address": "北京市朝阳区左家庄街道三源里(北区)",
+      "latitude": 39.954296,
+      "longtitude": 116.457585,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "Aodi6",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 101,
+      "name": "灵境胡同",
+      "address": "北京市西城区金融街街道辟才胡同58号",
+      "latitude": 39.91436,
+      "longtitude": 116.371187,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "Aodi6",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 102,
+      "name": "供电局",
+      "address": "北京市西城区西长安街街道前门西大街33号",
+      "latitude": 39.900362,
+      "longtitude": 116.391832,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-2118773804",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 103,
+      "name": "白纸坊桥西向东",
+      "address": "北京市西城区白纸坊街道广安门南街34号",
+      "latitude": 39.877572,
+      "longtitude": 116.350414,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--245088795",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 106,
+      "name": "四惠东双向",
+      "address": "北京市朝阳区高碑店地区建国路临时56号",
+      "latitude": 39.907842,
+      "longtitude": 116.511148,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 107,
+      "name": "西坝河东里西门南面",
+      "address": "北京市朝阳区香河园街道西坝河",
+      "latitude": 39.963716,
+      "longtitude": 116.437853,
+      "direction": "N->S",
+      "note": "抓限行，早晚高峰",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1184073818",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 108,
+      "name": "和平东桥南，北向南",
+      "address": "北京市朝阳区和平街街道和平里东街12区号",
+      "latitude": 39.967655,
+      "longtitude": 116.424843,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 109,
+      "name": "十字路口拍进京证",
+      "address": "北京市朝阳区香河园街道黄鹤楼旅社",
+      "latitude": 39.963002,
+      "longtitude": 116.437121,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-37677056",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 110,
+      "name": "七圣路西坝河南路交口",
+      "address": "北京市朝阳区香河园街道黄鹤楼旅社",
+      "latitude": 39.962982,
+      "longtitude": 116.437113,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-37677056",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 111,
+      "name": "招商局路口",
+      "address": "北京市怀柔区泉河街道开放路16号",
+      "latitude": 40.321274,
+      "longtitude": 116.645029,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "Metoo",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 112,
+      "name": "大瓦窑桥东向下辅路",
+      "address": "北京市丰台区宛平城地区六建搅拌站",
+      "latitude": 39.855468,
+      "longtitude": 116.237928,
+      "direction": "E->W",
+      "note": "大瓦窑桥东向下辅路",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 113,
+      "name": "丽湖北门西向东",
+      "address": "北京市怀柔区龙山街道南大街39号",
+      "latitude": 40.310398,
+      "longtitude": 116.626915,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 114,
+      "name": "肖家河桥南",
+      "address": "北京市海淀区青龙桥街道圆明园西路49号",
+      "latitude": 40.011827,
+      "longtitude": 116.287417,
+      "direction": "N->S",
+      "note": "圆明园西路辅路",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1396181184",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 115,
+      "name": "大羊坊桥下",
+      "address": "北京市朝阳区十八里店地区大羊坊桥",
+      "latitude": 39.819909,
+      "longtitude": 116.504904,
+      "direction": "S->N",
+      "note": "大羊坊桥下",
+      "deviceId": null,
+      "nickname": "鄂A在北京",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 116,
+      "name": "上清桥高速主路北向南",
+      "address": "北京市海淀区清河街道上清桥",
+      "latitude": 40.022954,
+      "longtitude": 116.353677,
+      "direction": "N->S",
+      "note": "桥下主路进京证拍照",
+      "deviceId": null,
+      "nickname": "小石头",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 117,
+      "name": "师大北路东口",
+      "address": "北京市海淀区北太平庄街道杏坛路34号",
+      "latitude": 39.96515,
+      "longtitude": 116.361006,
+      "direction": "S->N",
+      "note": "师大北路东口",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 118,
+      "name": "抓拍",
+      "address": "北京市东城区建国门街道通惠河北路出口(东二环出口南向)",
+      "latitude": 39.906734,
+      "longtitude": 116.435781,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 119,
+      "name": "月坛北桥下东向西",
+      "address": "北京市西城区金融街街道金融大街11号",
+      "latitude": 39.918545,
+      "longtitude": 116.356709,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 120,
+      "name": "欣羊桥北",
+      "address": "北京市丰台区新村街道京良路919号",
+      "latitude": 39.788935,
+      "longtitude": 116.313602,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "boyce",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 121,
+      "name": "姚家园路",
+      "address": "北京市朝阳区东风地区石佛营西里小区北院(西门)",
+      "latitude": 39.933715,
+      "longtitude": 116.494792,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "武剑",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 122,
+      "name": "进京证1",
+      "address": "北京市朝阳区王四营地区聚香阁家常菜",
+      "latitude": 39.882845,
+      "longtitude": 116.540462,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-1026981187",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 123,
+      "name": "有交警查限行",
+      "address": "北京市西城区西长安街街道西什库大街43号",
+      "latitude": 39.922602,
+      "longtitude": 116.381944,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 124,
+      "name": "西黄村桥东向西",
+      "address": "北京市石景山区苹果园街道田村路158号",
+      "latitude": 39.933537,
+      "longtitude": 116.212002,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-240800454",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 125,
+      "name": "鼓楼南街与南环路路口南向北",
+      "address": "北京市昌平区城北街道南环路14号",
+      "latitude": 40.212978,
+      "longtitude": 116.233876,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "大张",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 126,
+      "name": "招商局路口",
+      "address": "抓拍外地车摄像头-(40.321046,116.644793)",
+      "latitude": 40.321046,
+      "longtitude": 116.644793,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 128,
+      "name": "限行",
+      "address": "抓拍外地车摄像头-(39.868982,116.348849)",
+      "latitude": 39.868982,
+      "longtitude": 116.348849,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "Aodi6",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 129,
+      "name": "拍进京证",
+      "address": "抓拍外地车摄像头-(40.214529,116.251150)",
+      "latitude": 40.215061,
+      "longtitude": 116.250691,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 130,
+      "name": "方面",
+      "address": "北京市昌平区城北街道松园路口",
+      "latitude": 40.228345,
+      "longtitude": 116.249837,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 131,
+      "name": "这7)",
+      "address": "北京市昌平区城北街道东环路甲1号",
+      "latitude": 40.229233,
+      "longtitude": 116.239178,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 132,
+      "name": "地税局路口红绿灯",
+      "address": "北京市怀柔区怀柔地区南华大街17号",
+      "latitude": 40.308668,
+      "longtitude": 116.631508,
+      "direction": "W->E",
+      "note": "地税局路口红绿处，丁字路口",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 133,
+      "name": "欧尚十字路口",
+      "address": "北京市朝阳区常营地区老北京涮肉(朝阳路辅路)",
+      "latitude": 39.92449,
+      "longtitude": 116.583206,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 134,
+      "name": "进京证",
+      "address": "北京市朝阳区孙河地区黄港桥",
+      "latitude": 40.061285,
+      "longtitude": 116.484164,
+      "direction": "E->W",
+      "note": "我从东向北上京承，被拍",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 135,
+      "name": "拍进京证",
+      "address": "北京市昌平区城北街道政府街68号",
+      "latitude": 40.220224,
+      "longtitude": 116.226952,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 136,
+      "name": "紫竹桥东天桥 由东向西",
+      "address": "北京市海淀区紫竹院街道紫竹院路58号",
+      "latitude": 39.940606,
+      "longtitude": 116.314746,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 137,
+      "name": "长春桥北 北向南",
+      "address": "北京市海淀区曙光街道长春桥(地铁站)",
+      "latitude": 39.958612,
+      "longtitude": 116.294201,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 138,
+      "name": "高峰期摄像头",
+      "address": "北京市朝阳区奥运村街道林萃桥",
+      "latitude": 40.022549,
+      "longtitude": 116.37436,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1007950400",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 139,
+      "name": "马甸桥下",
+      "address": "北京市西城区德胜街道北三环中路乙18号",
+      "latitude": 39.968248,
+      "longtitude": 116.380844,
+      "direction": "E->W",
+      "note": "位置不详，违反禁令指示标志",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 140,
+      "name": "机场辅路望京公园",
+      "address": "北京市朝阳区崔各庄地区望京公园垂钓园",
+      "latitude": 39.99558,
+      "longtitude": 116.497483,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 141,
+      "name": "摄像头",
+      "address": "",
+      "latitude": -11.132882,
+      "longtitude": -10.971528,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 142,
+      "name": "东向西",
+      "address": "北京市昌平区城北街道府学路1-2号楼号",
+      "latitude": 40.221956,
+      "longtitude": 116.261589,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 143,
+      "name": "实测",
+      "address": "北京市昌平区城北街道南环路甲3号",
+      "latitude": 40.212943,
+      "longtitude": 116.240637,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 144,
+      "name": "实测",
+      "address": "北京市昌平区城北街道北环里小区",
+      "latitude": 40.229259,
+      "longtitude": 116.22662,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 145,
+      "name": "实测",
+      "address": "北京市昌平区城北街道水萝卜饺子(西环路店)",
+      "latitude": 40.214573,
+      "longtitude": 116.226992,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 146,
+      "name": "南环东路与燕平街路口北侧南向北",
+      "address": "北京市昌平区城北街道千子桐宾馆(南环店)",
+      "latitude": 40.213128,
+      "longtitude": 116.244659,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 147,
+      "name": "左安门桥",
+      "address": "北京市丰台区方庄地区左安门桥",
+      "latitude": 39.871183,
+      "longtitude": 116.43935,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "UglyNakedGuy",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 148,
+      "name": "晋元桥阜石路主路西向东",
+      "address": "北京市海淀区田村路街道晋元桥",
+      "latitude": 39.924698,
+      "longtitude": 116.212199,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--1096198217",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 149,
+      "name": "被拍",
+      "address": "北京市朝阳区香河园街道西坝河中街1号",
+      "latitude": 39.963478,
+      "longtitude": 116.44583,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 2,
+      "createTime": null
+    },
+    {
+      "cameraId": 151,
+      "name": "朝阳门桥北内环北向南",
+      "address": "北京市东城区东四街道朝阳门(地铁站)",
+      "latitude": 39.924873,
+      "longtitude": 116.434432,
+      "direction": "N->S",
+      "note": "朝阳门桥北内环北向南",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 152,
+      "name": "朝阳路由东向西辅路中间车道",
+      "address": "北京市朝阳区高碑店地区大黄庄",
+      "latitude": 39.91614,
+      "longtitude": 116.543442,
+      "direction": "E->W",
+      "note": "摄像头装在五环大黄庄桥西侧！",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 153,
+      "name": "南环路与西环路路口东侧",
+      "address": "北京市昌平区城北街道西环路南口",
+      "latitude": 40.212357,
+      "longtitude": 116.2271,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 154,
+      "name": "拍进京证",
+      "address": "北京市昌平区城北街道西环路南口",
+      "latitude": 40.212347,
+      "longtitude": 116.227073,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 155,
+      "name": "进京证",
+      "address": "北京市昌平区城北街道北京农商银行(鼓楼北街分理处)",
+      "latitude": 40.229226,
+      "longtitude": 116.233226,
+      "direction": "N->S",
+      "note": "北环往昌平区医院方向拐被拍了5.17",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 156,
+      "name": "拍照",
+      "address": "北京市西城区广安门内街道宣武门西大街101-2号",
+      "latitude": 39.899485,
+      "longtitude": 116.366188,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--417094251",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 157,
+      "name": "古城北小街",
+      "address": "北京市石景山区八角街道古城南街16号",
+      "latitude": 39.907369,
+      "longtitude": 116.189113,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 158,
+      "name": "五环亦庄桥出口",
+      "address": "北京市大兴区亦庄地区亦庄桥",
+      "latitude": 39.806436,
+      "longtitude": 116.475694,
+      "direction": "E->W",
+      "note": "警察叔叔在此蹲点",
+      "deviceId": null,
+      "nickname": "京户津牌",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 159,
+      "name": "高峰期限行",
+      "address": "北京市朝阳区奥运村街道昌泰不锈钢(S50北五环辅路)",
+      "latitude": 40.021326,
+      "longtitude": 116.356241,
+      "direction": "S->N",
+      "note": "京藏辅路到五环方向高峰期被拍多次",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-1757764919",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 160,
+      "name": "拍进京证",
+      "address": "北京市昌平区城南街道广电大厦(南1门)",
+      "latitude": 40.213529,
+      "longtitude": 116.258451,
+      "direction": "E->W",
+      "note": "龙水路与南环路路口北侧，东向西方向",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--174994708",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 161,
+      "name": "拍进京证",
+      "address": "北京市昌平区城南街道广电大厦(南1门)",
+      "latitude": 40.213527,
+      "longtitude": 116.258447,
+      "direction": "E->W",
+      "note": "龙水路与南环路路口",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--174994708",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 162,
+      "name": "家乐福天桥",
+      "address": "北京市朝阳区香河园街道北京国展宾馆",
+      "latitude": 39.960821,
+      "longtitude": 116.444622,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 163,
+      "name": "十字路口北向南",
+      "address": "北京市朝阳区香河园街道三友轩",
+      "latitude": 39.962993,
+      "longtitude": 116.437125,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 165,
+      "name": "禁令",
+      "address": "北京市怀柔区泉河街道开放路82号",
+      "latitude": 40.340959,
+      "longtitude": 116.644515,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 166,
+      "name": "禁令",
+      "address": "北京市怀柔区龙山街道迎宾路10号",
+      "latitude": 40.312636,
+      "longtitude": 116.637967,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 167,
+      "name": "禁令",
+      "address": "北京市怀柔区龙山街道迎宾路10号",
+      "latitude": 40.312636,
+      "longtitude": 116.637967,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 168,
+      "name": "禁令",
+      "address": "北京市怀柔区泉河街道青春路78号",
+      "latitude": 40.332779,
+      "longtitude": 116.630448,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 169,
+      "name": "光明桥西",
+      "address": "北京市东城区龙潭街道夕照寺街50号",
+      "latitude": 39.884583,
+      "longtitude": 116.443876,
+      "direction": "E->W",
+      "note": "光明桥西，没有办证在这里被拍了一次",
+      "deviceId": null,
+      "nickname": "Asunleaf",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 170,
+      "name": "仓南胡同东口",
+      "address": "北京市东城区东四街道朝阳门北大街17号",
+      "latitude": 39.927516,
+      "longtitude": 116.433641,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 171,
+      "name": "月坛桥西",
+      "address": "抓拍外地车摄像头-(39.913745,116.355651)",
+      "latitude": 39.913745,
+      "longtitude": 116.355651,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-359762691",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 172,
+      "name": "违反禁今标志",
+      "address": "北京市朝阳区呼家楼街道富尔大厦(南门)",
+      "latitude": 39.914619,
+      "longtitude": 116.46146,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主-577823401",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 173,
+      "name": "三元东桥南由东向西",
+      "address": "北京市朝阳区左家庄街道三元里南小街12号",
+      "latitude": 39.954006,
+      "longtitude": 116.459037,
+      "direction": "E->W",
+      "note": "摄像头不是每天开，周二周三分别1次",
+      "deviceId": null,
+      "nickname": "Hna ",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 174,
+      "name": "麻痹",
+      "address": "北京市昌平区城北街道学之渊源教育",
+      "latitude": 40.220915,
+      "longtitude": 116.261971,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "郭",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 175,
+      "name": "东向北右拐",
+      "address": "北京市丰台区太平桥街道丰管路75号",
+      "latitude": 39.858062,
+      "longtitude": 116.317093,
+      "direction": "E->W",
+      "note": "辅路右拐的时候被拍的！6月17号  晚上10点多",
+      "deviceId": null,
+      "nickname": "静默晨曦",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 176,
+      "name": "垂杨柳医院路口双向",
+      "address": "北京市朝阳区双井街道垂杨柳南街3号",
+      "latitude": 39.887818,
+      "longtitude": 116.460995,
+      "direction": "W->E,E->W",
+      "note": "拍进京证 目前就被拍过一次 应该是人为捕捉",
+      "deviceId": null,
+      "nickname": "牛B74122",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 177,
+      "name": "安宁庄G6辅路桥下",
+      "address": "北京市海淀区清河街道京北诚一锅羊蝎子",
+      "latitude": 40.054652,
+      "longtitude": 116.32865,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 178,
+      "name": "吉祥寺桥北",
+      "address": "北京市朝阳区崔各庄地区吉祥寺桥",
+      "latitude": 40.041213,
+      "longtitude": 116.480165,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "游荡北京",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 179,
+      "name": "肖家河桥南北向南",
+      "address": "北京市海淀区青龙桥街道圆明园西路65",
+      "latitude": 40.013437,
+      "longtitude": 116.287246,
+      "direction": "N->S",
+      "note": "肖家河桥南北向南。万泉河快速路上",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 180,
+      "name": "三元西桥南第二个天桥",
+      "address": "北京市朝阳区香河园街道朝阳党校路201",
+      "latitude": 39.960538,
+      "longtitude": 116.444302,
+      "direction": "N->S",
+      "note": "不是24小时开启",
+      "deviceId": null,
+      "nickname": "外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 181,
+      "name": "高峰",
+      "address": "北京市丰台区丰台街道西四环南路临98",
+      "latitude": 39.848044,
+      "longtitude": 116.283659,
+      "direction": "S->N",
+      "note": "丰台大桥",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--851144368",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 182,
+      "name": "管庄桥北",
+      "address": "北京市朝阳区东坝地区S51机场第二高速入口(南向)",
+      "latitude": 39.951223,
+      "longtitude": 116.584951,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主--238406789",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 183,
+      "name": "早晚高峰",
+      "address": "北京市大兴区旧宫地区五福堂北路2号院(西北门)",
+      "latitude": 39.784952,
+      "longtitude": 116.424386,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 1,
+      "createTime": null
+    },
+    {
+      "cameraId": 184,
+      "name": "化工桥西向东",
+      "address": "北京市朝阳区豆各庄地区化工桥",
+      "latitude": 39.845798,
+      "longtitude": 116.54354,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 185,
+      "name": "四通桥南天桥",
+      "address": "",
+      "latitude": 39.960897,
+      "longtitude": 116.322829,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 186,
+      "name": "为公桥东",
+      "address": "",
+      "latitude": 39.956946,
+      "longtitude": 116.311312,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 187,
+      "name": "紫竹桥东天桥",
+      "address": "",
+      "latitude": 39.940352,
+      "longtitude": 116.314675,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 188,
+      "name": "杏石口桥东",
+      "address": "",
+      "latitude": 39.954873,
+      "longtitude": 116.223904,
+      "direction": "W->E",
+      "note": "西向东，可以走辅路绕过即可",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 189,
+      "name": "上清桥",
+      "address": "",
+      "latitude": 40.017817,
+      "longtitude": 116.357784,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 190,
+      "name": "肖家河桥南",
+      "address": "",
+      "latitude": 40.01203,
+      "longtitude": 116.287612,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 191,
+      "name": "厢白旗桥南",
+      "address": "",
+      "latitude": 40.01718,
+      "longtitude": 116.316977,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 192,
+      "name": "晋元桥东天桥",
+      "address": "",
+      "latitude": 39.924713,
+      "longtitude": 116.219323,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 193,
+      "name": "新兴桥东天桥",
+      "address": "",
+      "latitude": 39.907477,
+      "longtitude": 116.314498,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 194,
+      "name": "新兴桥主路",
+      "address": "",
+      "latitude": 39.907424,
+      "longtitude": 116.31026,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 195,
+      "name": "增光路西口东",
+      "address": "",
+      "latitude": 39.928139,
+      "longtitude": 116.311296,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 196,
+      "name": "联想桥西",
+      "address": "",
+      "latitude": 39.967397,
+      "longtitude": 116.330168,
+      "direction": "E->W,W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 197,
+      "name": "五方桥西",
+      "address": "",
+      "latitude": 39.87,
+      "longtitude": 116.524537,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 198,
+      "name": "白家楼桥西",
+      "address": "",
+      "latitude": 39.923548,
+      "longtitude": 116.53931,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 199,
+      "name": "大羊坊桥",
+      "address": "",
+      "latitude": 39.817667,
+      "longtitude": 116.499324,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 200,
+      "name": "七棵树路五环路西",
+      "address": "",
+      "latitude": 39.963969,
+      "longtitude": 116.525733,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 201,
+      "name": "平房桥西",
+      "address": "",
+      "latitude": 39.941462,
+      "longtitude": 116.532406,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 202,
+      "name": "京通快速",
+      "address": "",
+      "latitude": 39.910008,
+      "longtitude": 116.576829,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 203,
+      "name": "朝阳门桥",
+      "address": "",
+      "latitude": 39.92449,
+      "longtitude": 116.435578,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 204,
+      "name": "安华桥南",
+      "address": "",
+      "latitude": 39.966086,
+      "longtitude": 116.394669,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 205,
+      "name": "黑庄户桥",
+      "address": "",
+      "latitude": 39.867402,
+      "longtitude": 116.589264,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 206,
+      "name": "林翠桥南",
+      "address": "",
+      "latitude": 40.019805,
+      "longtitude": 116.374631,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 207,
+      "name": "化工桥北",
+      "address": "",
+      "latitude": 39.857046,
+      "longtitude": 116.549213,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 208,
+      "name": "大黄庄桥西天桥",
+      "address": "",
+      "latitude": 39.916196,
+      "longtitude": 116.539857,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 209,
+      "name": "安贞桥南天桥",
+      "address": "",
+      "latitude": 39.965551,
+      "longtitude": 116.407796,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 210,
+      "name": "潘家园桥西",
+      "address": "",
+      "latitude": 39.876213,
+      "longtitude": 116.459938,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 211,
+      "name": "奥林西桥",
+      "address": "",
+      "latitude": 40.020828,
+      "longtitude": 116.384268,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 212,
+      "name": "金盏桥北",
+      "address": "",
+      "latitude": 40.004459,
+      "longtitude": 116.594489,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 213,
+      "name": "双桥东天桥",
+      "address": "",
+      "latitude": 39.909415,
+      "longtitude": 116.588266,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 214,
+      "name": "京良桥",
+      "address": "",
+      "latitude": 39.774464,
+      "longtitude": 116.163018,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 215,
+      "name": "方庄桥",
+      "address": "",
+      "latitude": 39.859007,
+      "longtitude": 116.438792,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 216,
+      "name": "铁营桥",
+      "address": "",
+      "latitude": 39.858599,
+      "longtitude": 116.432135,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 217,
+      "name": "大红门桥",
+      "address": "",
+      "latitude": 39.832293,
+      "longtitude": 116.407024,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 218,
+      "name": "西沙桥",
+      "address": "",
+      "latitude": 40.164412,
+      "longtitude": 116.245587,
+      "direction": "N->S,S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 219,
+      "name": "立水桥北路 ",
+      "address": "",
+      "latitude": 40.053069,
+      "longtitude": 116.413321,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 220,
+      "name": "二拨子桥",
+      "address": "",
+      "latitude": 40.090171,
+      "longtitude": 116.30062,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 221,
+      "name": "百葛桥",
+      "address": "",
+      "latitude": 40.171922,
+      "longtitude": 116.242282,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 222,
+      "name": "积水潭桥",
+      "address": "",
+      "latitude": 39.948544,
+      "longtitude": 116.372015,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 223,
+      "name": "虎坊桥 ",
+      "address": "",
+      "latitude": 39.889443,
+      "longtitude": 116.384713,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 224,
+      "name": "北京站东街东口",
+      "address": "",
+      "latitude": 39.905132,
+      "longtitude": 116.433867,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 225,
+      "name": "海运仓胡同东口",
+      "address": "",
+      "latitude": 39.936654,
+      "longtitude": 116.433352,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 226,
+      "name": "金星桥南天桥",
+      "address": "",
+      "latitude": 39.75936,
+      "longtitude": 116.343369,
+      "direction": "N->S,S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 227,
+      "name": "双源桥北天桥",
+      "address": "",
+      "latitude": 39.705222,
+      "longtitude": 116.332555,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 228,
+      "name": "德茂桥",
+      "address": "",
+      "latitude": 39.783353,
+      "longtitude": 116.426475,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 229,
+      "name": "衙门口桥",
+      "address": "",
+      "latitude": 39.891826,
+      "longtitude": 116.208143,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 230,
+      "name": "八角桥东天桥",
+      "address": "",
+      "latitude": 39.907415,
+      "longtitude": 116.214151,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 231,
+      "name": "鲁谷桥",
+      "address": "",
+      "latitude": 39.907432,
+      "longtitude": 116.214173,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 232,
+      "name": "丰北桥北",
+      "address": "",
+      "latitude": 39.869177,
+      "longtitude": 116.281475,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 233,
+      "name": "闵西桥",
+      "address": "",
+      "latitude": 39.973057,
+      "longtitude": 116.226903,
+      "direction": "E->W,W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 234,
+      "name": "马甸桥南天桥",
+      "address": "",
+      "latitude": 39.963709,
+      "longtitude": 116.379874,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 235,
+      "name": "安贞桥",
+      "address": "",
+      "latitude": 39.968898,
+      "longtitude": 116.409116,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 236,
+      "name": "和平西桥",
+      "address": "",
+      "latitude": 39.968602,
+      "longtitude": 116.418058,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 237,
+      "name": "农展桥北",
+      "address": "",
+      "latitude": 39.944555,
+      "longtitude": 116.461709,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 238,
+      "name": "莲花桥",
+      "address": "",
+      "latitude": 39.897078,
+      "longtitude": 116.310496,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 239,
+      "name": "桦皮厂胡同北口",
+      "address": "",
+      "latitude": 39.944193,
+      "longtitude": 116.358991,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 240,
+      "name": "小街桥",
+      "address": "",
+      "latitude": 39.94903,
+      "longtitude": 116.425477,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 241,
+      "name": "东四十条西天桥",
+      "address": "",
+      "latitude": 39.933688,
+      "longtitude": 116.430938,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 242,
+      "name": "正义路南口",
+      "address": "",
+      "latitude": 39.901329,
+      "longtitude": 116.406739,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 243,
+      "name": "复兴门",
+      "address": "",
+      "latitude": 39.906741,
+      "longtitude": 116.356287,
+      "direction": "N->S,S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 244,
+      "name": "车公庄东天桥",
+      "address": "",
+      "latitude": 39.932356,
+      "longtitude": 116.358889,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 245,
+      "name": "西四",
+      "address": "",
+      "latitude": 39.924001,
+      "longtitude": 116.373303,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 246,
+      "name": "美术馆路口",
+      "address": "",
+      "latitude": 39.92433,
+      "longtitude": 116.410757,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 247,
+      "name": "南沙窝桥",
+      "address": "",
+      "latitude": 39.896963,
+      "longtitude": 116.273954,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 248,
+      "name": "岳各庄北桥",
+      "address": "",
+      "latitude": 39.885026,
+      "longtitude": 116.274523,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 249,
+      "name": "小红门桥",
+      "address": "",
+      "latitude": 39.833207,
+      "longtitude": 116.458962,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 250,
+      "name": "窑洼湖桥",
+      "address": "",
+      "latitude": 39.884779,
+      "longtitude": 116.489636,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 251,
+      "name": "宵云桥南天桥",
+      "address": "",
+      "latitude": 39.964524,
+      "longtitude": 116.479733,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 252,
+      "name": "望和桥南京承高速1.7km",
+      "address": "",
+      "latitude": 39.985029,
+      "longtitude": 116.440701,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 253,
+      "name": "学清路北口",
+      "address": "",
+      "latitude": 40.021978,
+      "longtitude": 116.351711,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 254,
+      "name": "功德寺桥",
+      "address": "",
+      "latitude": 40.001542,
+      "longtitude": 116.257174,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 255,
+      "name": "七星园北门",
+      "address": "",
+      "latitude": 39.900535,
+      "longtitude": 116.212848,
+      "direction": "W->E,E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 256,
+      "name": "大瓦窑桥",
+      "address": "",
+      "latitude": 39.859468,
+      "longtitude": 116.237293,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 257,
+      "name": "金西桥",
+      "address": "",
+      "latitude": 39.77143,
+      "longtitude": 116.373786,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 258,
+      "name": "环铁桥",
+      "address": "",
+      "latitude": 39.977852,
+      "longtitude": 116.51826,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 259,
+      "name": "广顺桥",
+      "address": "",
+      "latitude": 40.015134,
+      "longtitude": 116.467288,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 260,
+      "name": "马驹桥",
+      "address": "",
+      "latitude": 39.75251,
+      "longtitude": 116.568831,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 261,
+      "name": "五元桥南天桥",
+      "address": "",
+      "latitude": 39.99749,
+      "longtitude": 116.497629,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 262,
+      "name": "京通快速路3.28km",
+      "address": "",
+      "latitude": 39.90809,
+      "longtitude": 116.499968,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 263,
+      "name": "顾家庄桥南路口南",
+      "address": "",
+      "latitude": 40.016564,
+      "longtitude": 116.43994,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 264,
+      "name": "三元桥西北外环",
+      "address": "",
+      "latitude": 39.958451,
+      "longtitude": 116.45304,
+      "direction": "E->W",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 265,
+      "name": "鲁瞳桥",
+      "address": "",
+      "latitude": 40.105518,
+      "longtitude": 116.483274,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 266,
+      "name": "管庄桥北天桥",
+      "address": "",
+      "latitude": 39.909621,
+      "longtitude": 116.60055,
+      "direction": "S->N,N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 267,
+      "name": "西单路口",
+      "address": "",
+      "latitude": 39.907193,
+      "longtitude": 116.374236,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 268,
+      "name": "宣武门路口",
+      "address": "",
+      "latitude": 39.899724,
+      "longtitude": 116.374301,
+      "direction": "W->E",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 269,
+      "name": "右安门桥",
+      "address": "",
+      "latitude": 39.86921,
+      "longtitude": 116.364269,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 270,
+      "name": "陶然桥北",
+      "address": "",
+      "latitude": 39.873331,
+      "longtitude": 116.387696,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 271,
+      "name": "广渠门桥西",
+      "address": "",
+      "latitude": 39.893666,
+      "longtitude": 116.437912,
+      "direction": "西向东",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 272,
+      "name": "首都机场南路与小天竺路交叉路口",
+      "address": "",
+      "latitude": 40.049485,
+      "longtitude": 116.586887,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 273,
+      "name": "安定门桥南",
+      "address": "",
+      "latitude": 39.947862,
+      "longtitude": 116.408215,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 274,
+      "name": "北京市东城区玉蜓桥北过街天桥",
+      "address": "",
+      "latitude": 39.875398,
+      "longtitude": 116.421213,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 275,
+      "name": "开阳桥北天桥",
+      "address": "",
+      "latitude": 39.873718,
+      "longtitude": 116.374478,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 276,
+      "name": "杏坛路",
+      "address": "",
+      "latitude": 39.965765,
+      "longtitude": 116.360986,
+      "direction": "N->S",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    },
+    {
+      "cameraId": 277,
+      "name": "李营桥北",
+      "address": "",
+      "latitude": 39.78961,
+      "longtitude": 116.31393,
+      "direction": "S->N",
+      "note": "",
+      "deviceId": null,
+      "nickname": "北京外地车牌车主",
+      "type": 0,
+      "createTime": null
+    }
+  ]
 }

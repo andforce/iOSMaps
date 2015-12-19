@@ -10,6 +10,6 @@
 
 @interface Cameras : JSONModel
 
-@property (strong, nonatomic) NSArray<CameraBean *>* Cameras;
+@property (strong, nonatomic) NSArray<CameraBean>* cameras;
 
 @end

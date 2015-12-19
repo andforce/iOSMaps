@@ -17,9 +17,13 @@
 #import "CommonUtils.h"
 #import "Constances.h"
 #import "SearchView.h"
-
-
+#import "MAAnnotationImpl.h"
 #import <AMapNaviKit/MAMapView.h>
+#import <AMapNaviKit/MAAnnotation.h>
+#import <AMapNavi/AMapNaviKit/MAAnnotation.h>
+#import "CameraDAO.h"
+#import "CameraBean.h"
+
 
 @interface MapViewController ()<DrawerViewDelegate, IMapView>{
     CircleLocationView *_locationView;
@@ -110,6 +114,55 @@
     [_mapPresenter changeMapStyle:[CommonUtils readUserData:KMapStyleKey]];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+
+
+
+//    MAAnnotationView *maAnnotationView = [[MAAnnotationView alloc] init];
+//    MyMAAnnotation *ann = [[MyMAAnnotation alloc]init];
+//    [ann setCoordinate:<#(CLLocationCoordinate2D)#>]
+//
+//    [self.mapView addAnnotation:maAnnotationView];
+
+
+    //MAAnnotationView *maAnnotationView = [MAAnnotationView alloc]initWithAnnotation:nil reuseIdentifier:@"11111111"];
+
+    CameraDAO *dao = [[CameraDAO alloc]init];
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"presetCameraDB" ofType:@"json"];
+    
+    NSArray *cameras = [dao praseCameras:path];
+    
+//    CameraBean *cameraBean = cameras.firstObject;
+//    
+//    MAAnnotationImpl *pointAnnotation = [[MAAnnotationImpl alloc] init];
+//    
+//    pointAnnotation.coordinate = CLLocationCoordinate2DMake(cameraBean.latitude, cameraBean.longtitude);
+//    
+//    
+//    pointAnnotation.title = cameraBean.name;
+//    
+//    pointAnnotation.subtitle = cameraBean.direction;
+//    
+//    
+//    [self.mapView addAnnotation:pointAnnotation];
+    
+    for (CameraBean *cameraBean in cameras) {
+        MAAnnotationImpl *pointAnnotation = [[MAAnnotationImpl alloc] init];
+        
+        pointAnnotation.coordinate = CLLocationCoordinate2DMake(cameraBean.latitude, cameraBean.longtitude);
+        
+        
+        pointAnnotation.title = cameraBean.name;
+        
+        pointAnnotation.subtitle = cameraBean.direction;
+        
+        
+        [self.mapView addAnnotation:pointAnnotation];
+    }
+
+}
 
 -(void)switchMaps{
     CGRect tmp = _searchView.frame;

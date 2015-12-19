@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class CameraBean;
+
 @interface CameraDAO : NSObject
 
--(NSMutableArray *)praseCameras:(NSString *)jsonFilePath;
+-(NSArray<CameraBean*> *)praseCameras:(NSString *)jsonFilePath;
 
 @end

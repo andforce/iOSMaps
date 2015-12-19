@@ -7,21 +7,25 @@
 //
 
 #import "CameraDAO.h"
+#import "CameraBean.h"
+#import "Cameras.h"
 
 @implementation CameraDAO
 
 
--(NSMutableArray *)praseCameras:(NSString *)jsonFilePath{
+-(NSArray<CameraBean*> *)praseCameras:(NSString *)jsonFilePath{
     
     NSError *error;
     
     NSData *jsonData = [[NSData alloc]initWithContentsOfFile:jsonFilePath];
-    id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+
+    // 系统自带的json解析方法
+    //id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    //[jsonObject objectForKey:@"Cameras"];
+    Cameras *cameras = [[Cameras alloc] initWithData:jsonData error:&error];
 
 
-
-
-    return [jsonObject objectForKey:@"Cameras"];
+    return cameras.cameras;
 }
 
 

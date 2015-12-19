@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
+@protocol CameraBean
+@end
 
 @interface CameraBean : JSONModel
 
 @property (nonatomic, assign) int cameraId;
-@property (nonatomic, assign) NSString *name;
-@property (nonatomic, assign) float latitude;
-@property (nonatomic, assign) float longtitude;
-@property (nonatomic, assign) NSString *direction;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longtitude;
+@property (nonatomic, strong) NSString *direction;
 
 @end
