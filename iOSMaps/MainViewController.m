@@ -11,7 +11,10 @@
 #import "ControllerSwitchDelegate.h"
 #import "MapSettingViewController.h"
 #import "MapScrollSetttingViewController.h"
-
+#import "CameraDAO.h"
+#import "CameraBean.h"
+#import "JSONModel+networking.h"
+#import "Cameras.h"
 
 @interface MainViewController ()<ControllerSwitchDelegate>{
     MapViewController *_mapVC;
@@ -54,7 +57,20 @@
         [self.view addSubview:_mapVC.view];
     }];
     
+    CameraDAO *dao = [[CameraDAO alloc]init];
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"presetCameraDB" ofType:@"json"];
     
+    NSMutableArray *cameras = [dao praseCameras:path];
+    NSData *oneCamera = [cameras.lastObject objectForKey:@"latitude"];
+
+    NSError *error;
+
+    NSData *jsonData = [[NSData alloc]initWithContentsOfFile:path];
+
+    Cameras * bean = [[Cameras alloc] initWithData:jsonData error:&error];
+
+    NSLog(@"%d",bean.Cameras.count);
+
 }
 
 -(void)switchToSettingController{
