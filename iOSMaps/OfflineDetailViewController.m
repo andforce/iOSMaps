@@ -40,7 +40,7 @@ NSString const *DownloadStageInfoKey2 = @"DownloadStageInfoKey";
   UIImage *_delete;
 }
 
-@property(nonatomic, strong) UITableView *tableView;
+
 @property(nonatomic, strong) NSArray *cities;
 @property(nonatomic, strong) NSPredicate *predicate;
 
@@ -700,8 +700,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (void)initTableView {
-  self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
-                                                style:UITableViewStylePlain];
+//  self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds
+//                                                style:UITableViewStylePlain];
   self.tableView.autoresizingMask =
       UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
   self.tableView.delegate = self;

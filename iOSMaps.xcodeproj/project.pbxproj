@@ -22,6 +22,7 @@
 		3A60325F1C26AAB100A1E29C /* UIViewController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A60325E1C26AAB100A1E29C /* UIViewController+Transition.m */; };
 		3A6032621C26CFE300A1E29C /* OfflineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6032611C26CFE300A1E29C /* OfflineDetailViewController.m */; };
 		3A6032651C26D46800A1E29C /* MAHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6032641C26D46800A1E29C /* MAHeaderView.m */; };
+		3A65680D1C26EFFE00162907 /* OfflineDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A65680C1C26EFFE00162907 /* OfflineDetailViewController.xib */; };
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
 		3A6D3CC61C244A30007FF7A7 /* CameraBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3CC51C244A30007FF7A7 /* CameraBean.m */; };
 		3A6D3CCA1C244A7E007FF7A7 /* CameraDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3CC91C244A7E007FF7A7 /* CameraDAO.m */; };
@@ -72,6 +73,7 @@
 		3A6032611C26CFE300A1E29C /* OfflineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineDetailViewController.m; sourceTree = "<group>"; };
 		3A6032631C26D46800A1E29C /* MAHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHeaderView.h; sourceTree = "<group>"; };
 		3A6032641C26D46800A1E29C /* MAHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHeaderView.m; sourceTree = "<group>"; };
+		3A65680C1C26EFFE00162907 /* OfflineDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfflineDetailViewController.xib; sourceTree = "<group>"; };
 		3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
 		3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
 		3A6D3CC41C244A30007FF7A7 /* CameraBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBean.h; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				3A6032641C26D46800A1E29C /* MAHeaderView.m */,
 				3A6032601C26CFE300A1E29C /* OfflineDetailViewController.h */,
 				3A6032611C26CFE300A1E29C /* OfflineDetailViewController.m */,
+				3A65680C1C26EFFE00162907 /* OfflineDetailViewController.xib */,
 				4DCD33321C11915000F68262 /* MapViewController.h */,
 				4DCD33331C11915000F68262 /* MapViewController.m */,
 				3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */,
@@ -403,6 +406,7 @@
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,
 				4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */,
 				4D0574E81C2276F60047FC75 /* MapScrollSetttingViewController.xib in Resources */,
+				3A65680D1C26EFFE00162907 /* OfflineDetailViewController.xib in Resources */,
 				4D0574E31C217FB50047FC75 /* MapSettingViewController.xib in Resources */,
 				4DCD33371C11915000F68262 /* Main.storyboard in Resources */,
 			);

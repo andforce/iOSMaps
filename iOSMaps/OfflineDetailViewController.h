@@ -14,4 +14,9 @@
 
 @property (nonatomic, strong) MAMapView *mapView;
 
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (weak, nonatomic) IBOutlet UINavigationBar *offlineNavigationBar;
+
 @end
