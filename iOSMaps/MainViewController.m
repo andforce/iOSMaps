@@ -16,6 +16,7 @@
 #import "JSONModel+networking.h"
 #import "Cameras.h"
 #import "MapSettingNavigationViewController.h"
+#import "UIViewController+Transition.h"
 
 @interface MainViewController ()<ControllerSwitchDelegate>{
     MapViewController *_mapVC;
@@ -59,26 +60,17 @@
     _naviGationBarSettingVC.controllerSwitchDelegate = self;
     [self addChildViewController:_naviGationBarSettingVC];
     
-    
-    [self transitionFromViewController:_naviGationBarSettingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
-        
-    } completion:^(BOOL finished) {
-        
-        [self.view addSubview:_mapVC.view];
-    }];
+    [self transitionFromViewController:_naviGationBarSettingVC toViewController:_mapVC];
+    [self.view addSubview:_mapVC.view];
 
 }
 
 -(void)switchToSettingController{
-        [self transitionFromViewController:_mapVC toViewController:_naviGationBarSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
-
-            [_mapVC switchMaps];
-            [_naviGationBarSettingVC switchSetting];
-            
     
-        } completion:^(BOOL finished) {
-            
-        }];
+    [self transitionFromViewController:_mapVC toViewController:_naviGationBarSettingVC duration:0.5 animations:^{
+        [_mapVC switchMaps];
+        [_naviGationBarSettingVC switchSetting];
+    }];
 }
 
 -(void)switchToMapController{
@@ -90,15 +82,11 @@
             [_naviGationBarSettingVC switchSetting];
             
         } completion:^(BOOL finished) {
-            NSLog(@"child count is >>>>>>>>>>>>>>> %lu", (unsigned long)self.view.subviews.count);
+            
             [self.view addSubview:_mapVC.view];
         }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

@@ -26,8 +26,15 @@
     
     screenFrame = [ UIScreen mainScreen ].bounds;
     
+
+    
     // 设置顶部的布局
     CGRect topFrame = _settingNavigationBar.frame;
+    
+    NSLog(@"MapSettingNavigationViewController ,    %f   %f    %f    %f", topFrame.origin.x, topFrame.origin.y , topFrame.size.width, topFrame.size.height);
+    
+    
+    
     topFrame.size.height = 20 + 44;
     
     
@@ -36,6 +43,12 @@
     _settingNavigationBar.frame = topFrame;
     
     orgTopFrame = topFrame;
+    
+    
+    CGRect topFrame2 = _settingNavigationBar.frame;
+    
+    NSLog(@"MapSettingNavigationViewController ,    %f   %f    %f    %f", topFrame2.origin.x, topFrame2.origin.y , topFrame2.size.width, topFrame2.size.height);
+    
     
     
     // 设置SScrollView的布局
@@ -59,13 +72,20 @@
 
 
 -(void)backButtonClick:(id)sender{
-    
+    if (_controllerSwitchDelegate != nil) {
+        [_controllerSwitchDelegate switchToMapController];
+    }
 }
 
 -(void)switchSetting{
     CGRect current = _settingNavigationBar.frame;
-    current.origin.y = current.origin.y >= 0 ? current.origin.y - current.size.height : 0;
+    current.origin.y = current.origin.y == 0 ? - current.size.height : 0;
     _settingNavigationBar.frame = current;
+    
+    CGRect topFrame2 = _settingNavigationBar.frame;
+    
+    NSLog(@"MapSettingNavigationViewController switchSetting ,    %f   %f    %f    %f", topFrame2.origin.x, topFrame2.origin.y , topFrame2.size.width, topFrame2.size.height);
+    
     
     CGRect currentScroll = _mainScrollView.frame;
     currentScroll.origin.y = currentScroll.origin.y == screenFrame.size.height ? orgTopFrame.size.height : screenFrame.size.height;
