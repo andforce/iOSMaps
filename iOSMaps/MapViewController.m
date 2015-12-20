@@ -27,6 +27,7 @@
 #import <AMapNavi/AMapNaviKit/MAAnnotation.h>
 #import "CameraDAO.h"
 #import "CameraBean.h"
+#import "OfflineDetailViewController.h"
 
 
 @interface MapViewController ()<DrawerViewDelegate, IMapView, MAMapViewDelegate>{
@@ -95,6 +96,10 @@
                 break;
             }
             case DrawerItemTypeAbout:{
+                // 离线地图测试
+                OfflineDetailViewController *offline = [[OfflineDetailViewController alloc]init];
+                [self presentViewController:offline animated:NO completion:nil];
+                
                 break;
             }
         }
