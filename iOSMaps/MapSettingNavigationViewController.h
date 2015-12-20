@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ControllerSwitchDelegate.h"
 
-@interface MapSettingNavigationViewController : UINavigationController
+@interface MapSettingNavigationViewController : UIViewController
+
+
+@property (weak, nonatomic) IBOutlet UINavigationBar *settingNavigationBar;
+
+
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
+
+- (IBAction)backButtonClick:(id)sender;
+
+@property (nonatomic, strong) id<ControllerSwitchDelegate> controllerSwitchDelegate;
+
+-(void) switchSetting;
+
 
 @end

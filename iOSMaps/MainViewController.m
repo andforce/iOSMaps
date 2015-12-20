@@ -15,13 +15,16 @@
 #import "CameraBean.h"
 #import "JSONModel+networking.h"
 #import "Cameras.h"
+#import "MapSettingNavigationViewController.h"
 
 @interface MainViewController ()<ControllerSwitchDelegate>{
     MapViewController *_mapVC;
     
     //MapSettingViewController *_mapSettingVC;
     
-    MapScrollSetttingViewController *_scrollSettingVC;
+    //MapScrollSetttingViewController *_scrollSettingVC;
+    
+    MapSettingNavigationViewController *_naviGationBarSettingVC;
 }
 
 
@@ -39,18 +42,25 @@
 //    _mapSettingVC.controllerSwitchDelegate = self;
     
     
-    _scrollSettingVC = [[MapScrollSetttingViewController alloc]init];
-    _scrollSettingVC.controllerSwitchDelegate = self;
+//    _scrollSettingVC = [[MapScrollSetttingViewController alloc]init];
+//    _scrollSettingVC.controllerSwitchDelegate = self;
     
     
     [self addChildViewController:_mapVC];
 
 //    [self addChildViewController:_mapSettingVC];
     
-    [self addChildViewController:_scrollSettingVC];
+//    [self addChildViewController:_scrollSettingVC];
     
     
-    [self transitionFromViewController:_scrollSettingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
+    
+    
+    _naviGationBarSettingVC = [[MapSettingNavigationViewController alloc]init];
+    _naviGationBarSettingVC.controllerSwitchDelegate = self;
+    [self addChildViewController:_naviGationBarSettingVC];
+    
+    
+    [self transitionFromViewController:_naviGationBarSettingVC toViewController:_mapVC duration:0 options:UIViewAnimationOptionTransitionNone animations:^{
         
     } completion:^(BOOL finished) {
         
@@ -60,10 +70,10 @@
 }
 
 -(void)switchToSettingController{
-        [self transitionFromViewController:_mapVC toViewController:_scrollSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self transitionFromViewController:_mapVC toViewController:_naviGationBarSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
 
             [_mapVC switchMaps];
-            [_scrollSettingVC switchSetting];
+            [_naviGationBarSettingVC switchSetting];
             
     
         } completion:^(BOOL finished) {
@@ -75,9 +85,9 @@
     
         [self.view addSubview:_mapVC.view];
     
-        [self transitionFromViewController:_mapVC toViewController:_scrollSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self transitionFromViewController:_mapVC toViewController:_naviGationBarSettingVC duration:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
             [_mapVC switchMaps];
-            [_scrollSettingVC switchSetting];
+            [_naviGationBarSettingVC switchSetting];
             
         } completion:^(BOOL finished) {
             NSLog(@"child count is >>>>>>>>>>>>>>> %lu", (unsigned long)self.view.subviews.count);

@@ -17,6 +17,8 @@
 		3A1AFF381C1C571400B46CC6 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF371C1C571400B46CC6 /* UIButton+BackgroundColor.m */; };
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40601C11FDEE009B520C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* CircleView.m */; };
+		3A6032591C265EE000A1E29C /* MapSettingNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6032571C265EE000A1E29C /* MapSettingNavigationViewController.m */; };
+		3A60325C1C265F9800A1E29C /* MapSettingNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A60325B1C265F9800A1E29C /* MapSettingNavigationViewController.xib */; };
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
 		3A6D3CC61C244A30007FF7A7 /* CameraBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3CC51C244A30007FF7A7 /* CameraBean.m */; };
 		3A6D3CCA1C244A7E007FF7A7 /* CameraDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3CC91C244A7E007FF7A7 /* CameraDAO.m */; };
@@ -58,6 +60,9 @@
 		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		3A4C405E1C11FDEE009B520C /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		3A4C405F1C11FDEE009B520C /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		3A6032561C265EE000A1E29C /* MapSettingNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingNavigationViewController.h; sourceTree = "<group>"; };
+		3A6032571C265EE000A1E29C /* MapSettingNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingNavigationViewController.m; sourceTree = "<group>"; };
+		3A60325B1C265F9800A1E29C /* MapSettingNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSettingNavigationViewController.xib; sourceTree = "<group>"; };
 		3A69DBAB1C13439900EABC79 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
 		3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
 		3A6D3CC41C244A30007FF7A7 /* CameraBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBean.h; sourceTree = "<group>"; };
@@ -173,6 +178,9 @@
 				4D0574E41C2276F60047FC75 /* MapScrollSetttingViewController.h */,
 				4D0574E51C2276F60047FC75 /* MapScrollSetttingViewController.m */,
 				4D0574E61C2276F60047FC75 /* MapScrollSetttingViewController.xib */,
+				3A6032561C265EE000A1E29C /* MapSettingNavigationViewController.h */,
+				3A6032571C265EE000A1E29C /* MapSettingNavigationViewController.m */,
+				3A60325B1C265F9800A1E29C /* MapSettingNavigationViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB37B4A1C25689300163B83 /* presetCameraDB.json in Resources */,
+				3A60325C1C265F9800A1E29C /* MapSettingNavigationViewController.xib in Resources */,
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,
 				4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */,
 				4D0574E81C2276F60047FC75 /* MapScrollSetttingViewController.xib in Resources */,
@@ -457,6 +466,7 @@
 				3A1AFF351C1C4FCF00B46CC6 /* UIColor+MyColor.m in Sources */,
 				4D0574D61C213C320047FC75 /* MainViewController.m in Sources */,
 				3A6D3CCA1C244A7E007FF7A7 /* CameraDAO.m in Sources */,
+				3A6032591C265EE000A1E29C /* MapSettingNavigationViewController.m in Sources */,
 				4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */,
 				3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */,
 				3A1AFF2F1C1C26C200B46CC6 /* CommonUtils.m in Sources */,
