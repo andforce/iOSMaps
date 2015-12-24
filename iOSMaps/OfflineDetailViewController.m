@@ -32,12 +32,15 @@ NSString const *DownloadStageInfoKey2 = @"DownloadStageInfoKey";
 
 @end
 
-@interface OfflineDetailViewController ()<
-    UITableViewDataSource, UITableViewDelegate, MAHeaderViewDelegate> {
+@interface OfflineDetailViewController ()<UITableViewDataSource, UITableViewDelegate, MAHeaderViewDelegate> {
   char *_expandedSections;
   UIImage *_download;
   UIImage *_pause;
   UIImage *_delete;
+    
+    CGRect orgTopFrame;
+    
+    CGRect screenFrame;
 }
 
 
@@ -626,12 +629,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
   }
 }
 
-- (void)backAction {
-  [self cancelAllAction];
-
-  //    [self dismissModalViewControllerAnimated:YES];
-  [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 - (void)cancelAllAction {
   [[MAOfflineMap sharedOfflineMap] cancelAll];
@@ -657,10 +654,15 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 #pragma mark - Initialization
 
 - (void)initNavigationBar {
-  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
-      initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                           target:self
-                           action:@selector(backAction)];
+    screenFrame = [ UIScreen mainScreen ].bounds;
+    
+    orgTopFrame = _offlineNavigationBar.frame;
+    
+    orgTopFrame.size.height = 20 + 44;
+    orgTopFrame.origin.y = 0;
+    
+    _offlineNavigationBar.frame = orgTopFrame;
+    
 
   self.navigationItem.rightBarButtonItem =
       [[UIBarButtonItem alloc] initWithTitle:@"取消全部"
@@ -795,7 +797,18 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
   }
 }
 
+- (IBAction)backClick:(UIBarButtonItem *)sender {
+    [self cancelAllAction];
+    
+    //    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
+
+
+
+
 
 @implementation OfflineDetailViewController (SearchCity)
 

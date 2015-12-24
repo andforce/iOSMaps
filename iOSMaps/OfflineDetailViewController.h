@@ -19,4 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *offlineNavigationBar;
 
+- (IBAction)backClick:(UIBarButtonItem *)sender;
+
 @end

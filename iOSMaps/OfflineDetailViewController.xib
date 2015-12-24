@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -30,6 +30,9 @@
                         <navigationItem title="离线地图" id="TQV-c9-8LM">
                             <barButtonItem key="leftBarButtonItem" image="ic_arrow_back_white_18pt" id="hpD-2Q-CGY">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="backClick:" destination="-1" id="vXu-05-w5G"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
