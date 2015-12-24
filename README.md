@@ -9,7 +9,7 @@
   - $ pod search AMapNavi
   - $ pod search AMapSearch
   - $ pod search AMapLocation
-- 查找入json解析库
+- 查找json解析库
   - $ pod search JSONModel
 - 导入上述依赖库
   - $ pod install
