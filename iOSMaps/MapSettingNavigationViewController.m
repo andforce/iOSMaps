@@ -7,6 +7,7 @@
 //
 
 #import "MapSettingNavigationViewController.h"
+#import "OfflineDetailViewController.h"
 
 @interface MapSettingNavigationViewController (){
     
@@ -93,6 +94,12 @@
     CGRect currentScroll = _mainScrollView.frame;
     currentScroll.origin.y = currentScroll.origin.y == screenFrame.size.height ? orgTopFrame.size.height : screenFrame.size.height;
     _mainScrollView.frame = currentScroll;
+}
+
+- (IBAction)switchToOfflineMapVIew:(SelectorUIButton *)sender {
+    // 离线地图测试
+    OfflineDetailViewController *offline = [[OfflineDetailViewController alloc]init];
+    [self presentViewController:offline animated:YES completion:nil];
 }
 
 @end

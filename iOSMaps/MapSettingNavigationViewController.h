@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ControllerSwitchDelegate.h"
+#import "SelectorUIButton.h"
 
 @interface MapSettingNavigationViewController : UIViewController
 
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) id<ControllerSwitchDelegate> controllerSwitchDelegate;
 
 -(void) switchSetting;
+
+- (IBAction)switchToOfflineMapVIew:(SelectorUIButton *)sender;
 
 
 @end

@@ -128,6 +128,9 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="switchToOfflineMapVIew:" destination="-1" eventType="touchUpInside" id="zPb-nw-Qq4"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" id="t3e-sH-I9S">
                             <rect key="frame" x="10" y="286" width="304" height="40"/>

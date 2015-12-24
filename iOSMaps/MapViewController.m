@@ -96,9 +96,6 @@
                 break;
             }
             case DrawerItemTypeAbout:{
-                // 离线地图测试
-                OfflineDetailViewController *offline = [[OfflineDetailViewController alloc]init];
-                [self presentViewController:offline animated:NO completion:nil];
                 
                 break;
             }
