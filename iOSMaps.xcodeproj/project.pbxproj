@@ -253,6 +253,8 @@
 		3AC694721C19C512009B0633 /* MapsActionView */ = {
 			isa = PBXGroup;
 			children = (
+				3A60325D1C26AAB100A1E29C /* UIViewController+Transition.h */,
+				3A60325E1C26AAB100A1E29C /* UIViewController+Transition.m */,
 				3AC6947A1C19CA7A009B0633 /* CircleLocationView.h */,
 				3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */,
 				3A1AFF1E1C1BECFF00B46CC6 /* MapDrawerView.h */,
@@ -299,6 +301,13 @@
 				3AB397F61C1B0FBF00DCDA06 /* Presenters */,
 				3A69DBAA1C1342D700EABC79 /* Controllers */,
 				3A69DBA91C1342BF00EABC79 /* Views */,
+				3A1AFF2D1C1C26C200B46CC6 /* CommonUtils.h */,
+				3A1AFF2E1C1C26C200B46CC6 /* CommonUtils.m */,
+				3A1AFF301C1C433100B46CC6 /* UIImage+Tint.h */,
+				3A1AFF311C1C433100B46CC6 /* UIImage+Tint.m */,
+				3A1AFF331C1C4FCF00B46CC6 /* UIColor+MyColor.h */,
+				3A1AFF341C1C4FCF00B46CC6 /* UIColor+MyColor.m */,
+				3ADA377F1C1DBC8B00EA2919 /* Constances.h */,
 				4DCD332F1C11915000F68262 /* AppDelegate.h */,
 				4DCD33301C11915000F68262 /* AppDelegate.m */,
 				4DCD33351C11915000F68262 /* Main.storyboard */,
@@ -307,15 +316,6 @@
 				4DCD33401C11915000F68262 /* Info.plist */,
 				4DCD33381C11915000F68262 /* iOSMaps.xcdatamodeld */,
 				4DCD332C1C11915000F68262 /* Supporting Files */,
-				3A1AFF2D1C1C26C200B46CC6 /* CommonUtils.h */,
-				3A1AFF2E1C1C26C200B46CC6 /* CommonUtils.m */,
-				3A1AFF301C1C433100B46CC6 /* UIImage+Tint.h */,
-				3A1AFF311C1C433100B46CC6 /* UIImage+Tint.m */,
-				3A1AFF331C1C4FCF00B46CC6 /* UIColor+MyColor.h */,
-				3A1AFF341C1C4FCF00B46CC6 /* UIColor+MyColor.m */,
-				3ADA377F1C1DBC8B00EA2919 /* Constances.h */,
-				3A60325D1C26AAB100A1E29C /* UIViewController+Transition.h */,
-				3A60325E1C26AAB100A1E29C /* UIViewController+Transition.m */,
 			);
 			path = iOSMaps;
 			sourceTree = "<group>";

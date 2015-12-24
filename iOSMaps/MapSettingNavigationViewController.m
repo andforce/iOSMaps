@@ -58,6 +58,9 @@
     
     orgScrollFrame = scrollFrame;
     
+    _mainScrollView.canCancelContentTouches = YES;
+    _mainScrollView.delaysContentTouches = NO;
+    
     
     
     UIEdgeInsets s = _mainScrollView.contentInset;
