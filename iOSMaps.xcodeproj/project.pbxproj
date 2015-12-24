@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
 		2F34C8304519CE2F96093C3A /* Cameras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C4E6F43D54D13BB1693B /* Cameras.m */; };
+		3A03903B1C2C36B5002D04C3 /* POIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A03903A1C2C36B5002D04C3 /* POIAnnotation.m */; };
 		3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */; };
 		3A1AFF231C1BF04A00B46CC6 /* LeftDrawerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF221C1BF04A00B46CC6 /* LeftDrawerItem.m */; };
 		3A1AFF2F1C1C26C200B46CC6 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF2E1C1C26C200B46CC6 /* CommonUtils.m */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		2F34C4E6F43D54D13BB1693B /* Cameras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cameras.m; sourceTree = "<group>"; };
 		2F34CF397B0EFC6C14404EFD /* Cameras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameras.h; sourceTree = "<group>"; };
+		3A0390391C2C36B5002D04C3 /* POIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIAnnotation.h; sourceTree = "<group>"; };
+		3A03903A1C2C36B5002D04C3 /* POIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIAnnotation.m; sourceTree = "<group>"; };
 		3A1AFF1E1C1BECFF00B46CC6 /* MapDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDrawerView.h; sourceTree = "<group>"; };
 		3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDrawerView.m; sourceTree = "<group>"; };
 		3A1AFF211C1BF04A00B46CC6 /* LeftDrawerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDrawerItem.h; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 		3A6D3CC31C24497E007FF7A7 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				3A0390391C2C36B5002D04C3 /* POIAnnotation.h */,
+				3A03903A1C2C36B5002D04C3 /* POIAnnotation.m */,
 				3A6D3CC41C244A30007FF7A7 /* CameraBean.h */,
 				3A6D3CC51C244A30007FF7A7 /* CameraBean.m */,
 				2F34C4E6F43D54D13BB1693B /* Cameras.m */,
@@ -484,6 +489,7 @@
 				4D0574E21C217FB50047FC75 /* MapSettingViewController.m in Sources */,
 				3A6032651C26D46800A1E29C /* MAHeaderView.m in Sources */,
 				3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */,
+				3A03903B1C2C36B5002D04C3 /* POIAnnotation.m in Sources */,
 				4DCD33341C11915000F68262 /* MapViewController.m in Sources */,
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
 				3A4C40601C11FDEE009B520C /* CircleView.m in Sources */,

@@ -13,6 +13,7 @@
 #import <AMapSearchKit/AMapCommonObj.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "BaseMapViewController.h"
+#import "POIAnnotation.h"
 
 
 
@@ -28,7 +29,7 @@
     UITableView *_searchResultTableView;
 }
 
-@property (nonatomic, strong) NSMutableArray *tips;
+@property (nonatomic, strong) NSMutableArray *searchTips;
 
 @property (nonatomic, strong) NSMutableArray *busLines;
 
@@ -39,6 +40,10 @@
 - (id)init {
     if (self = [super init]) {
         
+        self.searchTips = [NSMutableArray array];
+        self.busLines = [NSMutableArray array];
+        
+        [self initPoiSearch];
         [self initSearchView];
         
     }
@@ -51,6 +56,7 @@
     _search = [[AMapSearchAPI alloc]init];
     _search.delegate = self;
 }
+
 
 - (void)searchTipsWithKey:(NSString *)key{
     if (key.length == 0){
@@ -88,6 +94,7 @@
     
     // 设置TableView的dataSource
     _searchResultTableView.dataSource = self;
+    _searchResultTableView.delegate = self;
     
     [_maskView addSubview:_searchResultTableView];
     
@@ -97,26 +104,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.tips.count;
+    return self.searchTips.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *tipCellIdentifier = @"tipCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tipCellIdentifier];
     
-    if (cell == nil)
-    {
+    if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:tipCellIdentifier];
         cell.imageView.image = [UIImage imageNamed:@"locate"];
     }
     
-    AMapTip *tip = self.tips[indexPath.row];
+    AMapTip *tip = self.searchTips[indexPath.row];
     
-    if (tip.location == nil)
-    {
+    if (tip.location == nil){
         cell.imageView.image = [UIImage imageNamed:@"search"];
     }
     
@@ -132,7 +136,6 @@
     } else{
         UIImage *enter = [UIImage imageNamed:@"ic_qu_menu_grabber"];
         [_drawerSwitchButton setImage:enter forState:UIControlStateNormal];
-        
     }
 }
 
@@ -177,28 +180,94 @@
     _searchTextField.placeholder = @"请输入关键字";
 
     [_searchTextField setDelegate:self];
+    [_searchTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
     [self addSubview:_searchTextField];
     
     
-    
-    
-
 }
 
--(void)addDrawerOpenButtonClickListener:(OnClickListener)drawerClickListener{
-    [_drawerSwitchButton addOnClickListener:drawerClickListener];
+
+- (void) textFieldDidChange:(UITextField *) textField{
+    NSLog(@"textFieldDidChange 000000000000000000000000000000000000000000");
+    [self searchTipsWithKey:textField.text];
 }
+
+
+#pragma mark - UITextFieldDelegate
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    [self searchTipsWithKey:textField.text];
+    NSLog(@"textFieldDidEndEditing 000000000000000000000000000000000000000000");
+}
+
+
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    NSLog(@"textFieldShouldBeginEditing 000000000000000000000000000000000000000000");
     [self showOrHideWhiteBgViewWithAnim];
     return YES;
 }
 
 -(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    NSLog(@"textFieldShouldEndEditing 000000000000000000000000000000000000000000");
     [self showOrHideWhiteBgViewWithAnim];
     return YES;
 }
+
+#pragma mark - AMapSearchDelegate
+
+/* 输入提示回调. */
+- (void)onInputTipsSearchDone:(AMapInputTipsSearchRequest *)request response:(AMapInputTipsSearchResponse *)response{
+    [self.searchTips setArray:response.tips];
+    [_searchResultTableView reloadData];
+    //[self.displayController.searchResultsTableView reloadData];
+}
+
+/* 公交搜索回调. */
+- (void)onBusLineSearchDone:(AMapBusLineBaseSearchRequest *)request response:(AMapBusLineSearchResponse *)response{
+    if (response.buslines.count != 0){
+        [self.busLines setArray:response.buslines];
+        
+        //[self presentCurrentBusLine];
+    }
+}
+
+/* POI 搜索回调. */
+- (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response{
+    if (response.pois.count == 0){
+        return;
+    }
+    
+    NSMutableArray *poiAnnotations = [NSMutableArray arrayWithCapacity:response.pois.count];
+    
+    [response.pois enumerateObjectsUsingBlock:^(AMapPOI *obj, NSUInteger idx, BOOL *stop) {
+        
+        [poiAnnotations addObject:[[POIAnnotation alloc] initWithPOI:obj]];
+        
+    }];
+    
+    /* 将结果以annotation的形式加载到地图上. */
+    //[self.mapView addAnnotations:poiAnnotations];
+    
+    /* 如果只有一个结果，设置其为中心点. */
+    if (poiAnnotations.count == 1){
+        //[self.mapView setCenterCoordinate:[poiAnnotations[0] coordinate]];
+    }
+    /* 如果有多个结果, 设置地图使所有的annotation都可见. */
+    else{
+        //[self.mapView showAnnotations:poiAnnotations animated:NO];
+    }
+}
+
+
+
+
+-(void)addDrawerOpenButtonClickListener:(OnClickListener)drawerClickListener{
+    [_drawerSwitchButton addOnClickListener:drawerClickListener];
+}
+
+
 
 -(void)showOrHideWhiteBgViewWithAnim{
     [UIView beginAnimations:nil context:nil];
