@@ -24,6 +24,8 @@
     SelectorUIButton *_drawerSwitchButton;
     
     UITextField *_searchTextField;
+    
+    UITableView *_searchResultTableView;
 }
 
 @property (nonatomic, strong) NSMutableArray *tips;
@@ -50,6 +52,18 @@
     _search.delegate = self;
 }
 
+- (void)searchTipsWithKey:(NSString *)key{
+    if (key.length == 0){
+        return;
+    }
+    
+    AMapInputTipsSearchRequest *tips = [[AMapInputTipsSearchRequest alloc] init];
+    tips.keywords = key;
+    tips.city     = @"北京";
+    
+    [self.search AMapInputTipsSearch:tips];
+}
+
 -(void)didMoveToSuperview{
     UIView *rootView = [self superview];
     
@@ -69,7 +83,13 @@
     _maskView.backgroundColor = [UIColor whiteColor];
     _maskView.alpha = 0.0;
     
+    _searchResultTableView = [[UITableView alloc]init];
+    _searchResultTableView.frame = CGRectMake(0, 0, root.size.width, root.size.height);
     
+    // 设置TableView的dataSource
+    _searchResultTableView.dataSource = self;
+    
+    [_maskView addSubview:_searchResultTableView];
     
     [rootView addSubview:_maskView];
     [rootView bringSubviewToFront:self];
@@ -119,9 +139,6 @@
 
 
 -(void) initSearchView{
-    
-
-    //_topBarRootView = [[UIView alloc]init];
     
     self.backgroundColor = [UIColor whiteColor];
     
