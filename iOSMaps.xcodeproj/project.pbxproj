@@ -176,6 +176,7 @@
 		3A69DBAA1C1342D700EABC79 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D7E1F601C2BDF8B0067CEF9 /* UnusedForStudy */,
 				3A6032631C26D46800A1E29C /* MAHeaderView.h */,
 				3A6032641C26D46800A1E29C /* MAHeaderView.m */,
 				3A6032601C26CFE300A1E29C /* OfflineDetailViewController.h */,
@@ -188,12 +189,6 @@
 				4D0574D41C213C320047FC75 /* MainViewController.h */,
 				4D0574D51C213C320047FC75 /* MainViewController.m */,
 				4D0574D91C2144A00047FC75 /* ControllerSwitchDelegate.h */,
-				4D0574DF1C217FB50047FC75 /* MapSettingViewController.h */,
-				4D0574E01C217FB50047FC75 /* MapSettingViewController.m */,
-				4D0574E11C217FB50047FC75 /* MapSettingViewController.xib */,
-				4D0574E41C2276F60047FC75 /* MapScrollSetttingViewController.h */,
-				4D0574E51C2276F60047FC75 /* MapScrollSetttingViewController.m */,
-				4D0574E61C2276F60047FC75 /* MapScrollSetttingViewController.xib */,
 				3A6032561C265EE000A1E29C /* MapSettingNavigationViewController.h */,
 				3A6032571C265EE000A1E29C /* MapSettingNavigationViewController.m */,
 				3A60325B1C265F9800A1E29C /* MapSettingNavigationViewController.xib */,
@@ -263,6 +258,19 @@
 				3A1AFF221C1BF04A00B46CC6 /* LeftDrawerItem.m */,
 			);
 			name = MapsActionView;
+			sourceTree = "<group>";
+		};
+		4D7E1F601C2BDF8B0067CEF9 /* UnusedForStudy */ = {
+			isa = PBXGroup;
+			children = (
+				4D0574E41C2276F60047FC75 /* MapScrollSetttingViewController.h */,
+				4D0574E51C2276F60047FC75 /* MapScrollSetttingViewController.m */,
+				4D0574E61C2276F60047FC75 /* MapScrollSetttingViewController.xib */,
+				4D0574DF1C217FB50047FC75 /* MapSettingViewController.h */,
+				4D0574E01C217FB50047FC75 /* MapSettingViewController.m */,
+				4D0574E11C217FB50047FC75 /* MapSettingViewController.xib */,
+			);
+			name = UnusedForStudy;
 			sourceTree = "<group>";
 		};
 		4D91A0C71C16E69100093EC6 /* DrawerView */ = {

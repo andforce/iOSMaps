@@ -10,11 +10,14 @@
 #import "UIColor+MyColor.h"
 #import "UIButton+BackgroundColor.h"
 #import "SelectorUIButton.h"
+#import <AMapSearchKit/AMapCommonObj.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import "BaseMapViewController.h"
 
 
 
 
-@interface SearchView ()<UITextFieldDelegate>{
+@interface SearchView ()<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, AMapSearchDelegate>{
     UIView *_maskView;
     
     SelectorUIButton *_searchButton;
@@ -22,6 +25,11 @@
     
     UITextField *_searchTextField;
 }
+
+@property (nonatomic, strong) NSMutableArray *tips;
+
+@property (nonatomic, strong) NSMutableArray *busLines;
+
 @end
 
 @implementation SearchView
@@ -29,25 +37,23 @@
 - (id)init {
     if (self = [super init]) {
         
-        //UIView *rootView = [self superview];
-        //self.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, rootView.frame.size.width - kViewHeight / 2.0f, kViewHeight);
-        
-        
         [self initSearchView];
         
     }
     return self;
 }
 
+-(void) initPoiSearch{
+    // 搜索
+    [AMapSearchServices sharedServices].apiKey = kApiKey;
+    _search = [[AMapSearchAPI alloc]init];
+    _search.delegate = self;
+}
 
 -(void)didMoveToSuperview{
     UIView *rootView = [self superview];
     
     NSLog(@"didMoveToSuperviewdidMoveToSuperviewdidMoveToSuperviewdidMoveToSuperviewdidMoveToSuperview");
-    
-//    self.frame = CGRectMake(0, 0, rootView.frame.size.width, rootView.frame.size.height);
-//    self.backgroundColor = [UIColor redColor];
-    
     
     _searchButton.frame = CGRectMake(self.frame.size.width - self.frame.size.height + kMargin / 2.0f, kMargin / 2.0f, self.frame.size.height - kMargin, self.frame.size.height - kMargin);
     
@@ -55,8 +61,6 @@
     _drawerSwitchButton.frame = CGRectMake(kMargin / 2.0f, kMargin / 2.0f, self.frame.size.height - kMargin, self.frame.size.height - kMargin);
     
     _searchTextField.frame = CGRectMake(self.frame.origin.x + _drawerSwitchButton.frame.size.width + kMargin / 2.0f, kMargin / 2.0f, _searchButton.frame.origin.x - kMargin - _drawerSwitchButton.frame.size.width - kMargin / 2.0f, self.frame.size.height - kMargin);
-    
-    //[rootView addSubview:_topBarRootView];
     
     _maskView = [[UIView alloc]init];
     
@@ -72,6 +76,35 @@
     
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.tips.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *tipCellIdentifier = @"tipCellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tipCellIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:tipCellIdentifier];
+        cell.imageView.image = [UIImage imageNamed:@"locate"];
+    }
+    
+    AMapTip *tip = self.tips[indexPath.row];
+    
+    if (tip.location == nil)
+    {
+        cell.imageView.image = [UIImage imageNamed:@"search"];
+    }
+    
+    cell.textLabel.text = tip.name;
+    cell.detailTextLabel.text = tip.district;
+    
+    return cell;
+}
 -(void)enterSearch:(BOOL)isEnterSearch{
     if (isEnterSearch) {
         UIImage *exit = [UIImage imageNamed:@"ic_arrow_back_18pt"];

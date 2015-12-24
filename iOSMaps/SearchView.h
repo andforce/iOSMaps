@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "UIButton+BackgroundColor.h"
+#import <AMapNaviKit/MAMapServices.h>
+#import <AMapSearchKit/AMapSearchKit.h>
 
 #define kViewHeight 50
 #define kMargin 6
@@ -18,5 +20,7 @@
 -(void) addDrawerOpenButtonClickListener:(OnClickListener) drawerClickListener;
 
 -(void)enterSearch:(BOOL) isEnterSearch;
+
+@property (nonatomic, strong) AMapSearchAPI *search;
 
 @end

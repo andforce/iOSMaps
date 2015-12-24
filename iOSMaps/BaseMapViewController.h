@@ -11,16 +11,16 @@
 #import <AMapNaviKit/AMapNaviKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapNaviKit/MAMapView.h>
+#import <AMapNaviKit/MAMapServices.h>
 
 
 #define kApiKey @"f6a86f7a8d176d2ee0ae836d9e580158"
 
 
-@interface BaseMapViewController : UIViewController<MAMapViewDelegate ,AMapLocationManagerDelegate, AMapSearchDelegate>
+@interface BaseMapViewController : UIViewController<MAMapViewDelegate ,AMapLocationManagerDelegate>
 
 @property (nonatomic, retain) MAMapView *mapView;
 @property (nonatomic, strong) AMapLocationManager *locationManager;
-@property (nonatomic, strong) AMapSearchAPI *search;
 
 
 @end
