@@ -28,9 +28,11 @@
 #import "CameraDAO.h"
 #import "CameraBean.h"
 #import "OfflineDetailViewController.h"
+#import "SearchViewDelegate.h"
+#import "AMapTipAnnotation.h"
 
 
-@interface MapViewController ()<DrawerViewDelegate, IMapView, MAMapViewDelegate>{
+@interface MapViewController ()<DrawerViewDelegate, IMapView, MAMapViewDelegate, SearchViewDelegate>{
     CircleLocationView *_locationView;
 
     MapDrawerView *_drawerView;
@@ -57,11 +59,17 @@
     
     // 顶部的搜索空间
     _searchView = [[SearchView alloc] init];
+    _searchView.delegate = self;
     _searchView.frame = CGRectMake(kViewHeight / 4.0f, kViewHeight / 2.0f, self.view.frame.size.width - kViewHeight / 2.0f, kViewHeight);
 
 
     __block OnClickListener blockSef = ^(id view){
-        [_drawerView openLeftDrawer];
+        if (_searchView.isInSearchSate) {
+            // 退出搜索状态
+            [_searchView enterSearch:NO];
+        } else{
+            [_drawerView openLeftDrawer];
+        }
     };
     
     [_searchView addDrawerOpenButtonClickListener:blockSef];
@@ -177,6 +185,38 @@
 
     self.mapView.showTraffic= YES;
 
+}
+
+#pragma mark - SearchViewDelegate
+
+-(void)clearAndShowAnnotationWithTip:(AMapTip *)tip{
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView removeOverlays:self.mapView.overlays];
+    if (tip.uid != nil && tip.location != nil) /* 可以直接在地图打点  */
+    {
+        AMapTipAnnotation *annotation = [[AMapTipAnnotation alloc] initWithMapTip:tip];
+        [self.mapView addAnnotation:annotation];
+        [self.mapView setCenterCoordinate:annotation.coordinate];
+        [self.mapView selectAnnotation:annotation animated:YES];
+    }
+//    else if (tip.uid != nil && tip.location == nil)/* 公交路线，显示出来*/
+//    {
+//        AMapBusLineIDSearchRequest *request = [[AMapBusLineIDSearchRequest alloc] init];
+//        request.city                        = @"北京";
+//        request.uid                         = tip.uid;
+//        request.requireExtension            = YES;
+//        
+//        [self.search AMapBusLineIDSearch:request];
+//    }
+//    else if(tip.uid == nil && tip.location == nil)/* 品牌名，进行POI关键字搜索 */
+//    {
+//        AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc] init];
+//        
+//        request.keywords         = tip.name;
+//        request.city             = @"010";
+//        request.requireExtension = YES;
+//        [self.search AMapPOIKeywordsSearch:request];
+//    }
 }
 
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation {

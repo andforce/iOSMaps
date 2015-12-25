@@ -10,6 +10,7 @@
 #import "UIButton+BackgroundColor.h"
 #import <AMapNaviKit/MAMapServices.h>
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "SearchViewDelegate.h"
 
 #define kViewHeight 50
 #define kMargin 6
@@ -21,6 +22,10 @@
 
 -(void)enterSearch:(BOOL) isEnterSearch;
 
+-(BOOL) isInSearchSate;
+
 @property (nonatomic, strong) AMapSearchAPI *search;
+
+@property (nonatomic, strong) id<SearchViewDelegate> delegate;
 
 @end

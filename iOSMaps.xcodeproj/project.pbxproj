@@ -35,6 +35,7 @@
 		4D0574E31C217FB50047FC75 /* MapSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0574E11C217FB50047FC75 /* MapSettingViewController.xib */; };
 		4D0574E71C2276F60047FC75 /* MapScrollSetttingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0574E51C2276F60047FC75 /* MapScrollSetttingViewController.m */; };
 		4D0574E81C2276F60047FC75 /* MapScrollSetttingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0574E61C2276F60047FC75 /* MapScrollSetttingViewController.xib */; };
+		4D339D811C2CFCF10022A6A4 /* AMapTipAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D339D801C2CFCF10022A6A4 /* AMapTipAnnotation.m */; };
 		4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91A0C91C16E6C300093EC6 /* DrawerView.m */; };
 		4DCD332E1C11915000F68262 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD332D1C11915000F68262 /* main.m */; };
 		4DCD33311C11915000F68262 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD33301C11915000F68262 /* AppDelegate.m */; };
@@ -99,6 +100,9 @@
 		4D0574E41C2276F60047FC75 /* MapScrollSetttingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapScrollSetttingViewController.h; sourceTree = "<group>"; };
 		4D0574E51C2276F60047FC75 /* MapScrollSetttingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapScrollSetttingViewController.m; sourceTree = "<group>"; };
 		4D0574E61C2276F60047FC75 /* MapScrollSetttingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapScrollSetttingViewController.xib; sourceTree = "<group>"; };
+		4D339D7E1C2CFA860022A6A4 /* SearchViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewDelegate.h; sourceTree = "<group>"; };
+		4D339D7F1C2CFCF10022A6A4 /* AMapTipAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapTipAnnotation.h; sourceTree = "<group>"; };
+		4D339D801C2CFCF10022A6A4 /* AMapTipAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapTipAnnotation.m; sourceTree = "<group>"; };
 		4D91A0C81C16E6C300093EC6 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
 		4D91A0C91C16E6C300093EC6 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
 		4DBE58201C191695000B98AF /* DrawerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 			children = (
 				3A4C404D1C11F59B009B520C /* SearchView.h */,
 				3A4C404E1C11F59B009B520C /* SearchView.m */,
+				4D339D7E1C2CFA860022A6A4 /* SearchViewDelegate.h */,
 			);
 			name = SearchView;
 			sourceTree = "<group>";
@@ -202,6 +207,8 @@
 		3A6D3CC31C24497E007FF7A7 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				4D339D7F1C2CFCF10022A6A4 /* AMapTipAnnotation.h */,
+				4D339D801C2CFCF10022A6A4 /* AMapTipAnnotation.m */,
 				3A0390391C2C36B5002D04C3 /* POIAnnotation.h */,
 				3A03903A1C2C36B5002D04C3 /* POIAnnotation.m */,
 				3A6D3CC41C244A30007FF7A7 /* CameraBean.h */,
@@ -494,6 +501,7 @@
 				4DCD33311C11915000F68262 /* AppDelegate.m in Sources */,
 				3A4C40601C11FDEE009B520C /* CircleView.m in Sources */,
 				3A1AFF231C1BF04A00B46CC6 /* LeftDrawerItem.m in Sources */,
+				4D339D811C2CFCF10022A6A4 /* AMapTipAnnotation.m in Sources */,
 				3AB397F91C1B106800DCDA06 /* MapPresenter.m in Sources */,
 				3A1AFF321C1C433100B46CC6 /* UIImage+Tint.m in Sources */,
 				3A1AFF381C1C571400B46CC6 /* UIButton+BackgroundColor.m in Sources */,

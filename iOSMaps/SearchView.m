@@ -90,7 +90,9 @@
     _maskView.alpha = 0.0;
     
     _searchResultTableView = [[UITableView alloc]init];
-    _searchResultTableView.frame = CGRectMake(0, 0, root.size.width, root.size.height);
+    CGRect selfFrame = self.frame;
+    _searchResultTableView.frame = CGRectMake(0, selfFrame.origin.y + selfFrame.size.height + 10, root.size.width, root.size.height);
+    _searchResultTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // 设置TableView的dataSource
     _searchResultTableView.dataSource = self;
@@ -103,41 +105,7 @@
     
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.searchTips.count;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *tipCellIdentifier = @"tipCellIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tipCellIdentifier];
-    
-    if (cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:tipCellIdentifier];
-        cell.imageView.image = [UIImage imageNamed:@"locate"];
-    }
-    
-    AMapTip *tip = self.searchTips[indexPath.row];
-    
-    if (tip.location == nil){
-        cell.imageView.image = [UIImage imageNamed:@"search"];
-    }
-    
-    cell.textLabel.text = tip.name;
-    cell.detailTextLabel.text = tip.district;
-    
-    return cell;
-}
--(void)enterSearch:(BOOL)isEnterSearch{
-    if (isEnterSearch) {
-        UIImage *exit = [UIImage imageNamed:@"ic_arrow_back_18pt"];
-        [_drawerSwitchButton setImage:exit forState:UIControlStateNormal];
-    } else{
-        UIImage *enter = [UIImage imageNamed:@"ic_qu_menu_grabber"];
-        [_drawerSwitchButton setImage:enter forState:UIControlStateNormal];
-    }
-}
 
 
 
@@ -205,15 +173,10 @@
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     NSLog(@"textFieldShouldBeginEditing 000000000000000000000000000000000000000000");
-    [self showOrHideWhiteBgViewWithAnim];
+    [self enterSearch:YES];
     return YES;
 }
 
--(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    NSLog(@"textFieldShouldEndEditing 000000000000000000000000000000000000000000");
-    [self showOrHideWhiteBgViewWithAnim];
-    return YES;
-}
 
 #pragma mark - AMapSearchDelegate
 
@@ -260,21 +223,86 @@
     }
 }
 
+#pragma mark - UITableViewDelegate
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self enterSearch:NO];
+    
+    AMapTip *tip = self.searchTips[indexPath.row];
+    if (_delegate != nil && [_delegate respondsToSelector:@selector(clearAndShowAnnotationWithTip:)]) {
+        [_delegate clearAndShowAnnotationWithTip:tip];
+    }
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.searchTips.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *tipCellIdentifier = @"tipCellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tipCellIdentifier];
+    
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:tipCellIdentifier];
+        cell.imageView.image = [UIImage imageNamed:@"locate"];
+    }
+    
+    AMapTip *tip = self.searchTips[indexPath.row];
+    
+    if (tip.location == nil){
+        cell.imageView.image = [UIImage imageNamed:@"search"];
+    }
+    
+    cell.textLabel.text = tip.name;
+    cell.detailTextLabel.text = tip.district;
+    
+    return cell;
+}
 
 
+
+-(void)enterSearch:(BOOL)isEnterSearch{
+    if (isEnterSearch) {
+        UIImage *exit = [UIImage imageNamed:@"ic_arrow_back_18pt"];
+        [_drawerSwitchButton setImage:exit forState:UIControlStateNormal];
+        [self showWhiteBgViewWithAnim];
+    } else{
+        UIImage *enter = [UIImage imageNamed:@"ic_qu_menu_grabber"];
+        [_drawerSwitchButton setImage:enter forState:UIControlStateNormal];
+        [self hideWhiteBgViewWithAnim];
+    }
+}
+
+
+-(BOOL)isInSearchSate{
+    return (_maskView.alpha == 1.f);
+}
 
 -(void)addDrawerOpenButtonClickListener:(OnClickListener)drawerClickListener{
     [_drawerSwitchButton addOnClickListener:drawerClickListener];
 }
 
-
-
--(void)showOrHideWhiteBgViewWithAnim{
-    [UIView beginAnimations:nil context:nil];
-    CGFloat alpha = _maskView.alpha;
-    [self enterSearch:alpha == 0.f];
+-(void)hideWhiteBgViewWithAnim{
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     
-    _maskView.alpha = alpha > 0.f ? 0.f : 1.f;
+    [UIView beginAnimations:nil context:nil];
+    
+    _maskView.alpha = 0.f;
+    
+    [UIView commitAnimations];
+}
+
+-(void)showWhiteBgViewWithAnim{
+    [UIView beginAnimations:nil context:nil];
+    
+    _maskView.alpha = 1.f;
 
     [UIView commitAnimations];
 }
