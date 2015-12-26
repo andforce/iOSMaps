@@ -27,6 +27,7 @@
 		3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A69DBAC1C13439900EABC79 /* BaseMapViewController.m */; };
 		3A6D3CC61C244A30007FF7A7 /* CameraBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3CC51C244A30007FF7A7 /* CameraBean.m */; };
 		3A6D3CCA1C244A7E007FF7A7 /* CameraDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D3CC91C244A7E007FF7A7 /* CameraDAO.m */; };
+		3A837EF61C2E605C00385E70 /* AlertProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A837EF51C2E605C00385E70 /* AlertProgressViewController.m */; };
 		3AB37B4A1C25689300163B83 /* presetCameraDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AB37B491C25689300163B83 /* presetCameraDB.json */; };
 		3AB397F91C1B106800DCDA06 /* MapPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB397F81C1B106800DCDA06 /* MapPresenter.m */; };
 		3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6947B1C19CA7A009B0633 /* CircleLocationView.m */; };
@@ -84,6 +85,8 @@
 		3A6D3CC51C244A30007FF7A7 /* CameraBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBean.m; sourceTree = "<group>"; };
 		3A6D3CC81C244A7E007FF7A7 /* CameraDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDAO.h; sourceTree = "<group>"; };
 		3A6D3CC91C244A7E007FF7A7 /* CameraDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDAO.m; sourceTree = "<group>"; };
+		3A837EF41C2E605C00385E70 /* AlertProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertProgressViewController.h; sourceTree = "<group>"; };
+		3A837EF51C2E605C00385E70 /* AlertProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertProgressViewController.m; sourceTree = "<group>"; };
 		3AB37B491C25689300163B83 /* presetCameraDB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = presetCameraDB.json; sourceTree = "<group>"; };
 		3AB397F71C1B106800DCDA06 /* MapPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPresenter.h; sourceTree = "<group>"; };
 		3AB397F81C1B106800DCDA06 /* MapPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPresenter.m; sourceTree = "<group>"; };
@@ -228,9 +231,19 @@
 			name = DAO;
 			sourceTree = "<group>";
 		};
+		3A837EF31C2E602900385E70 /* AlertProgress */ = {
+			isa = PBXGroup;
+			children = (
+				3A837EF41C2E605C00385E70 /* AlertProgressViewController.h */,
+				3A837EF51C2E605C00385E70 /* AlertProgressViewController.m */,
+			);
+			name = AlertProgress;
+			sourceTree = "<group>";
+		};
 		3AB397F51C1B0E0C00DCDA06 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				3A837EF31C2E602900385E70 /* AlertProgress */,
 				4DE93EBD1C23A3F7006EA967 /* SelectorUIButon */,
 				4D91A0C71C16E69100093EC6 /* DrawerView */,
 				3A4C405D1C11FDDA009B520C /* CircleView */,
@@ -513,6 +526,7 @@
 				4D91A0CA1C16E6C300093EC6 /* DrawerView.m in Sources */,
 				3AC6947C1C19CA7A009B0633 /* CircleLocationView.m in Sources */,
 				3A60325F1C26AAB100A1E29C /* UIViewController+Transition.m in Sources */,
+				3A837EF61C2E605C00385E70 /* AlertProgressViewController.m in Sources */,
 				3A1AFF2F1C1C26C200B46CC6 /* CommonUtils.m in Sources */,
 				4DCD332E1C11915000F68262 /* main.m in Sources */,
 				2F34C8304519CE2F96093C3A /* Cameras.m in Sources */,

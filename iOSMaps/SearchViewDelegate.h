@@ -12,5 +12,9 @@
 
 @required
 - (void)clearAndShowAnnotationWithTip:(AMapTip *)tip;
+-(void) showPoiSearchResult:(NSMutableArray *)poiAnnotations;
+
+-(void) showAlertProgress;
+-(void) hideAlertProgress;
 
 @end

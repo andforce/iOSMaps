@@ -11,6 +11,7 @@
 #import <AMapNaviKit/MAMapServices.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "SearchViewDelegate.h"
+#import "AlertProgressViewController.h"
 
 #define kViewHeight 50
 #define kMargin 6
@@ -27,5 +28,7 @@
 @property (nonatomic, strong) AMapSearchAPI *search;
 
 @property (nonatomic, strong) id<SearchViewDelegate> delegate;
+
+@property (nonatomic, strong) AlertProgressViewController * alert;
 
 @end

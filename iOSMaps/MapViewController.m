@@ -30,6 +30,7 @@
 #import "OfflineDetailViewController.h"
 #import "SearchViewDelegate.h"
 #import "AMapTipAnnotation.h"
+#import "POIAnnotation.h"
 
 
 @interface MapViewController ()<DrawerViewDelegate, IMapView, MAMapViewDelegate, SearchViewDelegate>{
@@ -219,6 +220,33 @@
 //    }
 }
 
+-(void)showAlertProgress{
+    [self presentViewController:_searchView.alert animated:YES completion:nil];
+}
+
+-(void)hideAlertProgress{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)showPoiSearchResult:(NSMutableArray *)poiAnnotations{
+    
+    /* 将结果以annotation的形式加载到地图上. */
+    [self.mapView addAnnotations:poiAnnotations];
+    
+    /* 如果只有一个结果，设置其为中心点. */
+    if (poiAnnotations.count == 1){
+        POIAnnotation * ann = poiAnnotations[0];
+        [self.mapView setCenterCoordinate:[ann coordinate]];
+    }
+    /* 如果有多个结果, 设置地图使所有的annotation都可见. */
+    else{
+        [self.mapView showAnnotations:poiAnnotations animated:NO];
+    }
+}
+
+
+
+
+#pragma mark - MAMapViewDelegate
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation {
     if ([annotation isKindOfClass:[MAPointAnnotation class]]){
         if ([annotation isKindOfClass:[MAPointAnnotation class]]) {

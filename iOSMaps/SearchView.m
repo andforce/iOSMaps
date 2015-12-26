@@ -40,6 +40,8 @@
 - (id)init {
     if (self = [super init]) {
         
+        _alert = [AlertProgressViewController alertControllerWithTitle:@"正在搜索" message:@"\n\n\n" preferredStyle:UIAlertControllerStyleAlert];
+        
         self.searchTips = [NSMutableArray array];
         self.busLines = [NSMutableArray array];
         
@@ -68,6 +70,16 @@
     tips.city     = @"北京";
     
     [self.search AMapInputTipsSearch:tips];
+}
+
+/* 根据关键字来搜索POI. */
+- (void)searchPoiByKeyword: (NSString* ) key{
+    AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc] init];
+    
+    request.keywords            = key;
+    request.city                = @"010";
+    request.requireExtension    = YES;
+    [self.search AMapPOIKeywordsSearch:request];
 }
 
 -(void)didMoveToSuperview{
@@ -144,6 +156,7 @@
     
     
     _searchTextField = [[UITextField alloc]init];
+    _searchTextField.returnKeyType = UIReturnKeySearch;
 
     _searchTextField.placeholder = @"请输入关键字";
 
@@ -177,6 +190,21 @@
     return YES;
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSLog(@"textFieldShouldReturntextFieldShouldReturntextFieldShouldReturntextFieldShouldReturntextFieldShouldReturn");
+    
+    if (![textField.text isEqualToString:@""]) {
+
+        [_delegate showAlertProgress];
+        
+        [self enterSearch:NO];
+        [self searchPoiByKeyword:textField.text];
+    }
+    
+    
+    return YES;
+}
+
 
 #pragma mark - AMapSearchDelegate
 
@@ -198,9 +226,15 @@
 
 /* POI 搜索回调. */
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response{
+    
+    [_delegate hideAlertProgress];
+    
     if (response.pois.count == 0){
         return;
     }
+    
+    [self enterSearch:NO];
+    
     
     NSMutableArray *poiAnnotations = [NSMutableArray arrayWithCapacity:response.pois.count];
     
@@ -210,17 +244,9 @@
         
     }];
     
-    /* 将结果以annotation的形式加载到地图上. */
-    //[self.mapView addAnnotations:poiAnnotations];
+    // 显示POI搜索结果
+    [_delegate showPoiSearchResult:poiAnnotations];
     
-    /* 如果只有一个结果，设置其为中心点. */
-    if (poiAnnotations.count == 1){
-        //[self.mapView setCenterCoordinate:[poiAnnotations[0] coordinate]];
-    }
-    /* 如果有多个结果, 设置地图使所有的annotation都可见. */
-    else{
-        //[self.mapView showAnnotations:poiAnnotations animated:NO];
-    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -232,8 +258,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [self enterSearch:NO];
+
     
     AMapTip *tip = self.searchTips[indexPath.row];
+    
+    _searchTextField.text = tip.name;
+    
     if (_delegate != nil && [_delegate respondsToSelector:@selector(clearAndShowAnnotationWithTip:)]) {
         [_delegate clearAndShowAnnotationWithTip:tip];
     }
