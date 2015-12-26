@@ -16,6 +16,15 @@
 		3A1AFF321C1C433100B46CC6 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF311C1C433100B46CC6 /* UIImage+Tint.m */; };
 		3A1AFF351C1C4FCF00B46CC6 /* UIColor+MyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF341C1C4FCF00B46CC6 /* UIColor+MyColor.m */; };
 		3A1AFF381C1C571400B46CC6 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF371C1C571400B46CC6 /* UIButton+BackgroundColor.m */; };
+		3A2833AB1C2E7CA600C22BD6 /* GrideSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833A91C2E7CA600C22BD6 /* GrideSearchTableViewCell.m */; };
+		3A2833AC1C2E7CA600C22BD6 /* GrideSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2833AA1C2E7CA600C22BD6 /* GrideSearchTableViewCell.xib */; };
+		3A2833B01C2E83C700C22BD6 /* ListSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833AE1C2E83C700C22BD6 /* ListSearchTableViewCell.m */; };
+		3A2833B11C2E83C700C22BD6 /* ListSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2833AF1C2E83C700C22BD6 /* ListSearchTableViewCell.xib */; };
+		3A2833B71C2E89CE00C22BD6 /* GrideGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833B61C2E89CE00C22BD6 /* GrideGroup.m */; };
+		3A2833BA1C2E89DF00C22BD6 /* ListGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833B91C2E89DF00C22BD6 /* ListGroup.m */; };
+		3A2833BE1C2E8CBD00C22BD6 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833BD1C2E8CBD00C22BD6 /* SearchModel.m */; };
+		3A2833C41C2E9C1F00C22BD6 /* SearchGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833C31C2E9C1F00C22BD6 /* SearchGroup.m */; };
+		3A2833C71C2E9F7800C22BD6 /* GrideSearchModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833C61C2E9F7800C22BD6 /* GrideSearchModule.m */; };
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40601C11FDEE009B520C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* CircleView.m */; };
 		3A6032591C265EE000A1E29C /* MapSettingNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6032571C265EE000A1E29C /* MapSettingNavigationViewController.m */; };
@@ -65,6 +74,22 @@
 		3A1AFF341C1C4FCF00B46CC6 /* UIColor+MyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MyColor.m"; sourceTree = "<group>"; };
 		3A1AFF361C1C571400B46CC6 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
 		3A1AFF371C1C571400B46CC6 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
+		3A2833A81C2E7CA600C22BD6 /* GrideSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrideSearchTableViewCell.h; sourceTree = "<group>"; };
+		3A2833A91C2E7CA600C22BD6 /* GrideSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrideSearchTableViewCell.m; sourceTree = "<group>"; };
+		3A2833AA1C2E7CA600C22BD6 /* GrideSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrideSearchTableViewCell.xib; sourceTree = "<group>"; };
+		3A2833AD1C2E83C700C22BD6 /* ListSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListSearchTableViewCell.h; sourceTree = "<group>"; };
+		3A2833AE1C2E83C700C22BD6 /* ListSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSearchTableViewCell.m; sourceTree = "<group>"; };
+		3A2833AF1C2E83C700C22BD6 /* ListSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListSearchTableViewCell.xib; sourceTree = "<group>"; };
+		3A2833B51C2E89CE00C22BD6 /* GrideGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrideGroup.h; sourceTree = "<group>"; };
+		3A2833B61C2E89CE00C22BD6 /* GrideGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrideGroup.m; sourceTree = "<group>"; };
+		3A2833B81C2E89DF00C22BD6 /* ListGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListGroup.h; sourceTree = "<group>"; };
+		3A2833B91C2E89DF00C22BD6 /* ListGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListGroup.m; sourceTree = "<group>"; };
+		3A2833BC1C2E8CBD00C22BD6 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		3A2833BD1C2E8CBD00C22BD6 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		3A2833C21C2E9C1F00C22BD6 /* SearchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchGroup.h; sourceTree = "<group>"; };
+		3A2833C31C2E9C1F00C22BD6 /* SearchGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchGroup.m; sourceTree = "<group>"; };
+		3A2833C51C2E9F7800C22BD6 /* GrideSearchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrideSearchModule.h; sourceTree = "<group>"; };
+		3A2833C61C2E9F7800C22BD6 /* GrideSearchModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrideSearchModule.m; sourceTree = "<group>"; };
 		3A4C404D1C11F59B009B520C /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		3A4C405E1C11FDEE009B520C /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
@@ -156,12 +181,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3A2833BB1C2E8C9A00C22BD6 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				3A2833BC1C2E8CBD00C22BD6 /* SearchModel.h */,
+				3A2833BD1C2E8CBD00C22BD6 /* SearchModel.m */,
+				3A2833C51C2E9F7800C22BD6 /* GrideSearchModule.h */,
+				3A2833C61C2E9F7800C22BD6 /* GrideSearchModule.m */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
 		3A4C404C1C11F566009B520C /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				3A2833BB1C2E8C9A00C22BD6 /* Module */,
 				3A4C404D1C11F59B009B520C /* SearchView.h */,
 				3A4C404E1C11F59B009B520C /* SearchView.m */,
 				4D339D7E1C2CFA860022A6A4 /* SearchViewDelegate.h */,
+				3A2833A81C2E7CA600C22BD6 /* GrideSearchTableViewCell.h */,
+				3A2833A91C2E7CA600C22BD6 /* GrideSearchTableViewCell.m */,
+				3A2833AA1C2E7CA600C22BD6 /* GrideSearchTableViewCell.xib */,
+				3A2833AD1C2E83C700C22BD6 /* ListSearchTableViewCell.h */,
+				3A2833AE1C2E83C700C22BD6 /* ListSearchTableViewCell.m */,
+				3A2833AF1C2E83C700C22BD6 /* ListSearchTableViewCell.xib */,
+				3A2833C21C2E9C1F00C22BD6 /* SearchGroup.h */,
+				3A2833C31C2E9C1F00C22BD6 /* SearchGroup.m */,
+				3A2833B51C2E89CE00C22BD6 /* GrideGroup.h */,
+				3A2833B61C2E89CE00C22BD6 /* GrideGroup.m */,
+				3A2833B81C2E89DF00C22BD6 /* ListGroup.h */,
+				3A2833B91C2E89DF00C22BD6 /* ListGroup.m */,
 			);
 			name = SearchView;
 			sourceTree = "<group>";
@@ -436,10 +485,12 @@
 			files = (
 				3AB37B4A1C25689300163B83 /* presetCameraDB.json in Resources */,
 				3A60325C1C265F9800A1E29C /* MapSettingNavigationViewController.xib in Resources */,
+				3A2833AC1C2E7CA600C22BD6 /* GrideSearchTableViewCell.xib in Resources */,
 				4DCD333F1C11915000F68262 /* LaunchScreen.storyboard in Resources */,
 				4DCD333C1C11915000F68262 /* Assets.xcassets in Resources */,
 				4D0574E81C2276F60047FC75 /* MapScrollSetttingViewController.xib in Resources */,
 				3A65680D1C26EFFE00162907 /* OfflineDetailViewController.xib in Resources */,
+				3A2833B11C2E83C700C22BD6 /* ListSearchTableViewCell.xib in Resources */,
 				4D0574E31C217FB50047FC75 /* MapSettingViewController.xib in Resources */,
 				4DCD33371C11915000F68262 /* Main.storyboard in Resources */,
 			);
@@ -501,13 +552,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE93EC01C23A43A006EA967 /* SelectorUIButton.m in Sources */,
+				3A2833B71C2E89CE00C22BD6 /* GrideGroup.m in Sources */,
+				3A2833AB1C2E7CA600C22BD6 /* GrideSearchTableViewCell.m in Sources */,
 				4D0574E71C2276F60047FC75 /* MapScrollSetttingViewController.m in Sources */,
 				3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */,
+				3A2833BE1C2E8CBD00C22BD6 /* SearchModel.m in Sources */,
 				4DCD333A1C11915000F68262 /* iOSMaps.xcdatamodeld in Sources */,
 				3A6D3CC61C244A30007FF7A7 /* CameraBean.m in Sources */,
 				3A6032621C26CFE300A1E29C /* OfflineDetailViewController.m in Sources */,
+				3A2833C71C2E9F7800C22BD6 /* GrideSearchModule.m in Sources */,
 				4D0574E21C217FB50047FC75 /* MapSettingViewController.m in Sources */,
 				3A6032651C26D46800A1E29C /* MAHeaderView.m in Sources */,
+				3A2833C41C2E9C1F00C22BD6 /* SearchGroup.m in Sources */,
+				3A2833B01C2E83C700C22BD6 /* ListSearchTableViewCell.m in Sources */,
 				3A69DBAD1C13439900EABC79 /* BaseMapViewController.m in Sources */,
 				3A03903B1C2C36B5002D04C3 /* POIAnnotation.m in Sources */,
 				4DCD33341C11915000F68262 /* MapViewController.m in Sources */,
@@ -528,6 +585,7 @@
 				3A60325F1C26AAB100A1E29C /* UIViewController+Transition.m in Sources */,
 				3A837EF61C2E605C00385E70 /* AlertProgressViewController.m in Sources */,
 				3A1AFF2F1C1C26C200B46CC6 /* CommonUtils.m in Sources */,
+				3A2833BA1C2E89DF00C22BD6 /* ListGroup.m in Sources */,
 				4DCD332E1C11915000F68262 /* main.m in Sources */,
 				2F34C8304519CE2F96093C3A /* Cameras.m in Sources */,
 			);
