@@ -22,6 +22,8 @@
 #import "GrideSearchTableViewCell.h"
 #import "ListSearchTableViewCell.h"
 
+#import "CommonUtils.h"
+
 
 
 @interface SearchView ()<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, AMapSearchDelegate>{
@@ -37,6 +39,8 @@
     UITableView *_searchResultTableView;
     
     BOOL _isHasSearchText;
+    
+    UIBezierPath *path;
 }
 
 @property (nonatomic, strong) NSMutableArray *searchTips;
@@ -54,7 +58,7 @@
     if (self = [super init]) {
         
         _alert = [AlertProgressViewController alertControllerWithTitle:@"正在搜索" message:@"\n\n\n" preferredStyle:UIAlertControllerStyleAlert];
-        
+        path = [UIBezierPath bezierPath];
         _isHasSearchText = NO;
         
         self.searchTips = [NSMutableArray array];
@@ -87,34 +91,6 @@
 }
 
 -(void) initSearchView{
-    
-    self.backgroundColor = [UIColor whiteColor];
-    
-//    //设置View圆角
-//    self.layer.cornerRadius = 2.0f;
-    // 阴影的颜色
-    self.layer.shadowColor = [[UIColor blackColor]CGColor];
-    // 阴影的透明度
-    self.layer.shadowOpacity = 0.3f;
-    //设置View Shadow的偏移量
-    self.layer.shadowOffset = CGSizeMake(0, 0.5f);
-    
-    
-    
-
-    
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(2, 2)];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = self.frame;
-    maskLayer.path = maskPath.CGPath;
-    
-    maskLayer.masksToBounds = NO;
-    maskLayer.shadowPath = maskPath.CGPath;
-    // 设置阴影
-
-    //maskLayer.path = maskPath.CGPath;
-
-    //self.layer.mask = maskLayer;
     
     
     
@@ -204,7 +180,7 @@
     
     CGRect selfFrame = self.frame;
     
-    CGRect tableViewFrame = CGRectMake(self.frame.origin.x, selfFrame.origin.y + selfFrame.size.height + 5, self.frame.size.width, root.size.height);
+    CGRect tableViewFrame = CGRectMake(self.frame.origin.x, selfFrame.origin.y + selfFrame.size.height , self.frame.size.width, root.size.height);
     
     _searchResultTableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
     
@@ -222,8 +198,79 @@
     [rootView addSubview:_maskView];
     [rootView bringSubviewToFront:self];
     
+    
+  
+    
+    self.backgroundColor = [UIColor whiteColor];
+    
+    //设置View圆角
+    self.layer.cornerRadius = 2.5f;
+    // 阴影的颜色
+    self.layer.shadowColor = [[UIColor blackColor]CGColor];
+    // 阴影的透明度
+    self.layer.shadowOpacity = 0.5f;
+    //设置View Shadow的偏移量
+    self.layer.shadowOffset = CGSizeMake(0, 0.3f);
+    
+    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+
+    
 }
 
+-(void)tempdrawRect:(CGRect)rect{
+    // 擦除
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextBeginTransparencyLayer(context, NULL);
+//    [eraseImage drawAtPoint:CGPointZero];
+    [super drawRect: rect];
+    
+    
+    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
+    [path moveToPoint:CGPointMake(rect.origin.x , rect.origin.y + rect.size.height)];
+    [path addLineToPoint:CGPointMake(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height)];
+    
+//    CGContextAddPath(context, path);
+    CGContextAddPath(context, CGPathCreateMutable());
+    CGContextSetLineCap(context, kCGLineCapRound);
+    CGContextSetLineWidth(context, 500);
+    CGContextSetBlendMode(context, kCGBlendModeClear);
+    CGContextSetStrokeColorWithColor(context, [[UIColor clearColor] CGColor]);
+    CGContextStrokePath(context);
+    CGContextEndTransparencyLayer(context);
+    
+    
+    
+    
+//    [super drawRect:rect];
+    
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//
+//    //
+//
+//    UIImage *bgImage = [CommonUtils createImageWithColor:[UIColor whiteColor]];
+//    
+//    UIBezierPath *rectanglePath = [UIBezierPath bezierPathWithRoundedRect: self.bounds byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii: CGSizeMake(5, 5)];
+//    [rectanglePath closePath];
+//    CGContextSaveGState(context);
+//    [rectanglePath addClip];
+//    
+//    [bgImage drawInRect: self.bounds];
+//    CGContextRestoreGState(context);
+}
+
+-(UIImage*)imageFromView:(UIView*)view{
+    
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, view.layer.contentsScale);
+    
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+    
+}
 
 #pragma mark - UITextFieldDelegate
 
