@@ -26,6 +26,7 @@
 
 
 
+
 @interface SearchView ()<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, AMapSearchDelegate>{
     
     
@@ -180,7 +181,7 @@
     
     CGRect selfFrame = self.frame;
     
-    CGRect tableViewFrame = CGRectMake(self.frame.origin.x, selfFrame.origin.y + selfFrame.size.height , self.frame.size.width, root.size.height);
+    CGRect tableViewFrame = CGRectMake(0, selfFrame.origin.y + selfFrame.size.height , CGRectGetWidth(rootView.frame), CGRectGetHeight(rootView.frame));
     
     _searchResultTableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
     
@@ -321,6 +322,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 5;
 }
+
 //section头部视图
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 //    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0)];
@@ -379,6 +381,13 @@
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"GrideSearchTableViewCell" owner:self options:nil]lastObject];
         }
+        
+        cell.layer.cornerRadius = 2.5f;
+        cell.layer.shadowColor = [UIColor blackColor].CGColor;
+        cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+        cell.layer.shadowOpacity = 0.2f;
+        cell.layer.shadowRadius = 2.0f;
+        
         return cell;
     } else if([group isKindOfClass:[ListGroup class]] ){
         
@@ -387,6 +396,13 @@
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:@"ListSearchTableViewCell" owner:self options:nil]lastObject];
         }
+        
+        cell.layer.cornerRadius = 2.5f;
+        cell.layer.shadowColor = [UIColor blackColor].CGColor;
+        cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+        cell.layer.shadowOpacity = 0.2f;
+        cell.layer.shadowRadius = 2.0f;
+        
         
         return cell;
     } else{

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface GrideSearchTableViewCell : UITableViewCell
 
 @end
