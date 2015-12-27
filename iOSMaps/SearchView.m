@@ -23,6 +23,7 @@
 #import "ListSearchTableViewCell.h"
 
 #import "CommonUtils.h"
+#import "ShadowTableView.h"
 
 
 
@@ -37,7 +38,7 @@
     
     UITextField *_searchTextField;
     
-    UITableView *_searchResultTableView;
+    ShadowTableView *_searchResultTableView;
     
     BOOL _isHasSearchText;
     
@@ -183,7 +184,8 @@
     
     CGRect tableViewFrame = CGRectMake(0, selfFrame.origin.y + selfFrame.size.height , CGRectGetWidth(rootView.frame), CGRectGetHeight(rootView.frame));
     
-    _searchResultTableView = [[UITableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
+    _searchResultTableView = [[ShadowTableView alloc]initWithFrame:tableViewFrame style:UITableViewStyleGrouped];
+    _searchResultTableView.leftAndRightMargin = kViewHeight / 4;
     
     _searchResultTableView.delaysContentTouches = NO;
     
@@ -320,6 +322,7 @@
 
 //section 顶部高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    tableView.sectionHeaderHeight = 5;
     return 5;
 }
 
@@ -331,6 +334,7 @@
 //}
 //section底部高度
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    tableView.sectionFooterHeight = 10;
     return 10;
 }
 //section
@@ -382,12 +386,6 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"GrideSearchTableViewCell" owner:self options:nil]lastObject];
         }
         
-        cell.layer.cornerRadius = 2.5f;
-        cell.layer.shadowColor = [UIColor blackColor].CGColor;
-        cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-        cell.layer.shadowOpacity = 0.2f;
-        cell.layer.shadowRadius = 2.0f;
-        
         return cell;
     } else if([group isKindOfClass:[ListGroup class]] ){
         
@@ -397,12 +395,56 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"ListSearchTableViewCell" owner:self options:nil]lastObject];
         }
         
-        cell.layer.cornerRadius = 2.5f;
-        cell.layer.shadowColor = [UIColor blackColor].CGColor;
-        cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-        cell.layer.shadowOpacity = 0.2f;
-        cell.layer.shadowRadius = 2.0f;
+//        cell.layer.cornerRadius = 2.5f;
+//        cell.layer.shadowColor = [UIColor blackColor].CGColor;
+//        cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+//        cell.layer.shadowOpacity = 0.2f;
+//        cell.layer.shadowRadius = 2.0f;
         
+        
+        if ([cell respondsToSelector:@selector(tintColor)]) {
+            
+            CGFloat cornerRadius = 5.f;
+            cell.backgroundColor = UIColor.clearColor;
+            CAShapeLayer *layer = [[CAShapeLayer alloc] init];
+            CGMutablePathRef pathRef = CGPathCreateMutable();
+            CGRect bounds = CGRectInset(cell.bounds, 0, 0);
+            BOOL addLine = NO;
+            if (indexPath.row == 0 && indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1) {
+                CGPathAddRoundedRect(pathRef, nil, bounds, cornerRadius, cornerRadius);
+            } else if (indexPath.row == 0) {
+                CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds));
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMidX(bounds), CGRectGetMinY(bounds), cornerRadius);
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
+                CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds));
+                addLine = YES;
+            } else if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1) {
+                CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds));
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMidX(bounds), CGRectGetMaxY(bounds), cornerRadius);
+                CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
+                CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds));
+            } else {
+                CGPathAddRect(pathRef, nil, bounds);
+                addLine = YES;
+            }
+            layer.path = pathRef;
+            CFRelease(pathRef);
+            layer.fillColor = [UIColor colorWithWhite:1.f alpha:0.8f].CGColor;
+            
+            if (addLine == YES) {
+                CALayer *lineLayer = [[CALayer alloc] init];
+                CGFloat lineHeight = (1.f / [UIScreen mainScreen].scale);
+                lineLayer.frame = CGRectMake(CGRectGetMinX(bounds)+ 0, bounds.size.height-lineHeight, bounds.size.width, lineHeight);
+                lineLayer.backgroundColor = tableView.separatorColor.CGColor;
+                [layer addSublayer:lineLayer];
+            }
+            UIView *testView = [[UIView alloc] initWithFrame:bounds];
+            [testView.layer insertSublayer:layer atIndex:0];
+            testView.backgroundColor = [UIColor clearColor];
+            cell.backgroundView = testView;
+
+            
+        }
         
         return cell;
     } else{
