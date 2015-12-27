@@ -25,6 +25,9 @@
 #import "CommonUtils.h"
 #import "ShadowTableView.h"
 
+#import "CornerUIView.h"
+#import "UIColor+MyColor.h"
+
 
 
 
@@ -395,17 +398,12 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"ListSearchTableViewCell" owner:self options:nil]lastObject];
         }
         
-//        cell.layer.cornerRadius = 2.5f;
-//        cell.layer.shadowColor = [UIColor blackColor].CGColor;
-//        cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-//        cell.layer.shadowOpacity = 0.2f;
-//        cell.layer.shadowRadius = 2.0f;
-        
         
         if ([cell respondsToSelector:@selector(tintColor)]) {
             
-            CGFloat cornerRadius = 5.f;
+            CGFloat cornerRadius = 3.f;
             cell.backgroundColor = UIColor.clearColor;
+            
             CAShapeLayer *layer = [[CAShapeLayer alloc] init];
             CGMutablePathRef pathRef = CGPathCreateMutable();
             CGRect bounds = CGRectInset(cell.bounds, 0, 0);
@@ -429,7 +427,7 @@
             }
             layer.path = pathRef;
             CFRelease(pathRef);
-            layer.fillColor = [UIColor colorWithWhite:1.f alpha:0.8f].CGColor;
+            layer.fillColor = [UIColor colorWithWhite:1.f alpha:1.0f].CGColor;
             
             if (addLine == YES) {
                 CALayer *lineLayer = [[CALayer alloc] init];
@@ -445,6 +443,8 @@
 
             
         }
+        
+        [self setSelectedBackgroundView:indexPath forCell:cell forTableView:tableView];
         
         return cell;
     } else{
@@ -469,6 +469,32 @@
         return cell;
     }
     
+}
+
+
+-(void) setSelectedBackgroundView:(NSIndexPath *)indexPath forCell:(UITableViewCell*) cell forTableView:(UITableView*) tableView{
+    
+    if (indexPath.row == 0 && indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1 ) {
+        CornerUIView *view = [[CornerUIView alloc]initWith:CornerStyleAll frame:cell.frame backgroundColor:[UIColor colorWithButtonHighLight]];
+        cell.selectedBackgroundView = view;
+        
+    } else  if (indexPath.row == 0) {
+        
+        CornerUIView *view = [[CornerUIView alloc]initWith:CornerStyleTop frame:cell.frame backgroundColor:[UIColor colorWithButtonHighLight]];
+        cell.selectedBackgroundView = view;
+        
+    } else if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1){
+        CornerUIView *view = [[CornerUIView alloc]initWith:CornerStyleBottom frame:cell.frame backgroundColor:[UIColor colorWithButtonHighLight]];
+        cell.selectedBackgroundView = view;
+        
+        
+
+    } else {
+        
+        CornerUIView *view = [[CornerUIView alloc]initWith:CornerStyleNone frame:cell.frame backgroundColor:[UIColor colorWithButtonHighLight]];
+        cell.selectedBackgroundView = view;
+        
+    }
 }
 
 

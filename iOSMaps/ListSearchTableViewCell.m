@@ -13,6 +13,10 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.frame];
+    self.selectedBackgroundView.backgroundColor = [UIColor redColor];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -35,7 +39,6 @@
     
     [super setFrame:frame];
 }
-
 
 
 @end

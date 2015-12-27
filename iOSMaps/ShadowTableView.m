@@ -19,6 +19,11 @@
 }
 */
 
+-(void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
+    NSLog(@"drawRect ---->>");
+}
+
 
 -(void)layoutSubviews{
     [super layoutSubviews];
@@ -71,7 +76,7 @@
             shadowBackgroundView.backgroundColor = [UIColor clearColor];
             
             shadowBackgroundView.layer.shadowOpacity = 0.3;
-            shadowBackgroundView.layer.shadowRadius = 2;
+            shadowBackgroundView.layer.shadowRadius = 3.f;
             shadowBackgroundView.layer.shadowColor = [[UIColor blackColor] CGColor];
             shadowBackgroundView.layer.shadowOffset = CGSizeMake(0.0, 1.0);
             
