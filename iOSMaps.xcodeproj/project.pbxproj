@@ -25,6 +25,7 @@
 		3A2833BE1C2E8CBD00C22BD6 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833BD1C2E8CBD00C22BD6 /* SearchModel.m */; };
 		3A2833C41C2E9C1F00C22BD6 /* SearchGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833C31C2E9C1F00C22BD6 /* SearchGroup.m */; };
 		3A2833C71C2E9F7800C22BD6 /* GrideSearchModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833C61C2E9F7800C22BD6 /* GrideSearchModule.m */; };
+		3A2833CA1C2FCC5100C22BD6 /* StudyUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2833C91C2FCC5100C22BD6 /* StudyUIView.m */; };
 		3A4C404F1C11F59B009B520C /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C404E1C11F59B009B520C /* SearchView.m */; };
 		3A4C40601C11FDEE009B520C /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C405F1C11FDEE009B520C /* CircleView.m */; };
 		3A6032591C265EE000A1E29C /* MapSettingNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6032571C265EE000A1E29C /* MapSettingNavigationViewController.m */; };
@@ -90,6 +91,8 @@
 		3A2833C31C2E9C1F00C22BD6 /* SearchGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchGroup.m; sourceTree = "<group>"; };
 		3A2833C51C2E9F7800C22BD6 /* GrideSearchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrideSearchModule.h; sourceTree = "<group>"; };
 		3A2833C61C2E9F7800C22BD6 /* GrideSearchModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrideSearchModule.m; sourceTree = "<group>"; };
+		3A2833C81C2FCC5100C22BD6 /* StudyUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyUIView.h; sourceTree = "<group>"; };
+		3A2833C91C2FCC5100C22BD6 /* StudyUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyUIView.m; sourceTree = "<group>"; };
 		3A4C404D1C11F59B009B520C /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		3A4C404E1C11F59B009B520C /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		3A4C405E1C11FDEE009B520C /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
@@ -343,6 +346,8 @@
 				4D0574DF1C217FB50047FC75 /* MapSettingViewController.h */,
 				4D0574E01C217FB50047FC75 /* MapSettingViewController.m */,
 				4D0574E11C217FB50047FC75 /* MapSettingViewController.xib */,
+				3A2833C81C2FCC5100C22BD6 /* StudyUIView.h */,
+				3A2833C91C2FCC5100C22BD6 /* StudyUIView.m */,
 			);
 			name = UnusedForStudy;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				3A1AFF231C1BF04A00B46CC6 /* LeftDrawerItem.m in Sources */,
 				4D339D811C2CFCF10022A6A4 /* AMapTipAnnotation.m in Sources */,
 				3AB397F91C1B106800DCDA06 /* MapPresenter.m in Sources */,
+				3A2833CA1C2FCC5100C22BD6 /* StudyUIView.m in Sources */,
 				3A1AFF321C1C433100B46CC6 /* UIImage+Tint.m in Sources */,
 				3A1AFF381C1C571400B46CC6 /* UIButton+BackgroundColor.m in Sources */,
 				3A4C404F1C11F59B009B520C /* SearchView.m in Sources */,

@@ -201,76 +201,22 @@
     
   
     
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor whiteColor];
     
-//    //设置View圆角
-//    self.layer.cornerRadius = 2.5f;
-//    // 阴影的颜色
-//    self.layer.shadowColor = [[UIColor blackColor]CGColor];
-//    // 阴影的透明度
-//    self.layer.shadowOpacity = 0.5f;
-//    //设置View Shadow的偏移量
-//    self.layer.shadowOffset = CGSizeMake(0, 0.3f);
-//    
-//    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+    //设置View圆角
+    self.layer.cornerRadius = 2.5f;
+    // 阴影的颜色
+    self.layer.shadowColor = [[UIColor blackColor]CGColor];
+    // 阴影的透明度
+    self.layer.shadowOpacity = 0.5f;
+    //设置View Shadow的偏移量
+    self.layer.shadowOffset = CGSizeMake(0, 0.3f);
     
-    
-    //UIView *block1 = [[UIView alloc] initWithFrame:CGRectMake(32.0, 32.0, 128.0, 128.0)];
-    //[block1 setBackgroundColor:[UIColor orangeColor]];
-    //[self addSubview:block1];
-    
-    self.layer.masksToBounds = NO;
-    self.layer.shadowOffset = CGSizeMake(0, 0);
-    self.layer.shadowRadius = 1;
-    self.layer.shadowOpacity = 0.5;
-    
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    
-    // Start at the Top Left Corner
-    [path moveToPoint:CGPointMake(0.0, 0.0)];
-    
-    // Move to the Top Right Corner
-    [path addLineToPoint:CGPointMake(CGRectGetWidth(self.frame), 0.0)];
-    
-    // Move to the Bottom Right Corner
-    [path addLineToPoint:CGPointMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - 1)];
-    
-    // This is the extra point in the middle :) Its the secret sauce.
-    [path addLineToPoint:CGPointMake(CGRectGetWidth(self.frame) / 2.0, CGRectGetHeight(self.frame) / 2.0)];
-    
-    // Move to the Bottom Left Corner
-    [path addLineToPoint:CGPointMake(0.0, CGRectGetHeight(self.frame))];
-    
-    // Move to the Close the Path
-    [path closePath];
-    
-    self.layer.shadowPath = path.CGPath;
+    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
 
     
 }
 
--(void)drawRect:(CGRect)rect{
-
-    
-    
-    
-    
-    [super drawRect:rect];
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-
-    //
-
-    UIImage *bgImage = [CommonUtils createImageWithColor:[UIColor whiteColor]];
-    
-    UIBezierPath *rectanglePath = [UIBezierPath bezierPathWithRoundedRect: self.bounds byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii: CGSizeMake(3, 3)];
-    [rectanglePath closePath];
-    CGContextSaveGState(context);
-    [rectanglePath addClip];
-    
-    [bgImage drawInRect: self.bounds];
-    CGContextRestoreGState(context);
-}
 
 -(UIImage*)imageFromView:(UIView*)view{
     
@@ -373,7 +319,7 @@
 
 //section 顶部高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 1;
+    return 5;
 }
 //section头部视图
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
