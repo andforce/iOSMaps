@@ -40,7 +40,7 @@
     
     BOOL _isHasSearchText;
     
-    UIBezierPath *path;
+    //UIBezierPath *path;
 }
 
 @property (nonatomic, strong) NSMutableArray *searchTips;
@@ -58,7 +58,7 @@
     if (self = [super init]) {
         
         _alert = [AlertProgressViewController alertControllerWithTitle:@"正在搜索" message:@"\n\n\n" preferredStyle:UIAlertControllerStyleAlert];
-        path = [UIBezierPath bezierPath];
+        //path = [UIBezierPath bezierPath];
         _isHasSearchText = NO;
         
         self.searchTips = [NSMutableArray array];
@@ -201,61 +201,75 @@
     
   
     
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor clearColor];
     
-    //设置View圆角
-    self.layer.cornerRadius = 2.5f;
-    // 阴影的颜色
-    self.layer.shadowColor = [[UIColor blackColor]CGColor];
-    // 阴影的透明度
-    self.layer.shadowOpacity = 0.5f;
-    //设置View Shadow的偏移量
-    self.layer.shadowOffset = CGSizeMake(0, 0.3f);
+//    //设置View圆角
+//    self.layer.cornerRadius = 2.5f;
+//    // 阴影的颜色
+//    self.layer.shadowColor = [[UIColor blackColor]CGColor];
+//    // 阴影的透明度
+//    self.layer.shadowOpacity = 0.5f;
+//    //设置View Shadow的偏移量
+//    self.layer.shadowOffset = CGSizeMake(0, 0.3f);
+//    
+//    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
     
-    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+    
+    //UIView *block1 = [[UIView alloc] initWithFrame:CGRectMake(32.0, 32.0, 128.0, 128.0)];
+    //[block1 setBackgroundColor:[UIColor orangeColor]];
+    //[self addSubview:block1];
+    
+    self.layer.masksToBounds = NO;
+    self.layer.shadowOffset = CGSizeMake(0, 0);
+    self.layer.shadowRadius = 1;
+    self.layer.shadowOpacity = 0.5;
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    // Start at the Top Left Corner
+    [path moveToPoint:CGPointMake(0.0, 0.0)];
+    
+    // Move to the Top Right Corner
+    [path addLineToPoint:CGPointMake(CGRectGetWidth(self.frame), 0.0)];
+    
+    // Move to the Bottom Right Corner
+    [path addLineToPoint:CGPointMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) - 1)];
+    
+    // This is the extra point in the middle :) Its the secret sauce.
+    [path addLineToPoint:CGPointMake(CGRectGetWidth(self.frame) / 2.0, CGRectGetHeight(self.frame) / 2.0)];
+    
+    // Move to the Bottom Left Corner
+    [path addLineToPoint:CGPointMake(0.0, CGRectGetHeight(self.frame))];
+    
+    // Move to the Close the Path
+    [path closePath];
+    
+    self.layer.shadowPath = path.CGPath;
 
     
 }
 
--(void)tempdrawRect:(CGRect)rect{
-    // 擦除
+-(void)drawRect:(CGRect)rect{
+
+    
+    
+    
+    
+    [super drawRect:rect];
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextBeginTransparencyLayer(context, NULL);
-//    [eraseImage drawAtPoint:CGPointZero];
-    [super drawRect: rect];
+
+    //
+
+    UIImage *bgImage = [CommonUtils createImageWithColor:[UIColor whiteColor]];
     
+    UIBezierPath *rectanglePath = [UIBezierPath bezierPathWithRoundedRect: self.bounds byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii: CGSizeMake(3, 3)];
+    [rectanglePath closePath];
+    CGContextSaveGState(context);
+    [rectanglePath addClip];
     
-    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
-    [path moveToPoint:CGPointMake(rect.origin.x , rect.origin.y + rect.size.height)];
-    [path addLineToPoint:CGPointMake(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height)];
-    
-//    CGContextAddPath(context, path);
-    CGContextAddPath(context, CGPathCreateMutable());
-    CGContextSetLineCap(context, kCGLineCapRound);
-    CGContextSetLineWidth(context, 500);
-    CGContextSetBlendMode(context, kCGBlendModeClear);
-    CGContextSetStrokeColorWithColor(context, [[UIColor clearColor] CGColor]);
-    CGContextStrokePath(context);
-    CGContextEndTransparencyLayer(context);
-    
-    
-    
-    
-//    [super drawRect:rect];
-    
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//
-//    //
-//
-//    UIImage *bgImage = [CommonUtils createImageWithColor:[UIColor whiteColor]];
-//    
-//    UIBezierPath *rectanglePath = [UIBezierPath bezierPathWithRoundedRect: self.bounds byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii: CGSizeMake(5, 5)];
-//    [rectanglePath closePath];
-//    CGContextSaveGState(context);
-//    [rectanglePath addClip];
-//    
-//    [bgImage drawInRect: self.bounds];
-//    CGContextRestoreGState(context);
+    [bgImage drawInRect: self.bounds];
+    CGContextRestoreGState(context);
 }
 
 -(UIImage*)imageFromView:(UIView*)view{
