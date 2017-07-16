@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		213911C36900426D6445A75D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73408F1F001C22930F462080 /* libPods.a */; };
+		0A9906B05A09EF828EE4FD43 /* libPods-iOSMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC98BE67C7217A6ACC3F3E25 /* libPods-iOSMaps.a */; };
 		2F34C8304519CE2F96093C3A /* Cameras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C4E6F43D54D13BB1693B /* Cameras.m */; };
 		3A03903B1C2C36B5002D04C3 /* POIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A03903A1C2C36B5002D04C3 /* POIAnnotation.m */; };
 		3A1AFF201C1BECFF00B46CC6 /* MapDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AFF1F1C1BECFF00B46CC6 /* MapDrawerView.m */; };
@@ -158,6 +158,9 @@
 		4DE93EBF1C23A43A006EA967 /* SelectorUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorUIButton.m; sourceTree = "<group>"; };
 		58F9DC11FC3E7E9A622A2C41 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		73408F1F001C22930F462080 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A954D259DA258916C053E173 /* Pods-iOSMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMaps/Pods-iOSMaps.release.xcconfig"; sourceTree = "<group>"; };
+		BAFF668581D85B130EE6C201 /* Pods-iOSMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMaps/Pods-iOSMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		FC98BE67C7217A6ACC3F3E25 /* libPods-iOSMaps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSMaps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2D0A083A325F260A4E512E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				213911C36900426D6445A75D /* libPods.a in Frameworks */,
+				0A9906B05A09EF828EE4FD43 /* libPods-iOSMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				73408F1F001C22930F462080 /* libPods.a */,
+				FC98BE67C7217A6ACC3F3E25 /* libPods-iOSMaps.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +190,8 @@
 			children = (
 				FD2D0A083A325F260A4E512E /* Pods.debug.xcconfig */,
 				58F9DC11FC3E7E9A622A2C41 /* Pods.release.xcconfig */,
+				BAFF668581D85B130EE6C201 /* Pods-iOSMaps.debug.xcconfig */,
+				A954D259DA258916C053E173 /* Pods-iOSMaps.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -444,12 +450,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DCD33431C11915000F68262 /* Build configuration list for PBXNativeTarget "iOSMaps" */;
 			buildPhases = (
-				75420A296E9BFC5F8FE7688F /* Check Pods Manifest.lock */,
+				75420A296E9BFC5F8FE7688F /* [CP] Check Pods Manifest.lock */,
 				4DCD33251C11915000F68262 /* Sources */,
 				4DCD33261C11915000F68262 /* Frameworks */,
 				4DCD33271C11915000F68262 /* Resources */,
-				C08AC5F5F91CEC784BB0E06F /* Embed Pods Frameworks */,
-				A8AB1B52107A32DBF0C92146 /* Copy Pods Resources */,
+				C08AC5F5F91CEC784BB0E06F /* [CP] Embed Pods Frameworks */,
+				A8AB1B52107A32DBF0C92146 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -514,49 +520,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		75420A296E9BFC5F8FE7688F /* Check Pods Manifest.lock */ = {
+		75420A296E9BFC5F8FE7688F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A8AB1B52107A32DBF0C92146 /* Copy Pods Resources */ = {
+		A8AB1B52107A32DBF0C92146 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSMaps/Pods-iOSMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C08AC5F5F91CEC784BB0E06F /* Embed Pods Frameworks */ = {
+		C08AC5F5F91CEC784BB0E06F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSMaps/Pods-iOSMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -713,7 +719,7 @@
 		};
 		4DCD33441C11915000F68262 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD2D0A083A325F260A4E512E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BAFF668581D85B130EE6C201 /* Pods-iOSMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -729,7 +735,7 @@
 		};
 		4DCD33451C11915000F68262 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58F9DC11FC3E7E9A622A2C41 /* Pods.release.xcconfig */;
+			baseConfigurationReference = A954D259DA258916C053E173 /* Pods-iOSMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
